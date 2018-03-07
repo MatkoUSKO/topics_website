@@ -1,15 +1,14 @@
 $(document).on('click', '#toggleSidebar', function(){
   $("#sidebar").toggleClass("collapsed");
-  if ($("#sidebar").hasClass("collapsed")) {
-    $("#content").css({
-    'margin-left': 0
-  });
-  } else {
+  if (!$("#sidebar").hasClass("collapsed")) {
     $("#content").css({
     'margin-left': $('#sidebar').width()
   });
+  } else {
+    $("#content").css({
+    'margin-left': 0
+  });
   }
-  
   return false;
 })
 

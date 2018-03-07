@@ -68,6 +68,10 @@ body {
     font-weight: 500;
     margin-top: 10px;
   }
+
+  #content {
+    min-width : 100vw;
+  }
 }
 
 
