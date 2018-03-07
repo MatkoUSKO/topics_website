@@ -45,6 +45,19 @@
   width:100%;
 }
 
+.sidebar-btn2 {
+  width:100;
+  margin-top:5px;
+  margin-left:5px;
+  background-color: #429ea6;
+  color: #153b50;
+}
+
+.sidebar-btn2:hover {
+  background-color: #153b50;
+  color: #cc998d;
+}
+
 .sidebar-btn {
   width:100;
   margin-top:5px;
@@ -55,12 +68,4 @@
 .sidebar-btn:hover {
   background-color: #153b50;
   color: #cc998d;
-}
-
-.active a{
-  background-color: #429ea6 !important;
-}
-
-.active{
-  background-color: #429ea6 !important;
 }

@@ -1,7 +1,7 @@
 section.fullsite {
 	border-bottom: 1px solid #000;
- 	padding-top: 4rem;
-	padding-bottom: 4rem;
+ 	padding-top: 5rem;
+	padding-bottom: 5rem;
 	min-height: 100vh;
 }
 
@@ -30,12 +30,23 @@ body {
     height:100%;
 }
 
+.bg-primary{
+  background-color: #cc998d;
+  color: #153b50;  
+}
+
+
 .bg-primary a{
+  color: #153b50;  
+}
+
+.bg-secondary a{
   color: #153b50;  
 }
 
 .bg-secondary {
   background-color: #429ea6 !important;
+  color: #153b50; 
 }
 
 
