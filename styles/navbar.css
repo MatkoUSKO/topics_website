@@ -1,12 +1,7 @@
 .collapsed {
     display: none; /* hide it for small displays */
 }
-@media (max-width: 992px) {
-    .collapsed {
-        display: block;
-        margin-left: -25%; /* same width as sidebar */
-    }
-}
+
 
 #row-main {
     overflow-x: hidden; /* necessary to hide collapsed sidebar */
