@@ -14,9 +14,18 @@ $(document).on('click', '#toggleSidebar', function(){
 })
 
 $(document).ready(function(){
-  $("#content").css({
+  if($(window).width() < 650) {
+     $("#sidebar").addClass("collapsed");
+  }
+  if ($("#sidebar").hasClass("collapsed")) {
+    $("#content").css({
+    'margin-left': 0
+  });
+  } else {
+    $("#content").css({
     'margin-left': $('#sidebar').width()
   });
+  }
 
 
   $('a[href*="#"]')
