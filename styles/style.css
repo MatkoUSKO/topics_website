@@ -47,6 +47,15 @@ body {
 #main-title {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   margin-left: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 768) {
+  #main-title {
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 500;
+  }
 }
 
 
