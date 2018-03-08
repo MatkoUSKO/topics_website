@@ -2,6 +2,10 @@
     display: none; 
 }
 
+.accordion-group {
+  
+}
+
 
 #row-main {
     overflow-x: hidden;
