@@ -4,14 +4,14 @@
     <title> Human Skin Rendering</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href='https://fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family='Francois One'" rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/navbar.css">
-    <script type="text/javascript" src="javascript/navbar.js" ></script>
+    <script src="javascript/navbar.js"></script>
   </head>
   <body data-spy="scroll" data-target="#sidebarid" data-offset="10">
     <!-- NAVBAR START -->
@@ -19,162 +19,162 @@
       <!-- Links -->
       <ul id="topnavbar" class="navbar-nav">
         <li class="nav-item">
-        <button type="button" class="btn btn-primary" id="toggleSidebar"><img src="icons/three-bars.svg" alt="Toggle"></span></button>
-      </li>
-      <li>
-        <h3 class="bg-secondary-dark" id="main-title">Human Skin Rendering</h3>
-      </li>
-    </ul>
-  </nav>
-  <!-- NAVBAR END -->
-  <!-- SIDEBAR START -->
-  <div class="container-fluid">
-    <div id="row-main" class="container-fluid">
-      <div class="bg-secondary-dark" id="sidebar">
-        <div class="sidebar container-fluid" id="sidebarid">
-          <!-- Links -->
-          <ul>
-            <li>
-              <a href="#top" class="btn btn-block sidebar-btn">Back To Top</a>
-            </li>
-            <li >
-              <a href="#intro" class="btn btn-block sidebar-btn">Introduction to Rendering</a>
-              <ul>
-                <li><a href="#rasterisation" class="btn btn-block sidebar-btn2">Rasterisation</a></li>
-                <li><a href="#raycasting" class="btn btn-block sidebar-btn2">Ray Casting</a></li>
-                <li><a href="#raytracing" class="btn btn-block sidebar-btn2">Ray Tracing</a></li>
-                <li><a href="#radiosity" class="btn btn-block sidebar-btn2">Radiosity</a></li>
-                <li><a href="#texturemapping" class="btn btn-block sidebar-btn2">Texture Mapping</a></li>
-                <li><a href="#subsurfacescattering" class="btn btn-block sidebar-btn2">Subsurface Scattering</a></li>
-              </ul>
-            </li>
-            <li >
-              <a href="#education" class="btn btn-block sidebar-btn">Primary</a>
-            </li>
-            <li >
-              <a href="#" class="btn btn-block sidebar-btn">Primary</a>
-            </li>
-          </ul>
+          <button type="button" class="btn btn-primary" id="toggleSidebar"><img src="icons/three-bars.svg" alt="Toggle"></button>
+        </li>
+        <li>
+          <h3 class="bg-secondary-dark" id="main-title">Human Skin Rendering</h3>
+        </li>
+      </ul>
+    </nav>
+    <!-- NAVBAR END -->
+    <!-- SIDEBAR START -->
+    <div class="container-fluid">
+      <div id="row-main" class="container-fluid">
+        <div class="bg-secondary-dark" id="sidebar">
+          <div class="sidebar container-fluid" id="sidebarid">
+            <!-- Links -->
+            <ul>
+              <li>
+                <a href="#top" class="btn btn-block sidebar-btn">Back To Top</a>
+              </li>
+              <li>
+                <div>
+                  <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse1">Introduction to Rendering</button>
+                </div>
+                <div id="collapse1" class="collapse in">
+                  <ul>
+                    <li><a href="#rasterisation" class="btn btn-block sidebar-btn2">Rasterisation</a></li>
+                    <li><a href="#raycasting" class="btn btn-block sidebar-btn2">Ray Casting</a></li>
+                    <li><a href="#raytracing" class="btn btn-block sidebar-btn2">Ray Tracing</a></li>
+                    <li><a href="#radiosity" class="btn btn-block sidebar-btn2">Radiosity</a></li>
+                    <li><a href="#texturemapping" class="btn btn-block sidebar-btn2">Texture Mapping</a></li>
+                    <li><a href="#subsurfacescattering" class="btn btn-block sidebar-btn2">Subsurface Scattering</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li >
+                <a href="#education" class="btn btn-block sidebar-btn">Primary</a>
+              </li>
+              <li >
+                <a href="#" class="btn btn-block sidebar-btn">Primary</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <!-- SIDEBAR END -->
-      <!-- CONTENT -->
-      <div id="content">
-        <div>
-          <!-- TOP -->
-          <section id="top" class="fullsite">
-            <div class="row">
-              <div class="col-sm-12">
-                <h1>Realistic Human skin rendering</h1>
+        <!-- SIDEBAR END -->
+        <!-- CONTENT -->
+        <div id="content">
+          <div>
+            <!-- TOP -->
+            <section id="top" class="fullsite">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1>Realistic Human skin rendering</h1>
+                </div>
               </div>
-            </div>
-          </section>
-
-          <!-- INTRO -->
-          <section id="intro" class="fullsite container-fluid">
-            <div class="row">
-              <div class="col-sm-12">
-                <h1>Introduction to Rendering</h1>
+            </section>
+            <!-- INTRO -->
+            <section id="intro" class="fullsite container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1 class="topic-header">Introduction to Rendering</h1>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <section id="rasterisation" class="col-sm-4">
-                <h2>Rasterisation</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+              <div class="row">
+                <section id="rasterisation" class="col-sm-4">
+                  <h2 class="section-header">Rasterisation</h2>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                    
+                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                    
+                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                    
+                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                </section>
+                <section id="raycasting" class="col-sm-4">
+                  <h2 class="section-header">Ray Casting</h2>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                    
+                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                    
+                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                    
+                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                </section>
+                <section id="raytracing" class="col-sm-4">
+                  <h2 class="section-header">Ray Tracing</h2>
+                    <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                      
+                      Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                      
+                      Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                      
+                    Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                </section>
+              </div>
               
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-              </section>
-              <section id="raycasting" class="col-sm-4">
-                <h2>Ray Casting</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-              </section>
-              <section id="raytracing" class="col-sm-4">
-                <h2>Ray Tracing</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-              </section>
-            </div>
-            
-            <!-- INTRO cont. -->
-          </section>
-          <section id="intro2" class="fullsite container-fluid">
-            <div class="row">
-              <section id="radiosity" class="col-sm-4">
-                <h2>Radiosity</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-              </section>
-              <section id="texturemapping" class="col-sm-4">
-                <h2>Texture Mapping</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-              </section>
-              <section id="subsurfacescattering" class="col-sm-4">
-                <h2>Subsurface Scattering</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-              </section>
-            </div>
-
-          </section>
-
-
-          <section id="education" class="fullsite container-fluid">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.
-              
-            Morbi eros justo, posuere ac magna sit amet, vehicula tristique augue. Quisque dapibus sed sapien vel suscipit. Donec at urna arcu. Suspendisse laoreet bibendum lacus, quis mollis nunc venenatis et. Donec a mauris sit amet diam interdum bibendum quis id lorem. Praesent vel enim sapien. Curabitur elit lorem, vulputate vehicula faucibus ac, volutpat eu libero. Proin semper, diam eget iaculis fringilla, mauris est luctus nunc, vitae auctor purus velit quis odio. Sed id cursus erat, at finibus nunc. Cras mollis augue ut urna facilisis, et scelerisque eros cursus. Nullam maximus lacus mollis pulvinar consectetur. Nam pretium lectus vel eros posuere, vel laoreet elit gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </section>
-          <section id="skills" class="fullsite container-fluid">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-              
-              Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-              
-              Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-              
-              Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.
-              
-            Morbi eros justo, posuere ac magna sit amet, vehicula tristique augue. Quisque dapibus sed sapien vel suscipit. Donec at urna arcu. Suspendisse laoreet bibendum lacus, quis mollis nunc venenatis et. Donec a mauris sit amet diam interdum bibendum quis id lorem. Praesent vel enim sapien. Curabitur elit lorem, vulputate vehicula faucibus ac, volutpat eu libero. Proin semper, diam eget iaculis fringilla, mauris est luctus nunc, vitae auctor purus velit quis odio. Sed id cursus erat, at finibus nunc. Cras mollis augue ut urna facilisis, et scelerisque eros cursus. Nullam maximus lacus mollis pulvinar consectetur. Nam pretium lectus vel eros posuere, vel laoreet elit gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </section>
+              <!-- INTRO cont. -->
+            </section>
+            <section id="intro2" class="fullsite container-fluid">
+              <div class="row">
+                <section id="radiosity" class="col-sm-4">
+                  <h2 class="section-header">Radiosity</h2>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                    
+                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                    
+                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                    
+                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                </section>
+                <section id="texturemapping" class="col-sm-4">
+                  <h2 class="section-header">Texture Mapping</h2>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                    
+                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                    
+                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                    
+                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                </section>
+                <section id="subsurfacescattering" class="col-sm-4">
+                  <h2 class="section-header">Subsurface Scattering</h2>
+                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                    
+                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                    
+                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                    
+                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                </section>
+              </div>
+            </section>
+            <section id="education" class="fullsite container-fluid">
+              <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                
+                Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                
+                Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                
+                Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.
+                
+              Morbi eros justo, posuere ac magna sit amet, vehicula tristique augue. Quisque dapibus sed sapien vel suscipit. Donec at urna arcu. Suspendisse laoreet bibendum lacus, quis mollis nunc venenatis et. Donec a mauris sit amet diam interdum bibendum quis id lorem. Praesent vel enim sapien. Curabitur elit lorem, vulputate vehicula faucibus ac, volutpat eu libero. Proin semper, diam eget iaculis fringilla, mauris est luctus nunc, vitae auctor purus velit quis odio. Sed id cursus erat, at finibus nunc. Cras mollis augue ut urna facilisis, et scelerisque eros cursus. Nullam maximus lacus mollis pulvinar consectetur. Nam pretium lectus vel eros posuere, vel laoreet elit gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+            <section id="skills" class="fullsite container-fluid">
+              <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
+                
+                Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
+                
+                Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
+                
+                Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.
+                
+              Morbi eros justo, posuere ac magna sit amet, vehicula tristique augue. Quisque dapibus sed sapien vel suscipit. Donec at urna arcu. Suspendisse laoreet bibendum lacus, quis mollis nunc venenatis et. Donec a mauris sit amet diam interdum bibendum quis id lorem. Praesent vel enim sapien. Curabitur elit lorem, vulputate vehicula faucibus ac, volutpat eu libero. Proin semper, diam eget iaculis fringilla, mauris est luctus nunc, vitae auctor purus velit quis odio. Sed id cursus erat, at finibus nunc. Cras mollis augue ut urna facilisis, et scelerisque eros cursus. Nullam maximus lacus mollis pulvinar consectetur. Nam pretium lectus vel eros posuere, vel laoreet elit gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-</body>
+    
+  </body>
 </html>

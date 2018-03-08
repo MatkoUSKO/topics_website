@@ -1,6 +1,6 @@
 $(document).on('click', '#toggleSidebar', function(){
-  $("#sidebar").toggleClass("collapsed");
-  if (!$("#sidebar").hasClass("collapsed")) {
+  $("#sidebar").toggleClass("sidebar-collapsed");
+  if (!$("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
     'margin-left': $('#sidebar').width()
   });
@@ -14,9 +14,9 @@ $(document).on('click', '#toggleSidebar', function(){
 
 $(document).ready(function(){
   if($(window).width() < 650) {
-     $("#sidebar").addClass("collapsed");
+     $("#sidebar").addClass("sidebar-collapsed");
   }
-  if ($("#sidebar").hasClass("collapsed")) {
+  if ($("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
     'margin-left': 0
   });
@@ -28,7 +28,6 @@ $(document).ready(function(){
 
 
   $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
@@ -46,7 +45,7 @@ $(document).ready(function(){
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top-$('#topnavbar').outerHeight() - 10
+          scrollTop: target.offset().top-1.5*$('#topnavbar').outerHeight()
         }, 1000, function() {
           // Callback after animation
           // Must change focus!

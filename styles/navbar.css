@@ -1,10 +1,10 @@
-.collapsed {
-    display: none; /* hide it for small displays */
+.sidebar-collapsed {
+    display: none; 
 }
 
 
 #row-main {
-    overflow-x: hidden; /* necessary to hide collapsed sidebar */
+    overflow-x: hidden;
 }
 
 #content {
@@ -21,8 +21,6 @@
     height: 100vh;
     position:fixed;
     left:0;
-    /*display:flex;
-    flex-direction:column;*/
     width:17rem;
     height:100vh;
     margin: 0;
