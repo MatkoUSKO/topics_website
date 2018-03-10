@@ -2,11 +2,6 @@
     display: none; 
 }
 
-.accordion-group {
-  
-}
-
-
 #row-main {
     overflow-x: hidden;
 }
@@ -50,7 +45,6 @@
 .sidebar-btn2 {
   width:100;
   margin-top:5px;
-  margin-left:5px;
   background-color: #429ea6;
   color: #153b50;
 }
@@ -71,3 +65,4 @@
   background-color: #153b50;
   color: #cc998d;
 }
+

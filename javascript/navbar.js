@@ -2,12 +2,18 @@ $(document).on('click', '#toggleSidebar', function(){
   $("#sidebar").toggleClass("sidebar-collapsed");
   if (!$("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
-    'margin-left': $('#sidebar').width()
-  });
+      'margin-left': $('#sidebar').width()
+    });
+    $(".navbar").css({
+      'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
+    });
   } else {
     $("#content").css({
-    'margin-left': 0
-  });
+      'margin-left': 0
+    });
+    $(".navbar").css({
+      'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
+    });
   }
   return false;
 })
@@ -18,12 +24,18 @@ $(document).ready(function(){
   }
   if ($("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
-    'margin-left': 0
-  });
+      'margin-left': 0
+    });
+    $(".navbar").css({
+      'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
+    });
   } else {
     $("#content").css({
-    'margin-left': $('#sidebar').width()
-  });
+      'margin-left': $('#sidebar').width()
+    });
+    $(".navbar").css({
+      'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
+    });
   }
 
 
