@@ -14,8 +14,8 @@ body, html {
 .parallax {
     margin: 0px;
     padding: 0px;
-    /* The image used */
-    background-image: url("res/title.jpg");
+    /* background*/
+    background-color: #ecebe4;
 
     /* Full height */
     height: 100%;
