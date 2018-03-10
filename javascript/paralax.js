@@ -30,31 +30,46 @@ function parallax() {
     }
 
 
-  if (scrollPos > $(window).height() - 3*$('#paralax-heading').outerHeight()) {
+  var headingbot = $('#paralax-heading').offset().top + 1.5*$('#paralax-heading').outerHeight();
+
+  if (scrollPos > $(window).height() - headingbot) {
     var op = (( $(window).height() - $('#paralax-heading').outerHeight()- scrollPos ) / ( 2*$('#paralax-heading').outerHeight() ));
-    var tp = $('#paralax-heading').outerHeight()*(-1 + (( $(window).height() - scrollPos ) / ( 3*$('#paralax-heading').outerHeight() )));
+    var tp = 100 *(-1 + (( $(window).height() - scrollPos ) / ( 3*$('#paralax-heading').outerHeight() )));
     $('#paralax-heading').css({
         opacity: op,
-        top: tp
+        //top: tp
     });
   } else {
     $('#paralax-heading').css({
       opacity:100,
-      top: 0
+      //top: 0
     });
   }
 
-  if (scrollPos > $(window).height() - 3*$('#paralax-body').outerHeight()) {
-    var op = (( $(window).height() - $('#paralax-body').outerHeight()- scrollPos ) / ( 2*$('#paralax-body').outerHeight() ));
-    var tp = $('#paralax-body').outerHeight()*(-1 + (( $(window).height() - scrollPos ) / ( 3*$('#paralax-body').outerHeight() )));
-    $('#paralax-body').css({
+  var bodybotstart = $(window).height() - ($('#paralax-body').offset().top + 2*$('#paralax-body').outerHeight());
+  var bodybotend = $(window).height() - ($('#paralax-body').offset().top + $('#paralax-body').outerHeight());
+
+  if (scrollPos > bodybotstart) {
+    var op = ((bodybotend - scrollPos ) / ( $('#paralax-body').outerHeight() ));
+    var tp = ($('#paralax-body').height())*(-1 + (( $(window).height() - scrollPos ) / ( 3*$('#paralax-body').outerHeight() )));
+    if (op <= 0) {
+      $('#paralax-body').css({
+        display: 'none',
         opacity: op,
-        top: tp
-    });
+        //top: tp
+      });
+    } else {
+      $('#paralax-body').css({
+        display: 'block',
+        opacity: op,
+        //top: tp
+      }); 
+    }
   } else {
     $('#paralax-body').css({
+      display: 'block',
       opacity:100,
-      top: 0
+      //top: 0
     });
   }
 }

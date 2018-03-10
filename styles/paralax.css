@@ -46,14 +46,11 @@ body, html {
     font-weight: 100;
 }
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-/*@media only screen and (max-device-width: 992px) {
-    .parallax {
-        background-attachment: scroll;
-    }
+/* Make it bigger */
+@media only screen and (max-width: 992px) {
 
     .parallax h1 {
-        font-size:9vw;
+        font-size:6vw;
         font-family: "Courier Header";
     }
 
@@ -61,9 +58,8 @@ body, html {
         font-size:6vw;
         color:white;
     }
-}*/
+}
 
 .disappear-on-scroll{
-    top:0;
     opacity:100;
 }
