@@ -2,6 +2,10 @@
     display: none; 
 }
 
+.nav{
+  z-order:-1;
+}
+
 #row-main {
     overflow-x: hidden;
 }

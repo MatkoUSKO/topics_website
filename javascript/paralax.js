@@ -46,15 +46,15 @@ function parallax() {
     });
   }
 
-  var bodybotstart = $(window).height() - ($('#paralax-body').offset().top + 2*$('#paralax-body').outerHeight());
-  var bodybotend = $(window).height() - ($('#paralax-body').offset().top + $('#paralax-body').outerHeight());
+  var bodybotstart = $(window).height() - ($('#paralax-body').offset().top - $('#paralax-body').outerHeight());
+  var bodybotend = $(window).height() - ($('#paralax-body').offset().top - 2*$('#paralax-body').outerHeight());
 
   if (scrollPos > bodybotstart) {
-    var op = ((bodybotend - scrollPos ) / ( $('#paralax-body').outerHeight() ));
-    var tp = ($('#paralax-body').height())*(-1 + (( $(window).height() - scrollPos ) / ( 3*$('#paralax-body').outerHeight() )));
+    var op = 1 - ((scrollPos - bodybotstart) / ( bodybotend - bodybotstart));
     if (op <= 0) {
+      op = 0
       $('#paralax-body').css({
-        display: 'none',
+        display: 'block',
         opacity: op,
         //top: tp
       });
@@ -68,7 +68,7 @@ function parallax() {
   } else {
     $('#paralax-body').css({
       display: 'block',
-      opacity:100,
+      opacity: 1
       //top: 0
     });
   }
