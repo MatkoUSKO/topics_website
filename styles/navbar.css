@@ -18,7 +18,7 @@
     -o-transition: margin 0.3s ease;
     transition: margin 0.3s ease;
     height: 100vh;
-    position:fixed;
+    position:absolute;
     left:0;
     width:17rem;
     height:100vh;

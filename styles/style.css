@@ -3,6 +3,7 @@ section.fullsite {
  	padding-top: 5rem;
 	padding-bottom: 5rem;
 	min-height: 100vh;
+  overflow: auto;
 }
 
 @media (min-width: 768px) {
@@ -27,7 +28,6 @@ body {
     overflow: auto;
     position: relative;
     overflow-y: scroll;
-    height:100%;
 }
 
 .bg-primary{
@@ -76,6 +76,10 @@ body {
 
 .topic-header {
   margin-bottom: 30px;
+}
+
+#content{
+  overflow-y: hidden;
 }
 
 

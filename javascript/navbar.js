@@ -49,6 +49,7 @@ $(document).ready(function(){
       && 
       location.hostname == this.hostname
     ) {
+
       // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -56,8 +57,9 @@ $(document).ready(function(){
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
+        var scrollLocation = target.offset().top - 1.5*$('#topnavbar').outerHeight();
         $('html, body').animate({
-          scrollTop: target.offset().top-1.5*$('#topnavbar').outerHeight()
+          scrollTop: scrollLocation
         }, 1000, function() {
           // Callback after animation
           // Must change focus!
