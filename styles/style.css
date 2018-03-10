@@ -7,14 +7,14 @@ section.fullsite {
 }
 
 @media (min-width: 768px) {
-  section.fullstie {
+  section.fullsite {
     min-height: 100vh;
     min-width: 18rem;
   }
 }
 
 @media (min-width: 992px) {
-  section.fullstie {
+  section.fullsite {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
