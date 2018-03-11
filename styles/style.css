@@ -21,16 +21,6 @@ section.fullsite {
   }
 }
 
-html, body {
-	background-color: #fff8f0;
-}
-
-body {
-    overflow: auto;
-    position: relative;
-    overflow-y: scroll;
-}
-
 .bg-primary{
   background-color: #cc998d;
   color: #153b50;  
@@ -97,6 +87,40 @@ body {
   flex-direction: column;
 }
 
+.margin-top-sm-40, .margin-top-md-40, .margin-top-lg-40, .margin-top-xl-40 {
+  margin-top: 40vh;
+}
+
+@media (max-width: 1600px) {
+  .margin-top-xl-40 {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .margin-top-lg-40 {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .margin-top-md-40 {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .margin-top-sm-40 {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  .margin-top-lg-40 {
+    margin-top: 5vh;
+  }
+}
+
 .col-my-5, .col-my-6, .col-my-7, .col-my-8 {
   margin: 1%;
   margin-top: 10px;
@@ -129,13 +153,3 @@ body {
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 }*/
-
-
-
-/*
-bckg: #16f4d0;
-bckg-alt: #ecebe4;
-primary: #cc998d;
-secondary: #429ea6;
-secondary-dark: #153b50;
-*/

@@ -1,8 +1,10 @@
 body, html {
-    height: 100%;
-    width: 100%;
     margin: 0px;
     padding: 0px;
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
 }
 
 /** {
@@ -13,9 +15,16 @@ body, html {
 
 .parallax {
     margin: 0px;
-    padding: 0px;
+    padding: 50px;
+
+    
     /* background*/
-    background-color: #ecebe4;
+    background: url("../imgs/intro1blur.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     /* Full height */
     height: 100%;
@@ -33,6 +42,7 @@ body, html {
     font-size:4vw;
     font-family: "Courier Header";
     color: black;
+    background: url("imgs/generations.jpg");
 }
 
 .parallax h2 {

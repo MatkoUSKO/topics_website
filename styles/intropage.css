@@ -1,0 +1,17 @@
+.transulcent-card {
+	background: rgba(0,0,0,0.5);
+}
+
+.transulcent-card .card-img-top {
+	-webkit-transition: opacity 0.5s; /* Safari */
+    transition: opacity 0.5s;
+	opacity:0;
+}
+
+.transulcent-card:hover .card-img-top {
+	opacity:1;
+}
+
+.transulcent-card h3 {
+	color: #FFF5F3;
+}
