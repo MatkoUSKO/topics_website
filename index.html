@@ -100,6 +100,16 @@
                   <li><a href="#texturing" class="btn btn-block sidebar-btn2">Texturing</a></li>
                 </ul>
               </li>
+              <li>
+                <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse5">Wrinkles</button>
+                <ul id="collapse5" class="collapse">
+                  <li><a href="#introtowrinkes" class="btn btn-block sidebar-btn2">Introduction to Wrinkles</a></li>
+                  <li><a href="#propertiesofwrinkles" class="btn btn-block sidebar-btn2">Properties of Wrinkles</a></li>
+                  <li><a href="#trianglemesh" class="btn btn-block sidebar-btn2">Triangle Mesh</a></li>
+                  <li><a href="#finescalewrinkles" class="btn btn-block sidebar-btn2">Fine Scale Wrinkles</a></li>
+                  <li><a href="#largescalewrinkles" class="btn btn-block sidebar-btn2">Large-scale wrinkles</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -598,7 +608,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                         In contrast from the previous model this model also accounts for the texture of the rendered skin. Using texture maps we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin.
+                          In contrast from the previous model this model also accounts for the texture of the rendered skin. Using texture maps we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin.
                         </p>
                       </div>
                     </div>
@@ -608,6 +618,151 @@
               </div>
             </section>
             <!-- A SPECTRAL BSSRDF 2 END -->
+            <!-- WRINKLES 1 START -->
+            <section id="wrinkles1" class="fullsite container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1 class="topic-header">Wrinkles</h1>
+                </div>
+              </div>
+              <div class="row">
+                <section id="introtowrinkes" class="col-lg-4 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Introduction to Wrinkles</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by Donner and Jansen was able to add texture by using texture maps, we would like to investigate how to generate these in a more dynamic manner. A paper called “A simple method for modeling wrinkles on human skin” by Y. Bando, T. Kuratate, and T. Nishita introduces a way of achieving this and thus we shall investigate it in this section.
+                        </p>
+                      </div>
+                    </div>
+                    <img class="card-img-bottom" src="http://via.placeholder.com/400x400">
+                  </div>
+                </section>
+                <section id="propertiesofwrinkles" class="col-lg-4 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Properties of Wrinkles</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          The model distinguishes between two types of wrinkles. Fine-scale wrinkles, and large-scale wrinkles. Fine-scale wrinkles cover the whole body and are much harder to spot by eye than large-scale wrinkles which are usually associated with a certain body part such as the forehead. Both of the wrinkle types share a few features. When it comes to fine-scale wrinkles the interesting properties are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning large-scale wrinkles perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrinked around large-scale wrinkles. We will take this into consideration when modelling the shape of large-scale wrinkles.
+                        </p>
+                      </div>
+                    </div>
+                    <img class="card-img-bottom" src="http://via.placeholder.com/400x300">
+                  </div>
+                </section>
+                <section id="trianglemesh" class="col-lg-4 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Triangle Mesh</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          This model uses a triangle mesh to represent a particular body part. Wrinkles are then modeled on top of this mesh. In order to acquire the mesh we scan the particular body part and then we project it into 2D.
+                        </p>
+                      </div>
+                    </div>
+                    <img class="card-img-bottom" src="http://via.placeholder.com/400x400">
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!-- WRINKLES 1 END -->
+            <!-- WRINKLES 2 START -->
+            <section id="wrinkles2" class="fullsite container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1 class="topic-header">Wrinkles</h1>
+                </div>
+              </div>
+              <div class="row">
+                <section id="finescalewrinkles" class="col-lg-12 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Fine-Scale Wrinkles</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <p>
+                              The key of modeling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the triangle mesh.
+                            </p>
+                            <p>
+                              Carving the wrinkles happens by carving the furrows along the direction vectors. The output of the model is a height image which represents the depth of the carved wrinkles. This can be represented as a grayscale image which is initialized to white, and each wrinkle makes its positions more gray. The model does not allow wrinkle generation from points that already contain wrinkles. This is achieved by an occupancy image which is always updated throughout the wrinkle generation algorithm. Each position is either 0 or 1 so this way we do not start a wrinkle from a position already wrinkled.
+                            </p>
+                            <p>
+                              Before examining the actual algorithm that generates the wrinkles we need to introduce six new attributes of fine-scale wrinkles. These are the perturbation angle, the length of the furrow segment, the depth of the furrow, the width of the furrow, and the distance between adjacent furrows. The intuition behind these parameters is that they are controlled by the magnitude of the vector field in the given area. Should the magnitude be large, the wrinkles become more oriented, longer, deeper, wider, and the distance between them increases. The exact opposite happens for smaller magnitudes.
+                            </p>
+                            <img class="card-img-bottom" src="http://via.placeholder.com/400x150">
+                          </div>
+                          <div class="col-lg-6">
+                            <p>
+                              <b>Now let’s look at the actual algorithm.</b>
+                              <ol>
+                                <li>If possible pick a starting point P. Compute the number of furrow segments n needed for the furrow, and the direction d of the furrow by interpolating the direction vectors of the vertices of the triangle P lies in.</li>
+                                <li>Iterating over <b>n</b> do the following steps:</li>
+                                <li>Add the perturbation angle to the direction.</li>
+                                <li>Let Q be the end point of the given segment. If PQ intersects some other furrow, then set Q to be the intersection point and n to 0. This follows the property of fine wrinkles which states that either furrow has to end at the intersection.</li>
+                                <li>Draw a line on the grayscale image representing PQ with its depth and width obtained from the magnitude of the vector field.</li>
+                                <li>Record the occupied area in the occupancy image together with the calculated distance from the adjacent furrows.</li>
+                                <li>Set P to Q and continue with step 3 if n > 0.</li>
+                              </ol>
+                            </p>
+                            <p>
+                              This algorithm is performed by randomly picking starting points P until a lot of furrows fail to generate. This happens when picking a starting point becomes probabilistically hard due to the occupancy image. After we fail to generate furrows we perform the algorithm for all the points that have a 0 value in the occupancy image. In other words, they are not wrinkled yet.
+                            </p>
+                            <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x200"> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!-- WRINKLES 2 END -->
+            <!-- WRINKLES 3 START -->
+            <section id="wrinkles3" class="fullsite container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1 class="topic-header">Wrinkles</h1>
+                </div>
+              </div>
+              <div class="row">
+                <section id="largescalewrinkles" class="col-lg-12 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Large-Scale Wrinkles</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <p>
+                              Modeling large scale wrinkles is much more challenging from the perspective that they can be quite distinct depending not only on the area of the skin, but also on the given person. For this reason the model can not create them in bulks, but we have to assign and generate them one by one. We can achieve this by drawing cubic Bezier curves on the surface of the skin. Then, the model creates a cross sectional wrinkle shape function \(S(l)\). Here \(l\) is the perpendicular distance from the Bezier curve.
+                            </p>
+                            <p>
+                              \(S(l)\) can be defined as:
+                            </p>
+                            <img class="card-img-bottom" src="imgs/wrinklesgraph.png">
+                          </div>
+                          <div class="col-lg-6">
+                            <p>
+                              Where d is the depth and w is the width of the wrinkle. This definition of \(S(l)\) has several advantages. Firstly, it is controlled by very intuitive parameters. Secondly, it models the fact the skin bulks around the edges of the wrinkle. Finally, notice that:
+                              <b> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </b>
+                            </p>
+                            <p>
+                              This property ensures the preservation of the skin volume.
+                            </p>
+                            <img class="card-img-bottom" src="http://via.placeholder.com/400x300">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!-- WRINKLES 3 END -->
           </div>
         </div>
       </div>
