@@ -86,8 +86,38 @@ body {
   text-align: justify;
 }
 
+.my-flex {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
 
+.col-my-5, .col-my-6, .col-my-7, .col-my-8 {
+  margin: 1%;
+  margin-top: 10px;
+}
 
+.col-my-5 {
+  width:40%;
+}
+
+.col-my-6 {
+  width:47%;
+}
+
+.col-my-7 {
+  width: 56%;
+}
+
+.col-my-8 {
+  width: 64%;
+}
+
+@media (max-width: 1600px){
+  .col-my-5, .col-my-6, .col-my-7, .col-my-8 {
+    width: 100% !important;
+  }
+}
 
 /** {
   background: #000 !important;
