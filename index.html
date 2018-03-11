@@ -90,6 +90,16 @@
                   <li><a href="#biospecproblems" class="btn btn-block sidebar-btn2">Problems</a></li>
                 </ul>
               </li>
+              <li>
+                <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse4">A Spectral BSSRDF</button>
+                <ul id="collapse4" class="collapse">
+                  <li><a href="#whatisbssrdf" class="btn btn-block sidebar-btn2">What is a BSSRDF?</a></li>
+                  <li><a href="#bssrdfmainfeatures" class="btn btn-block sidebar-btn2">Main features</a></li>
+                  <li><a href="#reflection" class="btn btn-block sidebar-btn2">Reflection</a></li>
+                  <li><a href="#scatteringandabsorbtion" class="btn btn-block sidebar-btn2">Scattering and Absorption</a></li>
+                  <li><a href="#texturing" class="btn btn-block sidebar-btn2">Texturing</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -477,6 +487,127 @@
               </div>
             </section>
             <!-- THE BIOSPEC MODEL 3 END -->
+            <!-- A SPECTRAL BSSRDF 1 START -->
+            <section id="spectralbssrdf1" class="fullsite container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="topic-header">A Spectral BSSRDF</h1>
+                </div>
+              </div>
+              <div class="row">
+                <section class="col-lg-5 d-flex align-items-strech">
+                  <div class="row">
+                    <section id="whatisbssrdf" class="col-lg-12 mb-3 d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">What is BSSRFD?</h2>
+                        <div class="card-body">
+                          <div class="section-text">
+                            <p>
+                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function, and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenons such as scattering, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner, and Jansen can be conveniently described as a BSSRDF.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
+                      </div>
+                    </section>
+                    <section id="bssrdfmainfeatures" class="col-lg-12 d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">Main Features</h2>
+                        <div class="card-body">
+                          <div class="section-text">
+                            <p>
+                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jansen tries to approximate phenomenons while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                            </p>
+                            <p>
+                              The next distinction is that there are only four biologically relevant parameters which makes this model easily adjustable to different skin types. The parameters are: oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
+                      </div>
+                    </section>
+                  </div>
+                </section>
+                <section id="reflection" class="col-lg-7 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Relfection</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF.
+                        </p>
+                        <p>
+                          $$ f_{r,TS} = \rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)} $$
+                          Here x is the point at which we are modeling, F is the Fresnel reflectance, D models the distributions of the microstructures across the stratum corneum, G is a geometry term, wi and wo are the directions of the incoming and reflected light respectively, and ps is a term which controls the oiliness of skin. O controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
+                        </p>
+                        <p>
+                          In order to estimate the average reflectance of a given point we can just integrate fr,ts over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
+                        </p>
+                      </div>
+                    </div>
+                    <img class="card-img-bottom" src="http://via.placeholder.com/600x200">
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!-- A SPECTRAL BSSRDF 1 END -->
+            <!-- A SPECTRAL BSSRDF 2 START -->
+            <section id="spectralbssrdf2" class="fullsite container-fluid">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h1 class="topic-header">A Spectral BSSRDF</h1>
+                </div>
+              </div>
+              <div class="row">
+                <section id="scatteringandabsorbtion" class="col-lg-8 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Scattering and absorption</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          As light passes through the surface of skin the model approximates the rest of the physical phenomenons using only two layers of skin. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
+                        </p>
+                        <p>
+                          Modeling the subsurface scattering and absorption can be achieved by using the multipole diffusion model.  This model approximates the general BSSRDF
+                          $$ S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
+                          =
+                          \frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} $$
+                          <center>by</center>
+                          $$
+                          S_d\left(x_i,\overrightarrow{\omega}_i;x_o, \overrightarrow{\omega}_o\right)
+                          =
+                          \frac{1}{\pi}F_t\left(x_i,\overrightarrow{\omega}_i\right)
+                          R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)
+                          $$
+                          .
+                        </p>
+                        <p>
+                          Ft terms are the Fresnel transmittance at the entry and the exit points. The R term is a diffusion dipole which is beyond the scope of this work. The interested reader can find out more about diffusion here.
+                        </p>
+                        <p>
+                          Before using this model to compute the scattering and the absorption we need two extra coefficients which describe the optical properties of the layers. Namely, the scattering and the absorption coefficients. When it comes to skin these can be easily determined by the chemical structure of the different tissues across both layers.
+                        </p>
+                      </div>
+                    </div>
+                    <img class="card-img-bottom" src="http://via.placeholder.com/600x200">
+                  </div>
+                </section>
+                <section id="texturing" class="col-lg-4 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Texturing</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                         In contrast from the previous model this model also accounts for the texture of the rendered skin. Using texture maps we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x600"> -->
+                  </div>
+                </section>
+              </div>
+            </section>
+            <!-- A SPECTRAL BSSRDF 2 END -->
           </div>
         </div>
       </div>
