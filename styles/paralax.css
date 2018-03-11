@@ -22,10 +22,6 @@ body, html {
     width: 100%;
 
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: left-center;
-    background-repeat: no-repeat;
-    background-size: cover;
     
     /* Text in parallax */
     color:white;
