@@ -4,6 +4,7 @@ section.fullsite {
 	padding-bottom: 5rem;
 	min-height: 100vh;
   overflow: auto;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -35,6 +36,10 @@ body {
   color: #153b50;  
 }
 
+.btn-bg-collapsing {
+  background-color: #153b50;
+  fill: #153b50;
+}
 
 .bg-primary a{
   color: #153b50;  
