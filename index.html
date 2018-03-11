@@ -436,10 +436,10 @@
                         </p>
                         <p>
                           $$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$
-                          (here nf is the index of refraction of fibers, nm of the medium, N is the density of the fibers, t is the thickness of the medium, theta is the angle between the ray direction and the normal direction of the particle)
+                          (here \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle)
                         </p>
                         <p>
-                          We can associate the amount of the scattering with the probability that the scattering will occur by 1 - exp(R(lambda)). Then we generate a random variable to decide whether to account for Rayleigh scattering or not. If the random variable is less than 1 - exp(R(lambda)) we calculate the azimuthal angle similarly as in the previous section. The polar angle is computed using rejection sampling with the Rayleigh phase function. Should the 1 - exp(R(lambda)) be less than our random variable we randomize both angles around the normal direction using the cosine distribution.
+                          We can associate the amount of the scattering with the probability that the scattering will occur by \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not. If the random variable is less than \(1 - \exp\left(R\left(\lambda\right)\right)\) we calculate the azimuthal angle similarly as in the previous section. The polar angle is computed using rejection sampling with the Rayleigh phase function. Should the \(1 - \exp\left(R\left(\lambda\right)\right)\) be less than our random variable we randomize both angles around the normal direction using the cosine distribution.
                         </p>
                       </div>
                     </div>
