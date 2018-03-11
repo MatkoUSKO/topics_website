@@ -50,7 +50,7 @@ function parallax() {
   var bodybotend = $(window).height() - ($('#paralax-body').offset().top - 2*$('#paralax-body').outerHeight());
 
   if (scrollPos > bodybotstart) {
-    var op = 1 - ((scrollPos - bodybotstart) / ( bodybotend - bodybotstart));
+    var op = 1 - ((scrollPos - bodybotstart) / (bodybotend - bodybotstart));
     if (op <= 0) {
       op = 0
       $('#paralax-body').css({

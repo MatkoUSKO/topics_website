@@ -82,6 +82,10 @@ body {
   overflow-y: hidden;
 }
 
+.section-text {
+  text-align: justify;
+}
+
 
 
 
