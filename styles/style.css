@@ -1,5 +1,5 @@
 section.fullsite {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #FFF5F3;
  	padding-top: 5rem;
 	padding-bottom: 5rem;
 	min-height: 100vh;
@@ -79,6 +79,10 @@ section.fullsite {
 
 .section-text {
   text-align: justify;
+}
+
+.topic-header{
+  
 }
 
 .my-flex {

@@ -5,6 +5,15 @@ body, html {
     /* Full height */
     height: 100%;
     width: 100%;
+
+    
+    /* background*/
+    /*background: linear-gradient( rgba(255, 255, 255, 1), rgba(0, 0, 0, 0) ), url("../imgs/intro3blur.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
 }
 
 /** {
