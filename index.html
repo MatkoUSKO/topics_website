@@ -803,6 +803,7 @@
                             </p>
                             <p>
                               \(S(l)\) can be defined as:
+                              $$ S(l) = d\left(\frac{l}{w}-1\right)\exp\left(-\frac{l}{w}\right) $$
                             </p>
                             <img class="card-img-bottom" src="imgs/wrinklesgraph.png">
                           </div>
@@ -895,10 +896,9 @@
                   </div>
                   <div class="col-lg-4">
                     <p>
-                      
                       There are 3 main advantages for using this technique instead of standard dipole method.
                       <ol>
-                        <li>Gaussians are separable, so they can be applied as two 1D convolutions in \(x\) and \(y\) over a surface, allowing a very fast approximation of the surface irradiance convolution (S). It is much faster to compute the convolution by sums of separable Gaussians, than to calculate convolution by a non-separable kernel \(R(r)\).</li>
+                        <li>Gaussians are separable, so they can be applied as two 1D convolutions in \(x\) and \(y\) over a surface, allowing a very fast approximation of the surface irradiance convolution \((S)\). It is much faster to compute the convolution by sums of separable Gaussians, than to calculate convolution by a non-separable kernel \(R(r)\).</li>
                         <li>Convolution by a wider Gaussian is much faster to compute from the result of a narrower Gaussian, than from the original irradiance values.</li>
                         <li>Convolution of two layers becomes very efficient once the dipole or multipole profiles are described as sums of Gaussians. The radial convolution of any two Gaussians is another Gaussian.</li>
                       </ol>
