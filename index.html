@@ -860,10 +860,62 @@
             </section>
           </div>
         </section>
-        <!-- WRINKLES 3 END -->
-      </div>
+        <!-- INTERACTIVITY END -->
+        <!-- INTERACTIVITY MODEL START -->
+        <section id="background" class="fullsite container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="card-header">Fast approximate diffusion profiles</h2>
+            <div class="card-body">
+              <div class="section-text">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <p>
+                      The key observation made in [d’Eon’s paper] is, that sums of a small number of Gaussians work very well for approximation of dipoles and multipoles. In most cases very good approximations of single layer profiles can be done using four Gaussians.
+                    </p>
+                    <p>
+                      Fitting Gaussian onto a diffusion profile \(R(r)\) is done by minimising:
+                      <div class="equation">
+                        $$ \int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr $$
+                      </div>
+                    </p>
+                    <p>
+                      Both the weights wi and variances for vi for k Gaussians are allowed to vary. Further information on calculating these constants in order to achieve an accurate approximation can be found in [d’Eon’s paper]. Using their method, d’Eon et al. managed to produce very accurate results with errors ranging from 1.52% to 0.0793% for the blue wavelength depending on the illuminated object itself.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <img class="card-img" src="imgs/reflectancediagram.png">
+                    <p>
+                      This graph shows a comparison between two and four Gaussians used to approximate the dipole profile for the green wavelength of marble. Using four Gaussians they only got an error of 1.25%, which is small enough to make renders using dipoles versus renders using the sum of four Gaussians indistinguishable. These errors could also be reduced to 0.093% using eight Gaussians.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <p>
+                      
+                      There are 3 main advantages for using this technique instead of standard dipole method.
+                      <ol>
+                        <li>Gaussians are separable, so they can be applied as two 1D convolutions in \(x\) and \(y\) over a surface, allowing a very fast approximation of the surface irradiance convolution (S). It is much faster to compute the convolution by sums of separable Gaussians, than to calculate convolution by a non-separable kernel \(R(r)\).</li>
+                        <li>Convolution by a wider Gaussian is much faster to compute from the result of a narrower Gaussian, than from the original irradiance values.</li>
+                        <li>Convolution of two layers becomes very efficient once the dipole or multipole profiles are described as sums of Gaussians. The radial convolution of any two Gaussians is another Gaussian.</li>
+                      </ol>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- INTERACTIVITY MODEL END -->
     </div>
   </div>
+</div>
 </div>
 </body>
 </html>
