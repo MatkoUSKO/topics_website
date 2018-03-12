@@ -14,13 +14,14 @@
     
 }
 #sidebar {
-  height: 100vh;
+  height: 94vh;
   position:absolute;
   left:0;
   width:17rem;
-  height:100vh;
   margin: 0;
   padding: 0;
+  padding-bottom: 200px;
+  overflow-x: scroll;
 }
 
 #sidebar nav{
