@@ -61,6 +61,9 @@ body, html {
 
 /* Make it bigger */
 @media only screen and (max-width: 992px) {
+    .parallax {
+        background-attachment: scroll;
+    }
 
     .parallax h1 {
         font-size:6vw;
