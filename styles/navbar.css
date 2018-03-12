@@ -77,6 +77,8 @@
 }
 
 @media (max-width: 992px) {
-  .bg-image: rgba(255, 161, 83, 1);
+  .bg-image{
+    background: rgba(255, 161, 83, 1);
+  }
 }
 
