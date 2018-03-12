@@ -87,12 +87,7 @@
               <li>
                 <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse1">Introduction to Rendering</button>
                 <ul id="collapse1" class="collapse">
-                  <li><a href="#rasterisation" class="btn btn-block sidebar-btn2">Rasterisation</a></li>
-                  <li><a href="#raycasting" class="btn btn-block sidebar-btn2">Ray Casting</a></li>
-                  <li><a href="#raytracing" class="btn btn-block sidebar-btn2">Ray Tracing</a></li>
-                  <li><a href="#radiosity" class="btn btn-block sidebar-btn2">Radiosity</a></li>
                   <li><a href="#texturemapping" class="btn btn-block sidebar-btn2">Texture Mapping</a></li>
-                  <li><a href="#subsurfacescattering" class="btn btn-block sidebar-btn2">Subsurface Scattering</a></li>
                 </ul>
               </li>
               <li>
@@ -145,82 +140,111 @@
         <!-- CONTENT -->
         <div id="content">
           <div class="movedown">
-            <!-- INTRO -->
-            <section id="intro" class="fullsite container-fluid">
+            <!-- TEXTURE MAPPING START -->
+            <section id="texturemapping" class="fullsite container-fluid">
               <div class="row">
-                <div class="col-sm-12">
-                  <h1 class="topic-header">Introduction to Rendering</h1>
+                <div class="col-md-12">
+                  <h1>Texture Mapping</h1>
                 </div>
               </div>
               <div class="row">
-                <section id="rasterisation" class="col-sm-4">
-                  <h2 class="section-header">Rasterisation</h2>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-                    
-                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-                    
-                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-                    
-                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
+                <section id="whatistexturemapping" class="col-sm-5 d-flex align-items-strech">
+                  <!-- Miso povie aby som to robil rucne, because reasons -->
+                  <div class="card">
+                    <h2 class="card-header">What is Texture Mapping</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          Even if it does not seem like it, skin is very complex and every little detail of human skin affects the final look of the skin. If we want to create realistic computer-generated pictures of skin we have to take all the little complexities into consideration.
+                        </p>
+                        <p>
+                          Unlike many other materials, the skin consists of many different layers and each has its own function and behaviour. Skin appearance depends also on thickness. While skin can be very thin on eyelids or knuckles, the skin on the lips or belly can be thicker with also possibility of fat underneath the surface. Skin can also vary in colour due to different race, age, gender, physical wear or daily exposure to the sun.
+                        </p>
+                        <p>
+                          The geometry of the skin also plays a great role in realistic representation. The skin has many small natural pores, wrinkles and hairs. The little skin imperfections like freckles and moles are also part of the natural looking human skin.
+                          All these factors have to be taken into consideration while we intend to recreate believable human skin.
+                        </p>
+                      </div>
+                    </div>
+                    <img class="card-img-bottom" src="imgs/mapsdiagram.jpg">
+                  </div>
                 </section>
-                <section id="raycasting" class="col-sm-4">
-                  <h2 class="section-header">Ray Casting</h2>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-                    
-                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-                    
-                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-                    
-                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-                </section>
-                <section id="raytracing" class="col-sm-4">
-                  <h2 class="section-header">Ray Tracing</h2>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-                    
-                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-                    
-                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-                    
-                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-                </section>
+                <div class="col-sm-7">
+                  <div class="row">
+                    <section id="bumpmaps" class="d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">Bump Maps</h2>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="section-text col-sm-6">
+                              <p>
+                                Bump maps are textures special type of heightmap. They are greyscaled textures describing a difference in height of points the texture is applied to. Grey colour means ‘no change’, while black means ‘down’ and white means ‘up’. This way designers are able to tell the computer to generate a fake mesh.
+                              </p>
+                              <p>
+                                One of the usages of using the bump maps is generating pores or small wrinkles of skin.
+                                Bump maps do not contain any information about reflection angles at all.
+                              </p>
+                            </div>
+                            <div class="col-sm-6">
+                              <img class="card-img" src="imgs/bumpmap.jpg">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="row">
+                    <section id="displacementmaps" class="d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">Displacement Maps</h2>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="section-text col-sm-6">
+                              <p>
+                                Displacement maps are similar to bump maps. Both of them are height maps and whereas bump maps are creating fake ‘bumps’, displacement maps are actually changing the shape of mesh and pulling and pushing the vertices of the model upwards and downwards.
+                              </p>
+                              <p>
+                                One of the most typical use of displacement maps is generating the terrain from the texture.
+                              </p>
+                            </div>
+                            <div class="col-sm-6">
+                              <img class="card-img" src="imgs/displacementmap.jpg">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="row">
+                    <section id="normalmaps" class="d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">Normal Maps</h2>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="section-text col-sm-6">
+                              <p>
+                                Normal maps contain RGB information describing the angle information of every point mapped by this texture.          
+                              </p>
+                              <p>
+                               The angle of every point of the texture can be described by its position (done by the model itself) and vector of its normal. RGB value can describe every component of a vector in 3-dimensional space, therefore is enough to describe the angle and steepness of all parts of the model.
+                              </p>
+                              <p>
+                                This can be utilised to smooth the edges of the model and make all the models look natural.
+                              </p>
+                            </div>
+                            <div class="col-sm-6">
+                              <img class="card-img" src="imgs/normalmap.jpg">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
               </div>
-              
-              <!-- INTRO cont. -->
             </section>
-            <section id="intro2" class="fullsite container-fluid">
-              <div class="row">
-                <section id="radiosity" class="col-sm-4">
-                  <h2 class="section-header">Radiosity</h2>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-                    
-                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-                    
-                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-                    
-                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-                </section>
-                <section id="texturemapping" class="col-sm-4">
-                  <h2 class="section-header">Texture Mapping</h2>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-                    
-                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-                    
-                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-                    
-                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-                </section>
-                <section id="subsurfacescattering" class="col-sm-4">
-                  <h2 class="section-header">Subsurface Scattering</h2>
-                  <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor sed enim placerat viverra. Proin sollicitudin aliquam sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nibh dolor, luctus vitae bibendum id, bibendum nec sem. Praesent eu mauris vestibulum, vestibulum mi ac, mollis ipsum. Nullam egestas sagittis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis laoreet lectus eu pharetra. Vestibulum euismod urna aliquam aliquet efficitur. Maecenas ultrices velit dui, ut maximus ipsum vehicula non.
-                    
-                    Nulla dictum, dui nec congue placerat, augue neque dictum ante, at laoreet neque nisi eu ipsum. Morbi cursus scelerisque sem, eget dictum risus fermentum at. Aenean dictum eros eget rutrum vestibulum. Curabitur interdum libero sit amet vestibulum venenatis. Sed ornare eget massa quis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas id lectus euismod, euismod augue vel, vehicula diam. Aenean quis condimentum diam.
-                    
-                    Nulla eu maximus dolor. Morbi bibendum, metus et imperdiet molestie, lorem erat consectetur quam, nec consectetur ex felis vitae leo. Aliquam tristique lorem eu nisl ornare, in laoreet justo imperdiet. Curabitur sed arcu convallis, laoreet magna at, luctus neque. Suspendisse potenti. Suspendisse tempor leo a sodales iaculis. Curabitur sapien nulla, aliquet id vestibulum ut, imperdiet nec sem.
-                    
-                  Integer tempor commodo libero a euismod. Mauris eget convallis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec aliquet scelerisque tortor, a ornare ante dignissim in. Cras auctor vestibulum elit, ac porta metus malesuada a. Morbi magna lorem, congue sed ultricies ac, maximus sed tellus. Nunc a dapibus enim, eget ornare quam. Nullam a massa eu metus luctus lobortis et eget tortor.</p>
-                </section>
-              </div>
-            </section>
+            <!-- TEXTURE MAPPING END -->
+            
             <!-- CHALLENGES 1 START-->
             <section id="challenges1" class="fullsite container-fluid">
               <div class="row">
@@ -612,12 +636,12 @@
                           Modeling the subsurface scattering and absorption can be achieved by using the multipole diffusion model.  This model approximates the general BSSRDF
                           <div class="equation">\(S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
                             =\)
-                            \(\frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} \)</div>
+                          \(\frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} \)</div>
                           <center>by</center>
                           <div class="equation">\(S_d\left(x_i,\overrightarrow{\omega}_i;x_o, \overrightarrow{\omega}_o\right)
                             =\)
                             \(\frac{1}{\pi}F_t\left(x_i,\overrightarrow{\omega}_i\right)
-                            R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)\)</div>
+                          R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)\)</div>
                         </p>
                         <p>
                           Ft terms are the Fresnel transmittance at the entry and the exit points. The R term is a diffusion dipole which is beyond the scope of this work. The interested reader can find out more about diffusion here.
@@ -775,26 +799,26 @@
                           <div class="col-lg-6">
                             <p>
                               Where d is the depth and w is the width of the wrinkle. This definition of \(S(l)\) has several advantages. Firstly, it is controlled by very intuitive parameters. Secondly, it models the fact the skin bulks around the edges of the wrinkle. Finally, notice that:
-                              <div class="equation"> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </div class="equation">
-                            </p>
-                            <p>
-                              This property ensures the preservation of the skin volume.
-                            </p>
-                            <img class="card-img-bottom" src="http://via.placeholder.com/400x300">
-                          </div>
+                            <div class="equation"> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </div class="equation">
+                          </p>
+                          <p>
+                            This property ensures the preservation of the skin volume.
+                          </p>
+                          <img class="card-img-bottom" src="http://via.placeholder.com/400x300">
                         </div>
                       </div>
                     </div>
-                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
                   </div>
-                </section>
-              </div>
-            </section>
-            <!-- WRINKLES 3 END -->
-          </div>
+                  <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+                </div>
+              </section>
+            </div>
+          </section>
+          <!-- WRINKLES 3 END -->
         </div>
       </div>
     </div>
-    
-  </body>
+  </div>
+  
+</body>
 </html>
