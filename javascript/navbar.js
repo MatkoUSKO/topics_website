@@ -1,12 +1,13 @@
 $(document).on('click', '#toggleSidebar', function(){
-  $("#sidebar").toggleClass("sidebar-collapsed");
-  if (!$("#sidebar").hasClass("sidebar-collapsed")) {
+  if ($("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
       'margin-left': $('#sidebar').width()
     });
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
     });
+    
+    setTimeout(function() {$("#sidebar").removeClass("sidebar-collapsed");}, 300);
   } else {
     $("#content").css({
       'margin-left': 0
@@ -14,7 +15,9 @@ $(document).on('click', '#toggleSidebar', function(){
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
     });
+    $("#sidebar").addClass("sidebar-collapsed");
   }
+  
   return false;
 })
 
