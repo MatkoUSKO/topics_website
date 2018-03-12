@@ -133,6 +133,13 @@
                   <li><a href="#largescalewrinkles" class="btn btn-block sidebar-btn2">Large-scale wrinkles</a></li>
                 </ul>
               </li>
+              <li>
+                <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse6">Interactive Rendering</button>
+                <ul id="collapse6" class="collapse">
+                  <li><a href="#maximisingrealism" class="btn btn-block sidebar-btn2">Interactive Rendering</a></li>
+                  <li><a href="#background" class="btn btn-block sidebar-btn2">Background</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -818,10 +825,45 @@
             </div>
           </section>
           <!-- WRINKLES 3 END -->
-        </div>
+          <!-- INTERACTIVITY START -->
+          <section id="maximisingrealism" class="fullsite container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
+              </div>
+            </div>
+            <div class="card">
+              <h2 class="card-header">Introduction</h2>
+              <div class="card-body">
+                <div class="section-text">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <p>
+                        Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost.Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
+                      </p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p>
+                        Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface.This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
+                      </p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p>
+                        In their paper, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the multipole technique designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the diffusion of profiles of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <img class="card-img-bottom" src="imgs/faces2.png">
+                <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- WRINKLES 3 END -->
       </div>
     </div>
   </div>
-  
+</div>
 </body>
 </html>
