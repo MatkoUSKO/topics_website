@@ -223,10 +223,10 @@
                           <div class="row">
                             <div class="section-text col-sm-6">
                               <p>
-                                Normal maps contain RGB information describing the angle information of every point mapped by this texture.          
+                                Normal maps contain RGB information describing the angle information of every point mapped by this texture.
                               </p>
                               <p>
-                               The angle of every point of the texture can be described by its position (done by the model itself) and vector of its normal. RGB value can describe every component of a vector in 3-dimensional space, therefore is enough to describe the angle and steepness of all parts of the model.
+                                The angle of every point of the texture can be described by its position (done by the model itself) and vector of its normal. RGB value can describe every component of a vector in 3-dimensional space, therefore is enough to describe the angle and steepness of all parts of the model.
                               </p>
                               <p>
                                 This can be utilised to smooth the edges of the model and make all the models look natural.
@@ -495,14 +495,14 @@
                           This method is promised to be more accurate than the use of data-fitting. Note that most of the scattering happening in these layers is Mie scattering due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
                         </p>
                         <p>
-                          In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of scattering that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium. 
+                          In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of scattering that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
                         </p>
                         <p>
                           <div class="equation">$$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$</div>
                           \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle.
                         </p>
                         <p>
-                          We can associate the amount of the scattering with the probability that the scattering will occur by  \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not. 
+                          We can associate the amount of the scattering with the probability that the scattering will occur by  \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not.
                         </p>
                       </div>
                     </div>
@@ -579,7 +579,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jansen tries to approximate phenomenon while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers. 
+                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jansen tries to approximate phenomenon while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
                             </p>
                             <p>
                               The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
@@ -633,7 +633,7 @@
                           As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers of skin. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
                         </p>
                         <p>
-                          Modelling the subsurface scattering and absorption can be achieved by using the multipole diffusion model as mentioned in the introduction. This model approximates the general BSSRDF 
+                          Modelling the subsurface scattering and absorption can be achieved by using the multipole diffusion model as mentioned in the introduction. This model approximates the general BSSRDF
                           <div class="equation">\(S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
                             =\)
                           \(\frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} \)</div>
@@ -697,7 +697,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The model distinguishes between two types of wrinkles. Fine-scale wrinkles, and large-scale wrinkles. Fine-scale wrinkles cover the whole body and are much harder to spot by eye than large-scale wrinkles, which are usually associated with a certain body part such as the forehead. 
+                          The model distinguishes between two types of wrinkles. Fine-scale wrinkles, and large-scale wrinkles. Fine-scale wrinkles cover the whole body and are much harder to spot by eye than large-scale wrinkles, which are usually associated with a certain body part such as the forehead.
                         </p>
                         <p>
                           When it comes to fine-scale wrinkles the interesting properties they share are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning large-scale wrinkles perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrunk around large-scale wrinkles. We will take this into consideration when modelling the shape of large-scale wrinkles.
@@ -739,7 +739,7 @@
                         <div class="row">
                           <div class="col-lg-6">
                             <p>
-                              The key of modelling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the triangle mesh. 
+                              The key of modelling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the triangle mesh.
                             </p>
                             <p>
                               Carving the wrinkles happens by carving the furrows along the direction vectors. The output of the model is a height image which represents the depth of the carved wrinkles. This can be represented as a grayscale image which is initialized to white, and each wrinkle makes its positions more grey. The model does not allow wrinkle generation from points that already contain wrinkles. This is achieved by an occupancy image which is always updated throughout the wrinkle generation algorithm. Each position is either 0 or 1 so this way we do not start a wrinkle from a position already wrinkled.
@@ -747,7 +747,7 @@
                             <p>
                               Before examining the actual algorithm that generates the wrinkles we need to introduce six new attributes of fine-scale wrinkles. These are the perturbation angle, the length of the furrow segment, the depth of the furrow, the width of the furrow, and the distance between adjacent furrows. The intuition behind these parameters is that they are controlled by the magnitude of the vector field in the given area. Should the magnitude be large, the wrinkles become more oriented, longer, deeper, wider, and the distance between them increases. The exact opposite happens for smaller magnitudes.
                             </p>
-                            <img class="card-img-bottom" src="imgs/wrinklyhands.png">
+                            
                           </div>
                           <div class="col-lg-6">
                             <p>
@@ -769,9 +769,8 @@
                           </div>
                         </div>
                       </div>
-                      <img class="card-img-bottom" src="http://via.placeholder.com/400x80">
                     </div>
-                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+                    <img class="card-img-bottom" src="imgs/wrinklyhands.png">
                   </div>
                 </section>
               </div>
