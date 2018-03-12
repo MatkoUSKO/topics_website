@@ -376,10 +376,10 @@
                         <div class="col-md-12">
                           <div class="section-text">
                             <p>
-                              In the introduction we could see the wide scope of problems associated with rendering realistic human skin. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
+                              In the introduction, we could see the wide scope of problems associated with rendering realistic human skin. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
                             </p>
                             <p>
-                              In this section we will discover some of the novel approaches of rendering realistic human skin. Namely, we will take a closer look at a biophysically based spectral model proposed by Aravind Krishnaswamy and Gladimir V. G. Baranoski which heavily relies on stochastic modelling. We will examine Craig Donner’s and Henrik Wann Jensen’s spectral BSSRDF which introduces various improvements by highly effective approximations. Following these two models we will also take a peek at how to model wrinkles using a simple method for modeling wrinkles on human skin designed by Y. Bando, T. Kuratate, and T. Nishita.
+                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a biophysically-based spectral model proposed by Aravind Krishnaswamy and Gladimir V. G. Baranoski which heavily relies on stochastic modelling. We will examine Craig Donner’s and Henrik Wann Jensen’s spectral BSSRDF which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model wrinkles using a simple method for modelling wrinkles on human skin designed by Y. Bando, T. Kuratate, and T. Nishita.
                             </p>
                           </div>
                         </div>
@@ -413,7 +413,7 @@
                           The BioSpec model was developed by Aravind Krishnaswamy and Gladimir V. G. Baranoski as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
                         </p>
                         <p>
-                          Perhaps the main feature of this model is that it is modelled by a random walk process of the light rays that travel across the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the next section.
+                          Perhaps the main feature of this model is that it is modelled by a random walk process of the light rays that travel through the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the next section.
                         </p>
                       </div>
                     </div>
@@ -426,7 +426,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model uses Monte Carlo ray tracing to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in it’s random walk
+                          The BioSpec model uses ray tracing to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk; these are:
                         </p>
                         <p>
                           These are:
@@ -442,7 +442,7 @@
                           Notice, that these transition interfaces are the same as the ones real light travels through when interacting with human skin. By separating the interfaces the BioSpec model is able to more accurately alter the behaviour of the light rays as it can assign different biological coefficients to interfaces. This raises the accuracy, but also the complexity of the model.
                         </p>
                         <p>
-                          In each of the layers a given ray can be reflected and transmitted, scattered, or absorbed. Now, we will deeper investigate how this is achieved in the model.
+                          In each of the layers, a given ray can be reflected and transmitted, scattered, or absorbed. Now, we will deeper investigate how this is achieved in the model.
                         </p>
                       </div>
                     </div>
@@ -467,7 +467,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on Fresnel equations. These equations describe the behaviour of light when moving between media of differing refractive indices. The Fresnel’s coefficients can be computed by considering the angle of incidence and transmittance of the ray as well as the refractive indices of both tissues. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the law of reflection. Otherwise we generate a refracted ray using Snell’s law.
+                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on Fresnel equations. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the law of reflection. Otherwise we generate a refracted ray using Snell’s law.
                         </p>
                         <p>
                           When considering the reflected light we also have to account for the folds present in the stratum corneum. These can be conveniently represented as ellipsoids where the shape and size of the ellipsoid is governed by random variables. Therefore, we do not reflect from the stratum corneum as if it was perfectly flat but we reflect from a randomly curved ellipsoid instead.
@@ -489,20 +489,20 @@
                           The BioSpec model differentiates between scattering in the layers until and including epidermis and after epidermis.
                         </p>
                         <p>
-                          Scattering in the stratum corneum and epidermis involves perturbation of the ray in both the polar and the azimuthal angles. When it comes to the azimuthal angle the scattering is symmetric; therefore it suffices to generate a random angle \(2\pi*\xi\). The polar angle is acquired by a randomized table lookup. Burn and Leun[odkazat sa] have performed measurements in these layers using which we can construct the table. For each wavelength we store the measured fractions of scattered light as indices and their corresponding angle. Generating a random variable, scaling it to the size of the table, and using its integer part we can now acquire the necessary angle.
+                          Scattering in the stratum corneum and epidermis involves perturbation of the ray in both the polar and the azimuthal angles. When it comes to the azimuthal angle the scattering is symmetric; therefore it suffices to generate a random angle \(2\pi*\xi\). The polar angle is acquired by a randomized table lookup. Burn and Leun[odkazat sa] have performed measurements in these layers using which we can construct the table. For each wavelength, we store the measured fractions of scattered light as indices and their corresponding angle. Generating a random variable, scaling it to the size of the table, and using its integer part we can now acquire the necessary angle.
                         </p>
                         <p>
                           This method is promised to be more accurate than the use of data-fitting. Note that most of the scattering happening in these layers is Mie scattering due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
                         </p>
                         <p>
-                          In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of scattering that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
+                          In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of scattering that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium. 
                         </p>
                         <p>
                           <div class="equation">$$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$</div>
-                          (here \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle)
+                          \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle.
                         </p>
                         <p>
-                          We can associate the amount of the scattering with the probability that the scattering will occur by \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not. If the random variable is less than \(1 - \exp\left(R\left(\lambda\right)\right)\) we calculate the azimuthal angle similarly as in the previous section. The polar angle is computed using rejection sampling with the Rayleigh phase function. Should the \(1 - \exp\left(R\left(\lambda\right)\right)\) be less than our random variable we randomize both angles around the normal direction using the cosine distribution.
+                          We can associate the amount of the scattering with the probability that the scattering will occur by  \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not. 
                         </p>
                       </div>
                     </div>
@@ -527,7 +527,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          After the ray is scattered it is tested of for absorption. This is achieved by estimating the ray free path length of the tissue and comparing it to the actual thickness of the medium. If it is shorter than the thickness the ray is absorbed, otherwise it gets propagated to the next layer. Note that the last layer, hypodermis, is considered to be highly reflective, therefore the rays get reflected rather than absorbed in the final layer.
+                          After the ray is scattered it is tested for absorption. This is achieved by estimating the ray free path length of the tissue and comparing it to the actual thickness of the medium. If it is shorter than the thickness the ray is absorbed, otherwise it gets propagated to the next layer. Note that the last layer, hypodermis, is considered to be highly reflective, therefore the rays get reflected rather than absorbed in the final layer.
                         </p>
                       </div>
                     </div>
@@ -540,7 +540,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Our explanation so far has efficiently hidden all the biological indexes the model needs; however, in reality it requires almost two dozen in order to accurately describe the aforementioned phenomenons. As there is a large amount of different types of skin it makes the BioSpec model inflexible. In the following section we will look at a model which addresses these issues.
+                          Our explanation so far has efficiently hidden all the biological indexes the model needs; however, in reality, it requires almost two dozen in order to accurately describe the aforementioned phenomenon. As there is a large number of different types of skin it makes the BioSpec model inflexible. In the following section, we will look at a model which addresses these issues.
                         </p>
                       </div>
                     </div>
@@ -566,7 +566,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function, and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenons such as scattering, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner, and Jansen can be conveniently described as a BSSRDF.
+                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as scattering, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner and Jansen can be conveniently described as a BSSRDF.
                             </p>
                           </div>
                         </div>
@@ -579,10 +579,10 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jansen tries to approximate phenomenons while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jansen tries to approximate phenomenon while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers. 
                             </p>
                             <p>
-                              The next distinction is that there are only four biologically relevant parameters which makes this model easily adjustable to different skin types. The parameters are: oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
+                              The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
                             </p>
                           </div>
                         </div>
@@ -603,10 +603,10 @@
                           <div class="equation col-12">
                             \(f_{r,TS} =\) \(\rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)}\)
                           </div>
-                          Here x is the point at which we are modeling, F is the Fresnel reflectance, D models the distributions of the microstructures across the stratum corneum, G is a geometry term, wi and wo are the directions of the incoming and reflected light respectively, and ps is a term which controls the oiliness of skin. O controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
+                          Here \(x\) is the point at which we are modeling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
                         </p>
                         <p>
-                          In order to estimate the average reflectance of a given point we can just integrate fr,ts over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
+                          In order to estimate the average reflectance of a given point, we integrate \(f_{r,TS}\) over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
                         </p>
                       </div>
                     </div>
@@ -630,10 +630,10 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          As light passes through the surface of skin the model approximates the rest of the physical phenomenons using only two layers of skin. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
+                          As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers of skin. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
                         </p>
                         <p>
-                          Modeling the subsurface scattering and absorption can be achieved by using the multipole diffusion model.  This model approximates the general BSSRDF
+                          Modelling the subsurface scattering and absorption can be achieved by using the multipole diffusion model as mentioned in the introduction. This model approximates the general BSSRDF 
                           <div class="equation">\(S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
                             =\)
                           \(\frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} \)</div>
@@ -644,10 +644,10 @@
                           R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)\)</div>
                         </p>
                         <p>
-                          Ft terms are the Fresnel transmittance at the entry and the exit points. The R term is a diffusion dipole which is beyond the scope of this work. The interested reader can find out more about diffusion here.
+                          \(F_t\) terms are the Fresnel transmittance at the entry and the exit points. The \(R\) term is a diffusion dipole which is beyond the scope of this work. The interested reader can find out more about diffusion in <a href="https://www.sciencedirect.com/science/book/9780123747013">this book</a>.
                         </p>
                         <p>
-                          Before using this model to compute the scattering and the absorption we need two extra coefficients which describe the optical properties of the layers. Namely, the scattering and the absorption coefficients. When it comes to skin these can be easily determined by the chemical structure of the different tissues across both layers.
+                          Before using this model to compute the scattering and the absorption we need two extra coefficients which describe the optical properties of layers. Namely, the scattering and the absorption coefficients. When it comes to skin these can be easily determined by the chemical structure of the different tissues across both layers.
                         </p>
                       </div>
                     </div>
@@ -660,7 +660,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          In contrast from the previous model this model also accounts for the texture of the rendered skin. Using texture maps we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin.
+                          In contrast from the previous model this model also accounts for the texture of the rendered skin. Using texture maps we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem, the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin given by the model.
                         </p>
                       </div>
                     </div>
@@ -684,7 +684,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by Donner and Jansen was able to add texture by using texture maps, we would like to investigate how to generate these in a more dynamic manner. A paper called “A simple method for modeling wrinkles on human skin” by Y. Bando, T. Kuratate, and T. Nishita introduces a way of achieving this and thus we shall investigate it in this section.
+                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by Donner and Jansen was able to add texture by using texture maps, we would like to investigate how to generate these in a more dynamic manner. A paper called “A simple method for modelling wrinkles on human skin” by Y. Bando, T. Kuratate, and T. Nishita introduces a way of achieving this and thus we shall investigate it in this section.
                         </p>
                       </div>
                     </div>
@@ -697,7 +697,10 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The model distinguishes between two types of wrinkles. Fine-scale wrinkles, and large-scale wrinkles. Fine-scale wrinkles cover the whole body and are much harder to spot by eye than large-scale wrinkles which are usually associated with a certain body part such as the forehead. Both of the wrinkle types share a few features. When it comes to fine-scale wrinkles the interesting properties are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning large-scale wrinkles perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrinked around large-scale wrinkles. We will take this into consideration when modelling the shape of large-scale wrinkles.
+                          The model distinguishes between two types of wrinkles. Fine-scale wrinkles, and large-scale wrinkles. Fine-scale wrinkles cover the whole body and are much harder to spot by eye than large-scale wrinkles, which are usually associated with a certain body part such as the forehead. 
+                        </p>
+                        <p>
+                          When it comes to fine-scale wrinkles the interesting properties they share are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning large-scale wrinkles perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrunk around large-scale wrinkles. We will take this into consideration when modelling the shape of large-scale wrinkles.
                         </p>
                       </div>
                     </div>
@@ -710,7 +713,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          This model uses a triangle mesh to represent a particular body part. Wrinkles are then modeled on top of this mesh. In order to acquire the mesh we scan the particular body part and then we project it into 2D.
+                          This model uses a triangle mesh to represent a particular body part. Wrinkles are then modeled on top of this mesh. In order to acquire the mesh, we scan the particular body part and then we project it into 2D.
                         </p>
                       </div>
                     </div>
@@ -736,10 +739,10 @@
                         <div class="row">
                           <div class="col-lg-6">
                             <p>
-                              The key of modeling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the triangle mesh.
+                              The key of modelling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the triangle mesh. 
                             </p>
                             <p>
-                              Carving the wrinkles happens by carving the furrows along the direction vectors. The output of the model is a height image which represents the depth of the carved wrinkles. This can be represented as a grayscale image which is initialized to white, and each wrinkle makes its positions more gray. The model does not allow wrinkle generation from points that already contain wrinkles. This is achieved by an occupancy image which is always updated throughout the wrinkle generation algorithm. Each position is either 0 or 1 so this way we do not start a wrinkle from a position already wrinkled.
+                              Carving the wrinkles happens by carving the furrows along the direction vectors. The output of the model is a height image which represents the depth of the carved wrinkles. This can be represented as a grayscale image which is initialized to white, and each wrinkle makes its positions more grey. The model does not allow wrinkle generation from points that already contain wrinkles. This is achieved by an occupancy image which is always updated throughout the wrinkle generation algorithm. Each position is either 0 or 1 so this way we do not start a wrinkle from a position already wrinkled.
                             </p>
                             <p>
                               Before examining the actual algorithm that generates the wrinkles we need to introduce six new attributes of fine-scale wrinkles. These are the perturbation angle, the length of the furrow segment, the depth of the furrow, the width of the furrow, and the distance between adjacent furrows. The intuition behind these parameters is that they are controlled by the magnitude of the vector field in the given area. Should the magnitude be large, the wrinkles become more oriented, longer, deeper, wider, and the distance between them increases. The exact opposite happens for smaller magnitudes.
@@ -751,7 +754,7 @@
                               <b>Now let’s look at the actual algorithm.</b>
                               <ol>
                                 <li>If possible pick a starting point P. Compute the number of furrow segments n needed for the furrow, and the direction d of the furrow by interpolating the direction vectors of the vertices of the triangle P lies in.</li>
-                                <li>Iterating over <b>n</b> do the following steps:</li>
+                                <li>Iterating over n< do the following steps:</li>
                                 <li>Add the perturbation angle to the direction.</li>
                                 <li>Let Q be the end point of the given segment. If PQ intersects some other furrow, then set Q to be the intersection point and n to 0. This follows the property of fine wrinkles which states that either furrow has to end at the intersection.</li>
                                 <li>Draw a line on the grayscale image representing PQ with its depth and width obtained from the magnitude of the vector field.</li>
@@ -760,7 +763,7 @@
                               </ol>
                             </p>
                             <p>
-                              This algorithm is performed by randomly picking starting points P until a lot of furrows fail to generate. This happens when picking a starting point becomes probabilistically hard due to the occupancy image. After we fail to generate furrows we perform the algorithm for all the points that have a 0 value in the occupancy image. In other words, they are not wrinkled yet.
+                              This algorithm is performed by randomly picking starting points P until a lot of furrows fail to generate. This happens when picking a starting point becomes probabilistically hard due to the occupancy image.
                             </p>
                             <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x200"> -->
                           </div>
@@ -789,7 +792,7 @@
                         <div class="row">
                           <div class="col-lg-6">
                             <p>
-                              Modeling large scale wrinkles is much more challenging from the perspective that they can be quite distinct depending not only on the area of the skin, but also on the given person. For this reason the model can not create them in bulks, but we have to assign and generate them one by one. We can achieve this by drawing cubic Bezier curves on the surface of the skin. Then, the model creates a cross sectional wrinkle shape function \(S(l)\). Here \(l\) is the perpendicular distance from the Bezier curve.
+                              Modelling large-scale wrinkles is much more challenging from the perspective that they can be quite distinct depending not only on the area of the skin but also on the given person. For this reason, the model cannot create them in bulks, but it has to assign and generate them one by one. We can achieve this by drawing cubic Bezier curves on the surface of the skin. Then, the model creates a cross-sectional wrinkle shape function \(S(l)\). Here \(l\) is the perpendicular distance from the Bezier curve.
                             </p>
                             <p>
                               \(S(l)\) can be defined as:
@@ -798,7 +801,7 @@
                           </div>
                           <div class="col-lg-6">
                             <p>
-                              Where d is the depth and w is the width of the wrinkle. This definition of \(S(l)\) has several advantages. Firstly, it is controlled by very intuitive parameters. Secondly, it models the fact the skin bulks around the edges of the wrinkle. Finally, notice that:
+                              Where \(d\) is the depth and \(w\) is the width of the wrinkle. This definition of \(S(l)\) has several advantages. Firstly, it is controlled by very intuitive parameters. Secondly, it models the fact the skin bulks around the edges of the wrinkle. Finally, notice that:
                             <div class="equation"> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </div class="equation">
                           </p>
                           <p>
