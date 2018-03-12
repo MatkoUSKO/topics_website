@@ -76,3 +76,7 @@
   color:#FFF5F3;
 }
 
+@media (max-width: 992px) {
+  .bg-image: rgba(255, 161, 83, 1);
+}
+
