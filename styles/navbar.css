@@ -66,3 +66,13 @@
   color: #FFF5F3;
 }
 
+.bg-image {
+  background: url("../imgs/intro3blur.jpg");
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:#FFF5F3;
+}
+

@@ -1,5 +1,8 @@
 .transulcent-card {
-	background: rgba(0,0,0,0.5);
+	background: rgba(1,1,1,0.4);
+	border-width: 2px;
+	border-color: rgba(0,0,0,1);
+	
 }
 
 .transulcent-card .card-img-top {
@@ -12,6 +15,11 @@
 	opacity:1;
 }
 
-.transulcent-card h3 {
+.transulcent-card h2 {
+	font-size:30px;
 	color: #FFF5F3;
+}
+
+#intropagetitle {
+	color: #FFF5F3;	
 }
