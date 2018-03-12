@@ -91,6 +91,13 @@ section.fullsite {
   flex-direction: column;
 }
 
+
+@media (max-width: 750px){
+  .equation{
+    font-size: 2vw;
+  }
+}
+
 .margin-top-sm-30, .margin-top-md-30, .margin-top-lg-30, .margin-top-xl-30 {
   margin-top: 30vh;
 }

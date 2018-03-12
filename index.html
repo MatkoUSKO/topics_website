@@ -474,7 +474,7 @@
                           In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of scattering that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
                         </p>
                         <p>
-                          $$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$
+                          <div class="equation">$$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$</div>
                           (here \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle)
                         </p>
                         <p>
@@ -576,7 +576,9 @@
                           Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF.
                         </p>
                         <p>
-                          $$ f_{r,TS} = \rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)} $$
+                          <div class="equation col-12">
+                            \(f_{r,TS} =\) \(\rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)}\)
+                          </div>
                           Here x is the point at which we are modeling, F is the Fresnel reflectance, D models the distributions of the microstructures across the stratum corneum, G is a geometry term, wi and wo are the directions of the incoming and reflected light respectively, and ps is a term which controls the oiliness of skin. O controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
                         </p>
                         <p>
@@ -608,16 +610,14 @@
                         </p>
                         <p>
                           Modeling the subsurface scattering and absorption can be achieved by using the multipole diffusion model.  This model approximates the general BSSRDF
-                          $$ S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
-                          =
-                          \frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} $$
+                          <div class="equation">\(S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
+                            =\)
+                            \(\frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} \)</div>
                           <center>by</center>
-                          $$
-                          S_d\left(x_i,\overrightarrow{\omega}_i;x_o, \overrightarrow{\omega}_o\right)
-                          =
-                          \frac{1}{\pi}F_t\left(x_i,\overrightarrow{\omega}_i\right)
-                          R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)
-                          $$
+                          <div class="equation">\(S_d\left(x_i,\overrightarrow{\omega}_i;x_o, \overrightarrow{\omega}_o\right)
+                            =\)
+                            \(\frac{1}{\pi}F_t\left(x_i,\overrightarrow{\omega}_i\right)
+                            R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)\)</div>
                         </p>
                         <p>
                           Ft terms are the Fresnel transmittance at the entry and the exit points. The R term is a diffusion dipole which is beyond the scope of this work. The interested reader can find out more about diffusion here.
@@ -775,7 +775,7 @@
                           <div class="col-lg-6">
                             <p>
                               Where d is the depth and w is the width of the wrinkle. This definition of \(S(l)\) has several advantages. Firstly, it is controlled by very intuitive parameters. Secondly, it models the fact the skin bulks around the edges of the wrinkle. Finally, notice that:
-                              <b> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </b>
+                              <div class="equation"> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </div class="equation">
                             </p>
                             <p>
                               This property ensures the preservation of the skin volume.
