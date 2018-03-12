@@ -91,6 +91,10 @@ section.fullsite {
   flex-direction: column;
 }
 
+.margin-top-sm-30, .margin-top-md-30, .margin-top-lg-30, .margin-top-xl-30 {
+  margin-top: 30vh;
+}
+
 .margin-top-sm-40, .margin-top-md-40, .margin-top-lg-40, .margin-top-xl-40 {
   margin-top: 40vh;
 }
@@ -124,12 +128,16 @@ section.fullsite {
 }
 
 @media (max-width: 992px) {
+  .margin-top-md-30 {
+    margin-top: 5vh;
+  }
+
   .margin-top-md-40 {
     margin-top: 5vh;
   }
 
   .margin-top-md-40-p, .margin-top-md-30-p {
-    margin-top: 5%;
+    margin-top: 2%;
   }
 }
 

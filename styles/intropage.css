@@ -23,3 +23,9 @@
 #intropagetitle {
 	color: #FFF5F3;	
 }
+
+@media (max-width: 1050px){
+	.transulcent-card {
+		visibility: hidden;
+	}
+}
