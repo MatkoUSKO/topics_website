@@ -42,7 +42,7 @@
               <div class="card transulcent-card">
                 <img class="card-img-top" src="imgs/biospecintro.jpg">
                 <div class="card-img-overlay text-center margin-top-lg-30-p">
-                  <h2 class="card-title">Models</h2>
+                  <h2 class="card-title">Rendering Approaches</h2>
                 </div>
               </div>
             </a>
@@ -52,7 +52,7 @@
               <div class="card transulcent-card">
                 <img class="card-img-top" src="imgs/bssrdfintro.jpg">
                 <div class="card-img-overlay text-center margin-top-lg-30-p">
-                  <h2 class="card-title">Maximising Realism</h2>
+                  <h2 class="card-title">Interactivity</h2>
                 </div>
               </div>
             </a>
@@ -87,6 +87,9 @@
               <li>
                 <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse1">Introduction to Rendering</button>
                 <ul id="collapse1" class="collapse">
+                  <li><a href="#raytracing" class="btn btn-block sidebar-btn2">Raytracing</a></li>
+                  <li><a href="#fresnel" class="btn btn-block sidebar-btn2">Fresnel equations</a></li>
+                  <li><a href="#scattering" class="btn btn-block sidebar-btn2">Scattering</a></li>
                   <li><a href="#texturemapping" class="btn btn-block sidebar-btn2">Texture Mapping</a></li>
                 </ul>
               </li>
@@ -107,7 +110,7 @@
                 <ul id="collapse3" class="collapse">
                   <li><a href="#biospecmainfeatures" class="btn btn-block sidebar-btn2">Main Features</a></li>
                   <li><a href="#randomwalk" class="btn btn-block sidebar-btn2">The Random Walk</a></li>
-                  <li><a href="#reflactancetransmittance" class="btn btn-block sidebar-btn2">Reflectance and Transmittance</a></li>
+                  <li><a href="#reflactancetransmittance" class="btn btn-block sidebar-btn2">Reflectance</a></li>
                   <li><a href="#scattering" class="btn btn-block sidebar-btn2">Scattering</a></li>
                   <li><a href="#absorbtion" class="btn btn-block sidebar-btn2">Absorption</a></li>
                   <li><a href="#biospecproblems" class="btn btn-block sidebar-btn2">Problems</a></li>
@@ -147,6 +150,60 @@
         <!-- CONTENT -->
         <div id="content">
           <div class="movedown">
+            <!-- RAYTRACING START -->
+            <section id="raytracingscattering" class="fullsite container-fluid">
+              <div class="row">
+                <section id="raytracing" class="col-sm-4 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header"> Raytracing </h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          Is a technique used in high quality computer graphics renders. It is used for presenting 3D images on a 2D display by tracing a path of light through pixels on an image plane. The main idea behind ray tracing is trying to reproduce the path that each light ray follows in reverse direction from the eye back to its point of origin. In a 3D environment it is quite common that the ray of light collides with certain objects, which leads to various reflections and refractions. Each ray is represented by a mathematical equation that defines its path through space as a function of time. Rays are assigned a color based on the pigments the objects in the scene that the ray passes through and each pixel on the display corresponds to a ray.
+                        </p>
+                      </div>
+                      <img src="imgs/raytracing.png" alt="" class="card-img-bottom">
+                    </div>
+                  </div>
+                </section>
+                <div class="col-sm-8 d-flex align-items-strech">
+                  <div class="row">
+                    <section id="fresnel" class="col-12 d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">Fresnel Equations</h2>
+                        <div class="card-body">
+                          <div class="section-text">
+                            <p>
+                              These equations describe the behaviour of light when moving between media that interact with light differently. Namely, they have different refractive indices. The Fresnel’s coefficients can be computed by considering the angle of incidence and transmittance of the ray as well as the refractive indices of both media. They describe the fractions of light that were transmitted and reflected.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="scattering" class="col-12 d-flex align-items-strech">
+                      <div class="card">
+                        <h2 class="card-header">Scattering</h2>
+                        <div class="card-body">
+                          <div class="section-text">
+                            <p>
+                              As light travels in electromagnetic waves it interacts with particles in the medium it travels in. This interaction results in energy being transmitted and emitted in a direction that differs from the initial direction of the photon. This phenomenon is called scattering.
+                            </p>
+                            <p>
+                              A perfect example of scattering is the coloration of the sky. When light travels through air it gets scattered by the small particles present in the atmosphere. Since wavelength is inversely proportional to the amount of scattering, the most scattered wavelengths are the shortest ones. In terms of visible light, these are the blue and violet light. Since the sun emits more blue than violet light, the sky appears blue in the result.
+                            </p>
+                            <p>
+                              Depending on the wavelength of light and the size of the particle it interacts with we distinguish between several types of scattering. For this work, the most important ones are Rayleigh, and Mie scattering.
+                            </p>
+                            <img src="imgs/scattering.png" alt="" class="card-img-bottom">
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- RAYTRACING END -->
             <!-- TEXTURE MAPPING START -->
             <section id="texturemapping" class="fullsite container-fluid">
               <div class="row">
@@ -155,7 +212,7 @@
                 </div>
               </div>
               <div class="row">
-                <section id="whatistexturemapping" class="col-sm-5 d-flex align-items-strech">
+                <section id="whatistexturemapping" class="col-sm-4 d-flex align-items-strech">
                   <!-- Miso povie aby som to robil rucne, because reasons -->
                   <div class="card">
                     <h2 class="card-header">What is Texture Mapping</h2>
@@ -176,7 +233,7 @@
                     <img class="card-img-bottom" src="imgs/mapsdiagram.jpg">
                   </div>
                 </section>
-                <div class="col-sm-7">
+                <div class="col-sm-8">
                   <div class="row">
                     <section id="bumpmaps" class="d-flex align-items-strech">
                       <div class="card">
