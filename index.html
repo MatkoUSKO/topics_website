@@ -155,7 +155,7 @@
               <div class="row">
                 <section id="raytracing" class="col-sm-4 d-flex align-items-strech">
                   <div class="card">
-                    <h2 class="card-header"> Ray Tracing </h2>
+                    <h2 class="card-header"> Raytracing </h2>
                     <div class="card-body">
                       <div class="section-text">
                         <p>
@@ -219,16 +219,16 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When a computer is rendering a frame it has to take into account every possible detail of mesh of a currently rendered model. So it is obvious that high detailed (high-poly) mesh will take longer to render but will provide a better feel of photorealism.
+                          When a computer is rendering a frame it has to take into account every possible detail of a mesh of a currently rendered model. Therefore it is obvious that a high detailed (high-poly) mesh will take longer to render, but will appear more realistic.
                         </p>
                         <p>
-                          This is enough for still renders or even animations when a final user does not have to see the final render in real-time, but for games, this would be unacceptable. So does this mean that games are doomed to run only in low frames-per-second or have poor visual with low level of detail?
+                          This is enough for still renders or even animations where the observer does not have to see the final render in real-time, but for games, this would be unacceptable. Does this mean that games are doomed to run only in low frames-per-second or have poor visuals with low level of detail?
                         </p>
                         <p>
                           Texture mapping is the compromise between photorealism and performance.
                         </p>
                         <p>
-                          Maps are a special type of textures applied to the model, that does not influence the final colour of the model, but how the light is reflected from the surface. Texture maps are creating the illusion of high-poly model via simulating features that are actually not present on the low-poly mesh.
+                          Maps are special textures applied to the model that do not influence the final colour of the model, but how the light is reflected from the surface. Texture maps create the illusion of high-poly models via simulating features that are not present on the low-poly mesh.
                         </p>
                       </div>
                     </div>
@@ -244,11 +244,11 @@
                           <div class="row">
                             <div class="section-text col-sm-6">
                               <p>
-                                Bump maps are textures special type of heightmap. They are greyscaled textures describing a difference in height of points the texture is applied to. Grey colour means ‘no change’, while black means ‘down’ and white means ‘up’. This way designers are able to tell the computer to generate a fake mesh.
+                                Bump maps are special types of heightmaps. They are greyscaled textures describing the difference in height of the points the texture is applied to. Grey colour means ‘no change’, while black indicates 'lower' and white 'higher'. This way designers are able to tell the computer to generate a fake mesh.
                               </p>
                               <p>
-                                One of the usages of using the bump maps is generating pores or small wrinkles of skin.
-                                Bump maps do not contain any information about reflection angles at all.
+                                One of the usages of bump maps is generating pores or small wrinkles.
+                                Bump maps do not contain any information about reflection angles.
                               </p>
                             </div>
                             <div class="col-sm-6">
@@ -267,10 +267,10 @@
                           <div class="row">
                             <div class="section-text col-sm-6">
                               <p>
-                                Displacement maps are similar to bump maps. Both of them are height maps and whereas bump maps are creating fake ‘bumps’, displacement maps are actually changing the shape of mesh and pulling and pushing the vertices of the model upwards and downwards.
+                                Displacement maps are similar to bump maps. Both of them are height maps; however, while bump maps are creating fake ‘bumps’, displacement maps are actually changing the shape of the mesh through moving the vertices of the model upwards and downwards.
                               </p>
                               <p>
-                                One of the most typical use of displacement maps is generating the terrain from the texture.
+                                One of the most typical uses of displacement maps is generating terrain from texture.
                               </p>
                             </div>
                             <div class="col-sm-6">
@@ -289,13 +289,13 @@
                           <div class="row">
                             <div class="section-text col-sm-6">
                               <p>
-                                Normal maps contain RGB information describing the angle information of every point mapped by this texture.
+                                Normal maps contain RGB information describing the angle information of every point mapped by a texture.
                               </p>
                               <p>
-                                The angle of every point of the texture can be described by its position (done by the model itself) and vector of its normal. RGB value can describe every component of a vector in 3-dimensional space, therefore is enough to describe the angle and steepness of all parts of the model.
+                                The angle of every point of a texture can be described by its position (done by the model itself) and the vector of its normal. RGB values can describe every component of a vector in 3-dimensional space. This means it is enough to describe the angle and the steepness of all parts of the model.
                               </p>
                               <p>
-                                This can be utilised to smooth the edges of the model and make all the models look natural.
+                                This can be utilised to smoothen the edges of a model and make models look more natural.
                               </p>
                             </div>
                             <div class="col-sm-6">
@@ -325,14 +325,13 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Even if it does not seem like it, skin is very complex and every little detail of human skin affects the final look of the skin. If we want to create realistic computer-generated pictures of skin we have to take all the little complexities into consideration.
+                          Even if it does not seem like it, the structure of human skin is very complex and every little detail affects the final render. If we want to create realistic computer-generated images of skin we have to take all the little complexities into consideration.
                         </p>
                         <p>
-                          Unlike many other materials, the skin consists of many different layers and each has its own function and behaviour. Skin appearance depends also on thickness. While skin can be very thin on eyelids or knuckles, the skin on the lips or belly can be thicker with also possibility of fat underneath the surface. Skin can also vary in colour due to different race, age, gender, physical wear or daily exposure to the sun.
+                          Unlike many other materials, skin consists of different layers and each has its own function and behaviour. While skin can be very thin on eyelids or knuckles, it can be thick in the lips or belly area with the possibility of fat underneath the surface. Skin can also vary in colour due to different race, age, gender, physical wear, or daily exposure to the sun.
                         </p>
                         <p>
-                          The geometry of the skin also plays a great role in realistic representation. The skin has many small natural pores, wrinkles and hairs. The little skin imperfections like freckles and moles are also part of the natural looking human skin.
-                          All these factors have to be taken into consideration while we intend to recreate believable human skin.
+                          The geometry of skin also plays a great role in realistic representation. Skin has many small natural pores, wrinkles and hairs. The little skin imperfections like freckles and moles are also part of the natural looking human skin. All these factors have to be taken into consideration when we intend to recreate realistic human skin.
                         </p>
                       </div>
                     </div>
@@ -363,8 +362,8 @@
                     </div>
                   </div>
                 </section>
-              </div>
-              <div class="row">
+                </div>
+                <div class="row">
                 <section id="typesimperfections" class="col">
                   <div class="card">
                     <h2 class="card-header">Different Types and Imperfections of Skin</h2>
@@ -491,7 +490,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model uses ray tracing to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk.
+                          The BioSpec model uses ray tracing to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk; these are:
                         </p>
                         <p>
                           These are:
@@ -701,10 +700,10 @@
                           In the previous model, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
                         </p>
                         <p>
-                          Diffusion profiles present an approximation of how light scatters beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
+                         Diffusion profiles present an approximation of how light scatters beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
                         </p>
                         <p>
-                          Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
+                         Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
                         </p>
                       </div>
                     </div>
@@ -860,111 +859,112 @@
                           <div class="col-lg-6">
                             <p>
                               Where \(d\) is the depth and \(w\) is the width of the wrinkle. This definition of \(S(l)\) has several advantages. Firstly, it is controlled by very intuitive parameters. Secondly, it models the fact the skin bulks around the edges of the wrinkle. Finally, notice that:
-                              <div class="equation"> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </div>
-                            </p>
-                            <p>
-                              This property ensures the preservation of the skin volume.
-                            </p>
-                            <img class="card-img-bottom" src="imgs/largewrinkle.png">
-                          </div>
+                            <div class="equation"> $$ \int_0^\infty S\left(l\right)dl = 0 $$ </div class="equation">
+                          </p>
+                          <p>
+                            This property ensures the preservation of the skin volume.
+                          </p>
+                          <img class="card-img-bottom" src="imgs/largewrinkle.png">
                         </div>
                       </div>
                     </div>
-                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
                   </div>
-                </section>
-              </div>
-            </section>
-            <!-- WRINKLES 3 END -->
-            <!-- INTERACTIVITY START -->
-            <section id="maximisingrealism" class="fullsite container-fluid">
-              <div class="row">
-                <div class="col-sm-12">
-                  <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
-                </div>
-              </div>
-              <section id="interactivityintro" class="col d-flex">
-                <div class="card">
-                  <h2 class="card-header">Introduction</h2>
-                  <div class="card-body">
-                    <div class="section-text">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <p>
-                            Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost.Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
-                          </p>
-                        </div>
-                        <div class="col-lg-4">
-                          <p>
-                            Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface.This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
-                          </p>
-                        </div>
-                        <div class="col-lg-4">
-                          <p>
-                            In their paper, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the multipole technique designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the diffusion of profiles of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <img class="card-img-bottom" src="imgs/faces2.png">
-                  </div>
+                  <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
                 </div>
               </section>
+            </div>
           </section>
-          <!-- INTERACTIVITY END -->
-          <!-- INTERACTIVITY MODEL START -->
-          <section id="background" class="fullsite container-fluid">
+          <!-- WRINKLES 3 END -->
+          <!-- INTERACTIVITY START -->
+          <section id="maximisingrealism" class="fullsite container-fluid">
             <div class="row">
               <div class="col-sm-12">
                 <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
               </div>
             </div>
-            <section id="interactivitymodel" class="col-lg-12 d-flex align-items-strech">
-              <div class="card">
-                <h2 class="card-header">Fast approximate diffusion profiles</h2>
-                <div class="card-body">
-                  <div class="section-text">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <p>
-                          The key observation made in [d’Eon’s paper] is, that sums of a small number of Gaussians work very well for approximation of dipoles and multipoles. In most cases very good approximations of single layer profiles can be done using four Gaussians.
-                        </p>
-                        <p>
-                          Fitting Gaussian onto a diffusion profile \(R(r)\) is done by minimising:
-                          <div class="equation">
-                            $$ \int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr $$
-                          </div>
-                        </p>
-                        <p>
-                          Both the weights wi and variances for vi for k Gaussians are allowed to vary. Further information on calculating these constants in order to achieve an accurate approximation can be found in [d’Eon’s paper]. Using their method, d’Eon et al. managed to produce very accurate results with errors ranging from 1.52% to 0.0793% for the blue wavelength depending on the illuminated object itself.
-                        </p>
-                      </div>
-                      <div class="col-lg-4">
-                        <img class="card-img" src="imgs/reflectancediagram.png">
-                        <p>
-                          This graph shows a comparison between two and four Gaussians used to approximate the dipole profile for the green wavelength of marble. Using four Gaussians they only got an error of 1.25%, which is small enough to make renders using dipoles versus renders using the sum of four Gaussians indistinguishable. These errors could also be reduced to 0.093% using eight Gaussians.
-                        </p>
-                      </div>
-                      <div class="col-lg-4">
-                        <p>
-                          There are 3 main advantages for using this technique instead of standard dipole method.
-                          <ol>
-                            <li>Gaussians are separable, so they can be applied as two 1D convolutions in \(x\) and \(y\) over a surface, allowing a very fast approximation of the surface irradiance convolution \((S)\). It is much faster to compute the convolution by sums of separable Gaussians, than to calculate convolution by a non-separable kernel \(R(r)\).</li>
-                            <li>Convolution by a wider Gaussian is much faster to compute from the result of a narrower Gaussian, than from the original irradiance values.</li>
-                            <li>Convolution of two layers becomes very efficient once the dipole or multipole profiles are described as sums of Gaussians. The radial convolution of any two Gaussians is another Gaussian.</li>
-                          </ol>
-                        </p>
-                      </div>
+            <div class="card">
+              <h2 class="card-header">Introduction</h2>
+              <div class="card-body">
+                <div class="section-text">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <p>
+                        Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost.Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
+                      </p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p>
+                        Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface.This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
+                      </p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p>
+                        In their paper, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the multipole technique designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the diffusion of profiles of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
+                      </p>
                     </div>
                   </div>
                 </div>
+                <img class="card-img-bottom" src="imgs/faces2.png">
+                <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
               </div>
             </section>
+          </div>
         </section>
-        <!-- INTERACTIVITY MODEL END -->
-      </div>
+        <!-- INTERACTIVITY END -->
+        <!-- INTERACTIVITY MODEL START -->
+        <section id="background" class="fullsite container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="card-header">Fast approximate diffusion profiles</h2>
+            <div class="card-body">
+              <div class="section-text">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <p>
+                      The key observation made in [d’Eon’s paper] is, that sums of a small number of Gaussians work very well for approximation of dipoles and multipoles. In most cases very good approximations of single layer profiles can be done using four Gaussians.
+                    </p>
+                    <p>
+                      Fitting Gaussian onto a diffusion profile \(R(r)\) is done by minimising:
+                      <div class="equation">
+                        $$ \int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr $$
+                      </div>
+                    </p>
+                    <p>
+                      Both the weights wi and variances for vi for k Gaussians are allowed to vary. Further information on calculating these constants in order to achieve an accurate approximation can be found in [d’Eon’s paper]. Using their method, d’Eon et al. managed to produce very accurate results with errors ranging from 1.52% to 0.0793% for the blue wavelength depending on the illuminated object itself.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <img class="card-img" src="imgs/reflectancediagram.png">
+                    <p>
+                      This graph shows a comparison between two and four Gaussians used to approximate the dipole profile for the green wavelength of marble. Using four Gaussians they only got an error of 1.25%, which is small enough to make renders using dipoles versus renders using the sum of four Gaussians indistinguishable. These errors could also be reduced to 0.093% using eight Gaussians.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <p>
+                      There are 3 main advantages for using this technique instead of standard dipole method.
+                      <ol>
+                        <li>Gaussians are separable, so they can be applied as two 1D convolutions in \(x\) and \(y\) over a surface, allowing a very fast approximation of the surface irradiance convolution \((S)\). It is much faster to compute the convolution by sums of separable Gaussians, than to calculate convolution by a non-separable kernel \(R(r)\).</li>
+                        <li>Convolution by a wider Gaussian is much faster to compute from the result of a narrower Gaussian, than from the original irradiance values.</li>
+                        <li>Convolution of two layers becomes very efficient once the dipole or multipole profiles are described as sums of Gaussians. The radial convolution of any two Gaussians is another Gaussian.</li>
+                      </ol>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- <img class="card-img-bottom" src="http://via.placeholder.com/400x400"> -->
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- INTERACTIVITY MODEL END -->
     </div>
   </div>
+</div>
 </div>
 </body>
 </html>
