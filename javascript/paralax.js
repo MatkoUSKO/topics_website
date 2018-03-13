@@ -41,6 +41,18 @@ function parallax() {
     });
   }
 
+  //VIDEO NOT VISIBLE
+  if (scrollPos < 2*$(window).height()) {
+    var op = 1 - scrollPos / $(window).height();
+    $("#myVideo").css({
+      display: block
+    });
+  } else { 
+    $("#myVideo").css({
+      display: none
+    });
+  }
+
 
   // var headingbot = $('#paralax-heading').offset().top + 1.5*$('#paralax-heading').outerHeight();
 
