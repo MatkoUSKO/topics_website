@@ -7,7 +7,10 @@ $(document).on('click', '#toggleSidebar', function(){
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
     });
     $("#toggleSidebar img").addClass("rotated");
-    setTimeout(function() {$("#sidebar").removeClass("sidebar-collapsed");}, 300);
+    $("#sidebar").removeClass("sidebar-collapsed");
+    $(".sidebar").css({
+      'margin-left': 0
+    });
   } else {
     $("#content").css({
       'margin-left': 0
@@ -16,6 +19,9 @@ $(document).on('click', '#toggleSidebar', function(){
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
     });
     $("#sidebar").addClass("sidebar-collapsed");
+    $(".sidebar").css({
+      'margin-left': - $(".sidebar").width()
+    });
     $("#toggleSidebar img").removeClass("rotated");
   }
   
@@ -37,6 +43,9 @@ $(document).ready(function(){
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
     });
+    $(".sidebar").css({
+      'margin-left': - $(".sidebar").width()
+    });
     $("#toggleSidebar img").removeClass("rotated");
   } else {
     $("#content").css({
@@ -44,6 +53,9 @@ $(document).ready(function(){
     });
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
+    });
+    $(".sidebar").css({
+      'margin-left': 0
     });
     $("#toggleSidebar img").addClass("rotated");
   }
