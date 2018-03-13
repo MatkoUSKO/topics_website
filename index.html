@@ -563,7 +563,7 @@
                         </p>
                         <p>
                           <div class="equation">$$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$</div>
-                          \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle.
+                          \(\eta_f\) is the index of refraction of fibers, \(\eta_m\) of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle.
                         </p>
                         <p>
                           We can associate the amount of the scattering with the probability that the scattering will occur by  \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not.
@@ -630,7 +630,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as scattering, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner and Jansen can be conveniently described as a BSSRDF.
+                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as scattering, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner and Jensen can be conveniently described as a BSSRDF.
                             </p>
                           </div>
                         </div>
@@ -643,7 +643,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jansen tries to approximate phenomenon while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jensen tries to approximate phenomenon while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
                             </p>
                             <p>
                               The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
@@ -740,7 +740,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by Donner and Jansen was able to add texture by using texture maps, we would like to investigate how to generate these in a more dynamic manner. A paper called “A simple method for modelling wrinkles on human skin” by Y. Bando, T. Kuratate, and T. Nishita introduces a way of achieving this and thus we shall investigate it in this section.
+                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by Donner and Jensen was able to add texture by using texture maps, we would like to investigate how to generate these in a more dynamic manner. A paper called “A simple method for modelling wrinkles on human skin” by Y. Bando, T. Kuratate, and T. Nishita introduces a way of achieving this and thus we shall investigate it in this section.
                         </p>
                       </div>
                     </div>
