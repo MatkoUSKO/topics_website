@@ -110,7 +110,7 @@
                 <ul id="collapse3" class="collapse">
                   <li><a href="#biospecmainfeatures" class="btn btn-block sidebar-btn2">Main Features</a></li>
                   <li><a href="#randomwalk" class="btn btn-block sidebar-btn2">The Random Walk</a></li>
-                  <li><a href="#reflactancetransmittance" class="btn btn-block sidebar-btn2">Reflectance</a></li>
+                  <li><a href="#reflectancetransmittance" class="btn btn-block sidebar-btn2">Reflectance</a></li>
                   <li><a href="#scattering" class="btn btn-block sidebar-btn2">Scattering</a></li>
                   <li><a href="#absorbtion" class="btn btn-block sidebar-btn2">Absorption</a></li>
                   <li><a href="#biospecproblems" class="btn btn-block sidebar-btn2">Problems</a></li>
@@ -349,7 +349,7 @@
                           Having an extremely detailed mesh which captures all the details of skin would be computationally very extensive and it would not work well in reality.
                         </p>
                         <p>
-                          The polygonal model includes a realistically looking physical model of human body parts as well as bigger “details” such as wrinkles, scars, and skin folds. When modelling wrinkles Langer's Lines should be considered to make them look natural. The model should contain information about permanent wrinkles as well as wrinkles that are visible only during some facial expressions.
+                          The polygonal model includes a realistically looking physical model of human body parts as well as bigger “details” such as wrinkles, scars, and skin folds. When modeling wrinkles Langer's Lines should be considered to make them look natural. The model should contain information about permanent wrinkles as well as wrinkles that are visible only during some facial expressions.
                         </p>
                         <p>
                           A higher detail of skin geometry can be achieved using <a href="#normalmaps">normal maps</a>.
@@ -506,7 +506,7 @@
                           Notice, that these transition interfaces are the same as the ones real light travels through when interacting with human skin. By separating the interfaces the BioSpec model is able to more accurately alter the behaviour of the light rays as it can assign different biological coefficients to interfaces. This raises the accuracy, but also the complexity of the model.
                         </p>
                         <p>
-                          In each of the layers, a given ray can be reflected and transmitted, scattered, or absorbed. Now, we will deeper investigate how this is achieved in the model.
+                          In each of the layers, a given ray can be <a href="#reflectancetransmittance">reflected and transmitted</a>, <a href="#scattering">scattered</a>, or <a href="#absorbtion">absorbed</a>. Now, we will deeper investigate how this is achieved in the model.
                         </p>
                       </div>
                     </div>
@@ -524,7 +524,7 @@
                 </div>
               </div>
               <div class="row">
-                <section id="reflactancetransmittance" class="col-lg-4 d-flex align-items-strech">
+                <section id="reflectancetransmittance" class="col-lg-4 d-flex align-items-strech">
                   <!-- Miso povie aby som to robil rucne, because reasons -->
                   <div class="card">
                     <h2 class="card-header">Reflectance and Transmittance</h2>
@@ -667,7 +667,7 @@
                           <div class="equation-lg col-12">
                             \(f_{r,TS} =\) \(\rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)}\)
                           </div>
-                          Here \(x\) is the point at which we are modelling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
+                          Here \(x\) is the point at which we are modeling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
                         </p>
                         <p>
                           In order to estimate the average reflectance of a given point, we integrate \(f_{r,TS}\) over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
