@@ -6,7 +6,7 @@ $(document).on('click', '#toggleSidebar', function(){
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
     });
-    
+    $("#toggleSidebar img").addClass("rotated");
     setTimeout(function() {$("#sidebar").removeClass("sidebar-collapsed");}, 300);
   } else {
     $("#content").css({
@@ -16,10 +16,15 @@ $(document).on('click', '#toggleSidebar', function(){
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
     });
     $("#sidebar").addClass("sidebar-collapsed");
+    $("#toggleSidebar img").removeClass("rotated");
   }
   
   return false;
 })
+
+$(window).resize(function() {
+
+});
 
 $(document).ready(function(){
   if($(window).width() < 650) {
@@ -32,6 +37,7 @@ $(document).ready(function(){
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
     });
+    $("#toggleSidebar img").removeClass("rotated");
   } else {
     $("#content").css({
       'margin-left': $('#sidebar').width()
@@ -39,8 +45,8 @@ $(document).ready(function(){
     $(".navbar").css({
       'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
     });
+    $("#toggleSidebar img").addClass("rotated");
   }
-
 
   $('a[href*="#"]')
   .not('[href="#"]')
