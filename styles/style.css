@@ -21,6 +21,15 @@ section.fullsite {
   }
 }
 
+a {
+  color: #FF7558;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FF4040;
+}
+
 .bg-primary{
   background-color: #cc998d;
   color: #153b50;  
