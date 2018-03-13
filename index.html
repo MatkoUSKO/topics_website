@@ -624,40 +624,38 @@
                 </div>
               </div>
               <div class="row">
-                <section class="col-lg-5 d-flex align-items-strech">
-                  <div class="row">
-                    <section id="whatisbssrdf" class="col-lg-12 mb-3 d-flex align-items-strech">
-                      <div class="card">
-                        <h2 class="card-header">What is BSSRFD?</h2>
-                        <div class="card-body">
-                          <div class="section-text">
-                            <p>
-                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> can be conveniently described as a BSSRDF.
-                            </p>
-                          </div>
-                        </div>
-                        <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
+                <section id="whatisbssrdf" class="col-md-6 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">What is BSSRFD?</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> can be conveniently described as a BSSRDF.
+                        </p>
                       </div>
-                    </section>
-                    <section id="bssrdfmainfeatures" class="col-lg-12 d-flex align-items-strech">
-                      <div class="card">
-                        <h2 class="card-header">Main Features</h2>
-                        <div class="card-body">
-                          <div class="section-text">
-                            <p>
-                              The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
-                            </p>
-                            <p>
-                              The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
-                            </p>
-                          </div>
-                        </div>
-                        <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
-                      </div>
-                    </section>
+                    </div>
+                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
                   </div>
                 </section>
-                <section id="reflection" class="col-lg-7 d-flex align-items-strech">
+                <section id="bssrdfmainfeatures" class="col-md-6 d-flex align-items-strech">
+                  <div class="card">
+                    <h2 class="card-header">Main Features</h2>
+                    <div class="card-body">
+                      <div class="section-text">
+                        <p>
+                          The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                        </p>
+                        <p>
+                          The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
+                  </div>
+                </section>
+              </div>
+              <div class="row">
+                <section id="reflection" class="col-lg-12 d-flex align-items-strech">
                   <div class="card">
                     <h2 class="card-header">Reflection</h2>
                     <div class="card-body">
