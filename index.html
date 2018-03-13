@@ -110,7 +110,7 @@
                 <ul id="collapse3" class="collapse">
                   <li><a href="#biospecmainfeatures" class="btn btn-block sidebar-btn2">Main Features</a></li>
                   <li><a href="#randomwalk" class="btn btn-block sidebar-btn2">The Random Walk</a></li>
-                  <li><a href="#reflactancetransmittance" class="btn btn-block sidebar-btn2">Reflectance</a></li>
+                  <li><a href="#reflectancetransmittance" class="btn btn-block sidebar-btn2">Reflectance</a></li>
                   <li><a href="#scattering" class="btn btn-block sidebar-btn2">Scattering</a></li>
                   <li><a href="#absorbtion" class="btn btn-block sidebar-btn2">Absorption</a></li>
                   <li><a href="#biospecproblems" class="btn btn-block sidebar-btn2">Problems</a></li>
@@ -155,7 +155,7 @@
               <div class="row">
                 <section id="raytracing" class="col-sm-4 d-flex align-items-strech">
                   <div class="card">
-                    <h2 class="card-header"> Raytracing </h2>
+                    <h2 class="card-header"> Ray Tracing </h2>
                     <div class="card-body">
                       <div class="section-text">
                         <p>
@@ -349,7 +349,7 @@
                           Having an extremely detailed mesh which captures all the details of skin would be computationally very extensive and it would not work well in reality.
                         </p>
                         <p>
-                          The polygonal model includes a realistically looking physical model of human body parts as well as bigger “details” such as wrinkles, scars, and skin folds. When modelling wrinkles Langer's Lines should be considered to make them look natural. The model should contain information about permanent wrinkles as well as wrinkles that are visible only during some facial expressions.
+                          The polygonal model includes a realistically looking physical model of human body parts as well as bigger “details” such as wrinkles, scars, and skin folds. When modeling wrinkles Langer's Lines should be considered to make them look natural. The model should contain information about permanent wrinkles as well as wrinkles that are visible only during some facial expressions.
                         </p>
                         <p>
                           A higher detail of skin geometry can be achieved using <a href="#normalmaps">normal maps</a>.
@@ -397,29 +397,29 @@
                         <div class="col-lg-6">
                           <h3 id="epidermis"> Epidermis </h3>
                           <p class="section-text">
-                            The epidermis is outermost layer and therefore is subject to the external environment. Epidermis (or “epi”) is the layer of skin that varies the most in the thickness and thinner this layer is, the more influential are the lower layers of skin. The top layer of skin is rough and oily, due to small oily layer on the top of epi. This makes the skin directly reflect a small amount of uncoloured light. However, the reflection is not perfectly mirror-like because of the geometry of top layer. Epi is rough and contains pores and little bumps. But only about 6-9% of light is reflected directly from the skin. The rest of the light enters the skin, scatters and is either absorbed or exits the skin at a different point (see later).
-                            Responsibility for the absorption of light takes red/yellow absorbing phaeomelanin and a brown/black eumelanin. The ratio of their concentration contained in human skin varies from individual to individual.
+                            The epidermis is the outermost layer and therefore is subject to the external environment. Epidermis (or “epi”) is the layer of skin that varies the most in thickness. The thinner this layer is, the more influential are the lower layers. Since the epi has a small oily layer on top, a small amount of uncoloured light is reflected from the surface of skin. However, the reflection is not perfectly mirror-like because the epidermis is rough, containing pores and little bumps. Only about 6-9% of light is reflected directly from the skin. The rest of the light enters the skin, scatters and is either absorbed or exits the skin at a different point (see later).
+                            The pigments responsible for the absorption of light are phaeomelanin (red/yellow) and eumelanin (brown/black). The ratio of their concentration in human skin varies from individual to individual.
                           </p>
                           <h3 id="dermis">Dermis</h3>
                           <p class="section-text">
-                            The dermis is a structure that propagates the light further into the skin as well as absorbs the light.
-                            This layer contains all the blood vessels that can make the skin look more reddish when Epidermis is thinner, like on eyelids or cheekbones. In blood, we can find natural chromophore haemoglobin, which is the cause of the red colour of blood by the absorption of short wavelength light.
+                            The dermis is a structure that propagates the light further into the skin as well as absorbs it.
+                            This layer contains all the blood vessels that can make skin look more reddish in case of a thinner Epidermis, like on the eyelids or cheekbones. The natural chromophore haemoglobin found in blood is the cause of the red colour of blood by the absorption of short wavelength light.
                           </p>
                         </div>
                         <div class="col-lg-6">
                           <img class="card-img" src="imgs/layersofskin1.png">
                           <h3 id="hypodermis">Hypodermis</h3>
                           <p class="section-text">
-                            The hypodermis is innermost layer of skin and its function is to store fat, collagen and elastin. It keeps the skin in its shape and connects it to underlying bones and muscles. Even though hypodermis is biologically not considered as part of the skin it has a big influence on the skin's appearance. Hypodermis loses its ability to store collagen and fat as it ages, thus all tissues loses its strength and makes the skin look more wrinkly and dry.
-                            Because Hypodermis contains mostly fat its reflective abilities are strong and the huge portion of visible light that reaches this layer is reflected back to Dermis and Epidermis.
+                            The hypodermis is the innermost layer of skin and its function is to store fat, collagen and elastin. It keeps the skin in its shape and connects it to underlying bones and muscles. Even though the hypodermis is biologically not considered as part of the skin, it has a major influence on its appearance. Hypodermis loses its ability to store collagen and fat as it ages, thus all tissues lose their strength, which makes the skin look more wrinkly and dry.
+                            Since the Hypodermis contains mostly fat, its reflective abilities are strong and a huge portion of visible light that reaches this layer is reflected back to the Dermis and Epidermis.
                           </p>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-12">
                           <p class="section-text">
-                            The geometry of the skin also plays a great role in realistic representation. The skin has many small natural pores, wrinkles and hairs. The little skin imperfections like freckles and moles are also part of the natural looking human skin.
-                            All these factors have to be taken into consideration while we intend to recreate believable human skin.
+                            The geometry of skin also plays a great role in its realistic representation. The skin has many small natural pores, wrinkles and hairs. Little imperfections like freckles and moles are also part of the natural looking human skin.
+                            All these factors have to be taken into consideration if we intend to create a precise recreation of human skin.
                           </p>
                         </div>
                       </div>
@@ -443,7 +443,7 @@
                               Previously, we could see the wide scope of problems associated with rendering realistic human skin. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
                             </p>
                             <p>
-                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a biophysically-based spectral model proposed by Aravind Krishnaswamy and Gladimir V. G. Baranoski which heavily relies on stochastic modelling. We will examine Craig Donner’s and Henrik Wann Jensen’s spectral BSSRDF which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model wrinkles using a simple method for modelling wrinkles on human skin designed by Y. Bando, T. Kuratate, and T. Nishita.
+                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a <a href="#biospecmodel">biophysically-based spectral model</a> proposed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a> which heavily relies on stochastic modelling. We will examine <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Craig Donner’s and Henrik Wann Jensen’s</a> <a href="#spectralbssrdf1">spectral BSSRDF</a> which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model <a href="wrinkles">wrinkles</a> using a simple method for modelling wrinkles on human skin designed by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>.
                             </p>
                           </div>
                         </div>
@@ -474,10 +474,10 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model was developed by Aravind Krishnaswamy and Gladimir V. G. Baranoski as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
+                          The BioSpec model was developed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a> as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
                         </p>
                         <p>
-                          Perhaps the main feature of this model is that it is modelled by a random walk process of the light rays that travel through the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the next section.
+                          Perhaps the main feature of this model is that it is modelled by a <a href="#randomwalk">random walk</a> process of the light rays that travel through the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the next section.
                         </p>
                       </div>
                     </div>
@@ -490,7 +490,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model uses ray tracing to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk; these are:
+                          The BioSpec model uses <a href="#raytracing">ray tracing</a> to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk;
                         </p>
                         <p>
                           These are:
@@ -506,7 +506,7 @@
                           Notice, that these transition interfaces are the same as the ones real light travels through when interacting with human skin. By separating the interfaces the BioSpec model is able to more accurately alter the behaviour of the light rays as it can assign different biological coefficients to interfaces. This raises the accuracy, but also the complexity of the model.
                         </p>
                         <p>
-                          In each of the layers, a given ray can be reflected and transmitted, scattered, or absorbed. Now, we will deeper investigate how this is achieved in the model.
+                          In each of the layers, a given ray can be <a href="#reflectancetransmittance">reflected and transmitted</a>, <a href="#scattering">scattered</a>, or <a href="#absorbtion">absorbed</a>. Now, we will deeper investigate how this is achieved in the model.
                         </p>
                       </div>
                     </div>
@@ -524,7 +524,7 @@
                 </div>
               </div>
               <div class="row">
-                <section id="reflactancetransmittance" class="col-lg-4 d-flex align-items-strech">
+                <section id="reflectancetransmittance" class="col-lg-4 d-flex align-items-strech">
                   <!-- Miso povie aby som to robil rucne, because reasons -->
                   <div class="card">
                     <h2 class="card-header">Reflectance and Transmittance</h2>
@@ -667,7 +667,7 @@
                           <div class="equation-lg col-12">
                             \(f_{r,TS} =\) \(\rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)}\)
                           </div>
-                          Here \(x\) is the point at which we are modelling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
+                          Here \(x\) is the point at which we are modeling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
                         </p>
                         <p>
                           In order to estimate the average reflectance of a given point, we integrate \(f_{r,TS}\) over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
