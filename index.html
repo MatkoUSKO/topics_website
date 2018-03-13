@@ -531,7 +531,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on Fresnel equations. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the law of reflection. Otherwise we generate a refracted ray using Snell’s law.
+                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the law of reflection. Otherwise we generate a refracted ray using Snell’s law.
                         </p>
                         <p>
                           When considering the reflected light we also have to account for the folds present in the stratum corneum. These can be conveniently represented as ellipsoids where the shape and size of the ellipsoid is governed by random variables. Therefore, we do not reflect from the stratum corneum as if it was perfectly flat but we reflect from a randomly curved ellipsoid instead.
@@ -556,17 +556,17 @@
                           Scattering in the stratum corneum and epidermis involves perturbation of the ray in both the polar and the azimuthal angles. When it comes to the azimuthal angle the scattering is symmetric; therefore it suffices to generate a random angle \(2\pi*\xi\). The polar angle is acquired by a randomized table lookup. Burn and Leun[odkazat sa] have performed measurements in these layers using which we can construct the table. For each wavelength, we store the measured fractions of scattered light as indices and their corresponding angle. Generating a random variable, scaling it to the size of the table, and using its integer part we can now acquire the necessary angle.
                         </p>
                         <p>
-                          This method is promised to be more accurate than the use of data-fitting. Note that most of the scattering happening in these layers is Mie scattering due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
+                          This method is promised to be more accurate than the use of data-fitting. Note that most of the <a href="#scatteringintro">scattering</a> happening in these layers is Mie scattering due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
                         </p>
                         <p>
-                          In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of scattering that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
+                          In the remaining layers the model tests for Rayleigh scattering as with the decreasing size of the particles it becomes the dominant type of scattering. Firstly, we compute the amount of <a href="#scatteringintro">scattering</a> that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
                         </p>
                         <p>
                           <div class="equation">$$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$</div>
                           \(\eta_f\) is the index of refraction of fibers, nm of the medium, \(N\) is the density of the fibers, \(t\) is the thickness of the medium, \(\theta\) is the angle between the ray direction and the normal direction of the particle.
                         </p>
                         <p>
-                          We can associate the amount of the scattering with the probability that the scattering will occur by  \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not.
+                          We can associate the amount of the scattering with the probability that the <a href="#scatteringintro">scattering</a> will occur by  \(1 - \exp\left(R\left(\lambda\right)\right)\). Then we generate a random variable to decide whether to account for Rayleigh scattering or not.
                         </p>
                       </div>
                     </div>
@@ -604,7 +604,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Our explanation so far has efficiently hidden all the biological indexes the model needs; however, in reality, it requires almost two dozen in order to accurately describe the aforementioned phenomenon. As there is a large number of different types of skin it makes the BioSpec model inflexible. In the following section, we will look at a model which addresses these issues.
+                          Our explanation so far has efficiently hidden all the biological indexes the model needs; however, in reality, it requires almost two dozen in order to accurately describe the aforementioned phenomenon. As there is a large number of different types of skin it makes the BioSpec model inflexible. In the <a href="#spectralbssrdf1">following section</a>, we will look at a model which addresses these issues.
                         </p>
                       </div>
                     </div>
@@ -630,7 +630,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as scattering, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner and Jansen can be conveniently described as a BSSRDF.
+                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner and Jansen can be conveniently described as a BSSRDF.
                             </p>
                           </div>
                         </div>
