@@ -698,24 +698,16 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers of skin. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
+                          As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
                         </p>
                         <p>
-                          Modelling the subsurface scattering and absorption can be achieved by using the multipole diffusion model as mentioned in the introduction. This model approximates the general BSSRDF
-                          <div class="equation">\(S\left(x_i,\overrightarrow{\omega}_i,x_o, \overrightarrow{\omega}_o\right)
-                            =\)
-                          \(\frac{dL\left(x_o,\overrightarrow{\omega}_o\right)}{d\Phi\left(x_i,\overrightarrow{\omega}_i\right)} \)</div>
-                          by
-                          <div class="equation">\(S_d\left(x_i,\overrightarrow{\omega}_i;x_o, \overrightarrow{\omega}_o\right)
-                            =\)
-                            \(\frac{1}{\pi}F_t\left(x_i,\overrightarrow{\omega}_i\right)
-                          R\left(\|x_i-x_o\|_2\right)F_t\left(x_o,\overrightarrow{\omega}_o\right)\)</div>
+                          In the previous model, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
                         </p>
                         <p>
-                          \(F_t\) terms are the Fresnel transmittance at the entry and the exit points. The \(R\) term is a diffusion dipole which is beyond the scope of this work. The interested reader can find out more about diffusion in <a href="https://www.sciencedirect.com/science/book/9780123747013">this book</a>.
+                         Diffusion profiles present an approximation of how light scatters beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
                         </p>
                         <p>
-                          Before using this model to compute the scattering and the absorption we need two extra coefficients which describe the optical properties of layers. Namely, the scattering and the absorption coefficients. When it comes to skin these can be easily determined by the chemical structure of the different tissues across both layers.
+                         Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
                         </p>
                       </div>
                     </div>
@@ -821,8 +813,8 @@
                             <p>
                               <b>Now let’s look at the actual algorithm.</b>
                               <ol>
-                                <li>If possible pick a starting point P. Compute the number of furrow segments n needed for the furrow, and the direction d of the furrow by interpolating the direction vectors of the vertices of the triangle P lies in.</li>
-                                <li>Iterating over n< do the following steps:</li>
+                                <li>If possible pick a starting point P. Compute the number of furrow segments n needed for the furrow based on the magnitude of the direction field. Compute the direction d of the furrow by interpolating the direction vectors of the vertices of the triangle P lies in.</li>
+                                <li>Iterating over n do the following steps:</li>
                                 <li>Add the perturbation angle to the direction.</li>
                                 <li>Let Q be the end point of the given segment. If PQ intersects some other furrow, then set Q to be the intersection point and n to 0. This follows the property of fine wrinkles which states that either furrow has to end at the intersection.</li>
                                 <li>Draw a line on the grayscale image representing PQ with its depth and width obtained from the magnitude of the vector field.</li>
