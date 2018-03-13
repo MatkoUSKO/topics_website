@@ -21,6 +21,10 @@ section.fullsite {
   }
 }
 
+.card {
+  margin-top:2pc;
+}
+
 a {
   color: #FF7558;
 }
@@ -100,10 +104,17 @@ a:hover {
   flex-direction: column;
 }
 
+.equation {
+  font-size: 11pt;
+}
+
+.equation-lg {
+  font-size: 18pt;
+}
 
 @media (max-width: 750px){
-  .equation{
-    font-size: 2vw;
+  .equation, .equation-lg{
+    font-size: 9pt;
   }
 }
 
