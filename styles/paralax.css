@@ -53,10 +53,10 @@ body, html {
 }
 
 .parallax h2 {
-    font-size:3vw;
-    color:white;
-    font-family: "Courier Body copy";
-    font-weight: 100;
+    font-size: 3vw;
+    color: white;
+    font-family: "Helvetica";
+    font-weight: 300;
 }
 
 /* Make it bigger */
