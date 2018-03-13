@@ -28,12 +28,7 @@ body, html {
 
     
     /* background*/
-    background: url("../imgs/intro3blur.jpg");
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #FFF;
 
     /* Full height */
     height: 100%;
@@ -42,6 +37,17 @@ body, html {
     /* Text in parallax */
     color:white;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+}
+
+@media (max-width: 1050px){
+    .parallax {
+    background: url("../imgs/intro3blur.jpg");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 }
 
 .parallax h1 {

@@ -19,6 +19,9 @@
   <body>
     <!-- PARALAX START -->
     <div id="top" class="parallax">
+      <video autoplay muted loop id="myVideo">
+        <source src="vids/Ed.mp4" type="video/mp4">
+      </video>
       <div class="container-fluid">
         <!-- INTRO PAGE START -->
         <div class="row">
@@ -310,7 +313,6 @@
               </div>
             </section>
             <!-- TEXTURE MAPPING END -->
-
             <!-- CHALLENGES 1 START-->
             <section id="challenges1" class="fullsite container-fluid">
               <div class="row">
@@ -362,8 +364,8 @@
                     </div>
                   </div>
                 </section>
-                </div>
-                <div class="row">
+              </div>
+              <div class="row">
                 <section id="typesimperfections" class="col">
                   <div class="card">
                     <h2 class="card-header">Different Types and Imperfections of Skin</h2>
@@ -700,10 +702,10 @@
                           In the <a href="#biospecmodel">previous model</a>, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
                         </p>
                         <p>
-                         Diffusion profiles present an approximation of how light <a href="scatteringintro">scatters</a> beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
+                          Diffusion profiles present an approximation of how light <a href="scatteringintro">scatters</a> beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
                         </p>
                         <p>
-                         Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
+                          Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
                         </p>
                       </div>
                     </div>
@@ -803,7 +805,6 @@
                             <p>
                               Before examining the actual algorithm that generates the wrinkles we need to introduce six new attributes of fine-scale wrinkles. These are the perturbation angle, the length of the furrow segment, the depth of the furrow, the width of the furrow, and the distance between adjacent furrows. The intuition behind these parameters is that they are controlled by the magnitude of the vector field in the given area. Should the magnitude be large, the wrinkles become more oriented, longer, deeper, wider, and the distance between them increases. The exact opposite happens for smaller magnitudes.
                             </p>
-
                           </div>
                           <div class="col-lg-6">
                             <p>
@@ -875,40 +876,40 @@
             </div>
           </section>
           <!-- WRINKLES 3 END -->
- <!-- INTERACTIVITY START -->
-            <section id="maximisingrealism" class="fullsite container-fluid">
-              <div class="row">
-                <div class="col-sm-12">
-                  <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
-                </div>
+          <!-- INTERACTIVITY START -->
+          <section id="maximisingrealism" class="fullsite container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1 class="topic-header">Maximizing realism while maintaining interactivity</h1>
               </div>
-              <section id="interactivityintro" class="col d-flex">
-                <div class="card">
-                  <h2 class="card-header">Introduction</h2>
-                  <div class="card-body">
-                    <div class="section-text">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <p>
-                            Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost.Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
-                          </p>
-                        </div>
-                        <div class="col-lg-4">
-                          <p>
-                            Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface.This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
-                          </p>
-                        </div>
-                        <div class="col-lg-4">
-                          <p>
-                            In their paper, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the multipole technique designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the diffusion of profiles of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
-                          </p>
-                        </div>
+            </div>
+            <section id="interactivityintro" class="col d-flex">
+              <div class="card">
+                <h2 class="card-header">Introduction</h2>
+                <div class="card-body">
+                  <div class="section-text">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p>
+                          Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost.Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
+                        </p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>
+                          Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface.This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
+                        </p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>
+                          In their paper, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the multipole technique designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the diffusion of profiles of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
+                        </p>
                       </div>
                     </div>
-                    <img class="card-img-bottom" src="imgs/faces2.png">
                   </div>
+                  <img class="card-img-bottom" src="imgs/faces2.png">
                 </div>
-              </section>
+              </div>
+            </section>
           </section>
           <!-- INTERACTIVITY END -->
           <!-- INTERACTIVITY MODEL START -->
@@ -947,7 +948,6 @@
                             $$ \int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr $$
                           </div>
                           The result of this is an error function, where a squared error between \(R(r)\) and the sum of Gaussians at radial distance \(r\) is weighted by \(r\), because the profile at position \(r\) gathers light from a circle with circumference proportional to \(r\)
-
                         </p>
                       </div>
                       <div class="col-lg-4">
@@ -966,11 +966,11 @@
                 </div>
               </div>
             </section>
-        </section>
-        <!-- INTERACTIVITY MODEL END -->
+          </section>
+          <!-- INTERACTIVITY MODEL END -->
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </body>
 </html>
