@@ -1,7 +1,7 @@
 section.fullsite {
 	border-bottom: 1px solid #FFF5F3;
- 	padding-top: 5rem;
-	padding-bottom: 5rem;
+ 	padding-top: 2rem;
+	padding-bottom: 3rem;
 	min-height: 100vh;
   overflow: auto;
   margin-bottom: 30px;
@@ -16,8 +16,8 @@ section.fullsite {
 
 @media (min-width: 992px) {
   section.fullsite {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 }
 
