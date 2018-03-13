@@ -630,7 +630,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by Donner and Jensen can be conveniently described as a BSSRDF.
+                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> can be conveniently described as a BSSRDF.
                             </p>
                           </div>
                         </div>
@@ -643,7 +643,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              The main distinction from the previous model is that the BSSRDF suggested by Donner and Jensen tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                              The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
                             </p>
                             <p>
                               The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
@@ -690,17 +690,17 @@
               <div class="row">
                 <section id="scatteringandabsorbtion" class="col-lg-9 d-flex align-items-strech">
                   <div class="card">
-                    <h2 class="card-header">Scattering and absorption</h2>
+                    <h2 class="card-header">Scattering and Absorption</h2>
                     <div class="card-body">
                       <div class="section-text">
                         <p>
                           As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers. The epidermis and the dermis. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
                         </p>
                         <p>
-                          In the previous model, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
+                          In the <a href="#biospecmodel">previous model</a>, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
                         </p>
                         <p>
-                         Diffusion profiles present an approximation of how light scatters beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
+                         Diffusion profiles present an approximation of how light <a href="scatteringintro">scatters</a> beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
                         </p>
                         <p>
                          Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
@@ -716,7 +716,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          In contrast from the previous model this model also accounts for the texture of the rendered skin. Using texture maps we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem, the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin given by the model.
+                          In contrast from the previous model this model also accounts for the texture of the rendered skin. Using <a href="#texturemapping">texture maps</a> we can easily add texture to the rendered skin. The problem is that most maps also include the coloration caused by the hemoglobin and melanin. In order to fix this problem, the model normalizes the texture map by the already computed total reflectance of skin. This way we only see the differences caused by factors other than the actual color of the skin given by the model.
                         </p>
                       </div>
                     </div>
@@ -740,7 +740,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by Donner and Jensen was able to add texture by using texture maps, we would like to investigate how to generate these in a more dynamic manner. A paper called “A simple method for modelling wrinkles on human skin” by Y. Bando, T. Kuratate, and T. Nishita introduces a way of achieving this and thus we shall investigate it in this section.
+                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> was able to add texture by using <a href="#texturemapping">texture maps</a>, we would like to investigate how to generate these in a more dynamic manner. A paper called <i>A simple method for modelling wrinkles on human skin</i> by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a> introduces a way of achieving this and thus we shall investigate it in this section.
                         </p>
                       </div>
                     </div>
@@ -753,10 +753,10 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The model distinguishes between two types of wrinkles. Fine-scale wrinkles, and large-scale wrinkles. Fine-scale wrinkles cover the whole body and are much harder to spot by eye than large-scale wrinkles, which are usually associated with a certain body part such as the forehead.
+                          The model distinguishes between two types of wrinkles. <a href="#finescalewrinkles">Fine-scale wrinkles</a>, and <a href="#largescalewrinkles">large-scale wrinkles</a>. <a href="#finescalewrinkles">Fine-scale wrinkles</a> cover the whole body and are much harder to spot by eye than <a href="#largescalewrinkles">large-scale wrinkles</a>, which are usually associated with a certain body part such as the forehead.
                         </p>
                         <p>
-                          When it comes to fine-scale wrinkles the interesting properties they share are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning large-scale wrinkles perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrunk around large-scale wrinkles. We will take this into consideration when modelling the shape of large-scale wrinkles.
+                          When it comes to <a href="#finescalewrinkles">fine-scale wrinkles</a> the interesting properties they share are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning <a href="largescalewrinkles">large-scale wrinkles</a> perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrunk around <a href="largescalewrinkles">large-scale wrinkles</a>. We will take this into consideration when modelling the shape of <a href="largescalewrinkles">large-scale wrinkles</a>.
                         </p>
                       </div>
                     </div>
@@ -795,7 +795,7 @@
                         <div class="row">
                           <div class="col-lg-6">
                             <p>
-                              The key of modelling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the triangle mesh.
+                              The key of modelling fine-scale wrinkles is the formation of a direction field on the particular body part. This direction field represents the directions of furrows at particular vertices of the triangle mesh. The user specifies a couple of direction vectors and then the rest is interpolated based on the <a href="#trianglemesh">triangle mesh</a>.
                             </p>
                             <p>
                               Carving the wrinkles happens by carving the furrows along the direction vectors. The output of the model is a height image which represents the depth of the carved wrinkles. This can be represented as a grayscale image which is initialized to white, and each wrinkle makes its positions more grey. The model does not allow wrinkle generation from points that already contain wrinkles. This is achieved by an occupancy image which is always updated throughout the wrinkle generation algorithm. Each position is either 0 or 1 so this way we do not start a wrinkle from a position already wrinkled.
