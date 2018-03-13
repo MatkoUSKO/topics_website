@@ -26,6 +26,6 @@
 
 @media (max-width: 1050px){
 	.transulcent-card {
-		visibility: hidden;
+		display: none;
 	}
 }

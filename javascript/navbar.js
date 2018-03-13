@@ -78,20 +78,21 @@ $(document).ready(function(){
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        var scrollLocation = target.offset().top - 1.5*$('#topnavbar').outerHeight();
+        var magicconstant = $(window).height() / 650;
+        var scrollLocation = target.offset().top - magicconstant*$('#topnavbar').outerHeight();
         $('html, body').animate({
           scrollTop: scrollLocation
         }, 1000, function() {
           // Callback after animation
           // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
+          // var $target = $(target);
+          // $target.focus();
+          // if ($target.is(":focus")) { // Checking if the target was focused
+          //   return false;
+          // } else {
+          //   $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          //   $target.focus(); // Set focus again
+          // };
         });
       }
     }
