@@ -632,7 +632,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function and bidirectional transmittance distribution function. These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> can be conveniently described as a BSSRDF.
+                              In order to understand what is a BSSRDF we first need to understand what a BSDF is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> can be conveniently described as a BSSRDF.
                             </p>
                           </div>
                         </div>
@@ -645,7 +645,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> tries to approximate phenomenon while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                              The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
                             </p>
                             <p>
                               The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
@@ -663,16 +663,10 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF.
+                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF. You can find out more about this BRDF <a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-57-9-1105">here</a>.
                         </p>
                         <p>
-                          <div class="equation-lg col-12">
-                            \(f_{r,TS} =\) \(\rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)}\)
-                          </div>
-                          Here \(x\) is the point at which we are modeling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
-                        </p>
-                        <p>
-                          In order to estimate the average reflectance of a given point, we integrate \(f_{r,TS}\) over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
+                          In order to estimate the average reflectance of a given point, we integrate the BRDF over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
                         </p>
                       </div>
                     </div>
