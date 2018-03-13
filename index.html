@@ -664,7 +664,7 @@
                           Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF.
                         </p>
                         <p>
-                          <div class="equation col-12">
+                          <div class="equation-lg col-12">
                             \(f_{r,TS} =\) \(\rho_s\frac{F\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right) \cdot D\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i,\sigma\right) \cdot G\left(x,\overrightarrow{\omega}_o,\overrightarrow{\omega}_i\right)}{ 4 \left(\overrightarrow{\omega}_i\cdot\overrightarrow{n}\right) \left(\overrightarrow{\omega}_o\cdot\overrightarrow{n}\right)}\)
                           </div>
                           Here \(x\) is the point at which we are modeling, \(F\) is the Fresnel reflectance, \(D\) models the distributions of the microstructures across the stratum corneum, \(G\) is a geometry term, \(\omega_i\) and \(\omega_o\) are the directions of the incoming and reflected light respectively, and \(\rho_s\) is a term which controls the oiliness of skin. \(\sigma\) controls the roughness of the skin. In other words it is the root mean square of the slope of the microstructures.
