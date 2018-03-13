@@ -155,7 +155,7 @@
               <div class="row">
                 <section id="raytracing" class="col-sm-4 d-flex align-items-strech">
                   <div class="card">
-                    <h2 class="card-header"> Raytracing </h2>
+                    <h2 class="card-header"> Ray Tracing </h2>
                     <div class="card-body">
                       <div class="section-text">
                         <p>
@@ -443,7 +443,7 @@
                               Previously, we could see the wide scope of problems associated with rendering realistic human skin. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
                             </p>
                             <p>
-                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a biophysically-based spectral model proposed by Aravind Krishnaswamy and Gladimir V. G. Baranoski which heavily relies on stochastic modelling. We will examine Craig Donner’s and Henrik Wann Jensen’s spectral BSSRDF which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model wrinkles using a simple method for modelling wrinkles on human skin designed by Y. Bando, T. Kuratate, and T. Nishita.
+                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a <a href="#biospecmodel">biophysically-based spectral model</a> proposed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a> which heavily relies on stochastic modelling. We will examine <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Craig Donner’s and Henrik Wann Jensen’s</a> <a href="#spectralbssrdf1">spectral BSSRDF</a> which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model <a href="wrinkles">wrinkles</a> using a simple method for modelling wrinkles on human skin designed by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>.
                             </p>
                           </div>
                         </div>
@@ -474,10 +474,10 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model was developed by Aravind Krishnaswamy and Gladimir V. G. Baranoski as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
+                          The BioSpec model was developed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a> as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
                         </p>
                         <p>
-                          Perhaps the main feature of this model is that it is modelled by a random walk process of the light rays that travel through the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the next section.
+                          Perhaps the main feature of this model is that it is modelled by a <a href="#randomwalk">random walk</a> process of the light rays that travel through the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the next section.
                         </p>
                       </div>
                     </div>
@@ -490,7 +490,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model uses ray tracing to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk; these are:
+                          The BioSpec model uses <a href="#raytracing">ray tracing</a> to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk;
                         </p>
                         <p>
                           These are:
