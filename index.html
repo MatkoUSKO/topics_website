@@ -463,7 +463,7 @@
             <section id="biospecmodel" class="fullsite container-fluid">
               <div class="row">
                 <div class="col-sm-12">
-                  <h1 class="topic-header">The Biospec Model</h1>
+                  <h1 class="topic-header">The BioSpec Model</h1>
                 </div>
               </div>
               <div class="row">
@@ -490,7 +490,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model uses <a href="#raytracing">ray tracing</a> to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk;
+                          The BioSpec model uses <a href="#raytracing">ray tracing</a> to follow the light rays in their random walk process. Each ray is assigned a wavelength as we will later see it is a necessary parameter for computing the events happening to the given ray.  There is a total of five interfaces that a ray goes through in its random walk.
                         </p>
                         <p>
                           These are:
@@ -520,7 +520,7 @@
             <section id="biospecmodel2" class="fullsite container-fluid">
               <div class="row">
                 <div class="col-sm-12">
-                  <h1 class="topic-header">The Biospec Model</h1>
+                  <h1 class="topic-header">The BioSpec Model</h1>
                 </div>
               </div>
               <div class="row">
@@ -531,7 +531,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the law of reflection. Otherwise we generate a refracted ray using Snell’s law.
+                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the <a href="http://www.physicsclassroom.com/class/refln/Lesson-1/The-Law-of-Reflection">law of reflection</a>. Otherwise we generate a refracted ray using <a href="https://www.math.ubc.ca/~cass/courses/m309-01a/chu/Fundamentals/snell.htm">Snell’s law</a>.
                         </p>
                         <p>
                           When considering the reflected light we also have to account for the folds present in the stratum corneum. These can be conveniently represented as ellipsoids where the shape and size of the ellipsoid is governed by random variables. Therefore, we do not reflect from the stratum corneum as if it was perfectly flat but we reflect from a randomly curved ellipsoid instead.
@@ -580,7 +580,7 @@
             <section id="biospecmodel3" class="fullsite container-fluid">
               <div class="row">
                 <div class="col-sm-12">
-                  <h1 class="topic-header">The Biospec Model</h1>
+                  <h1 class="topic-header">The BioSpec Model</h1>
                 </div>
               </div>
               <div class="row">
