@@ -104,11 +104,11 @@ a:hover {
   font-size: 0.9pc;
 }
 
-/*@media (max-width: 750px){
+@media (max-width: 750px){
   .equation{
-    font-size: 2vw;
+    font-size: 0.7pc;
   }
-}*/
+}
 
 .margin-top-sm-30, .margin-top-md-30, .margin-top-lg-30, .margin-top-xl-30 {
   margin-top: 30vh;
