@@ -39,17 +39,6 @@ body, html {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
 }
 
-@media (max-width: 1050px){
-    .parallax {
-    background: url("../imgs/intro3blur.jpg");
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-}
-
 .parallax h1 {
     margin-top:8vh;
     font-size:4vw;
@@ -68,7 +57,12 @@ body, html {
 /* Make it bigger */
 @media only screen and (max-width: 992px) {
     .parallax {
-        background-attachment: scroll;
+    background-attachment: scroll;
+    background: url("../imgs/intro3blur.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
     }
 
     .parallax h1 {
