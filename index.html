@@ -531,7 +531,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the law of reflection. Otherwise we generate a refracted ray using Snell’s law.
+                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the <a href="http://www.physicsclassroom.com/class/refln/Lesson-1/The-Law-of-Reflection">law of reflection</a>. Otherwise we generate a refracted ray using <a href="https://www.math.ubc.ca/~cass/courses/m309-01a/chu/Fundamentals/snell.htm">Snell’s law</a>.
                         </p>
                         <p>
                           When considering the reflected light we also have to account for the folds present in the stratum corneum. These can be conveniently represented as ellipsoids where the shape and size of the ellipsoid is governed by random variables. Therefore, we do not reflect from the stratum corneum as if it was perfectly flat but we reflect from a randomly curved ellipsoid instead.
