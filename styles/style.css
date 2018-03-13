@@ -114,7 +114,7 @@ a:hover {
 
 @media (max-width: 750px){
   .equation, .equation-lg{
-    font-size: 9pc;
+    font-size: 9pt;
   }
 }
 
