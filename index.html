@@ -894,7 +894,7 @@
                         </div>
                         <div class="col-lg-4">
                           <p>
-                            In their  <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">paper</a>, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the <a href="http://delivery.acm.org/10.1145/1080000/1073308/p1032-donner.pdf?ip=146.169.187.149&id=1073308&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1520958868_abf513d2a1048fbfc5cfc46eca0a86d2" target="_blank">diffusion profile approximation technique</a> designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the <a href="#scatteringandabsorbtion">diffusion profiles</a> of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
+                            In their  <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">paper</a>, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the <a href="https://dl.acm.org/citation.cfm?id=1073308" target="_blank">diffusion profile approximation technique</a> designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the <a href="#scatteringandabsorbtion">diffusion profiles</a> of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
                           </p>
                         </div>
                       </div>
@@ -921,7 +921,7 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <p>
-                          The key observation made by <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">d'Eon et al.</a> is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\). In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians <a href="#scatteringintro">subsurface scattering</a> can be computed very efficiently.
+                          The key observation made by <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">d'Eon et al.</a> is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\), where \(r\) is the radius of the circle from which light is gathered. In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians <a href="#scatteringintro">subsurface scattering</a> can be computed very efficiently.
                         </p>
                         <p>
                           The aim of this method is to find for each diffusion profile \(R(r)\), \(k\) Gaussians with weights \(w_i\) and variances \(v_i\) such that:
@@ -932,7 +932,7 @@
                           <div class="equation">
                             $$ G (v, r) := \frac{1}{2\pi v} e^{-r^2/(2v)} $$
                           </div>
-                          It is important to note, that when \(G(v, r)\) is used for a radial 2D blur, it cannot darken or brighten the input image, that is why the constant for the Gaussian is set to \(1/(2v)\)
+                          It is important to note, that when \(G(v, r)\) is used for a radial 2D blur, it cannot darken or brighten the input image, that is why the constant for the Gaussian is set to \(1/(2v)\).
                         </p>
                       </div>
                       <div class="col-lg-4">
@@ -941,7 +941,7 @@
                           <div class="equation">
                             $$ \int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr $$
                           </div>
-                          The result of this is an error function, where a squared error between \(R(r)\) and the sum of Gaussians at radial distance \(r\) is weighted by \(r\), because the profile at position \(r\) gathers light from a circle with circumference proportional to \(r\)
+                          The result of this is an error function, where a squared error between \(R(r)\) and the sum of Gaussians at radial distance \(r\) is weighted by \(r\), because the profile at position \(r\) gathers light from a circle with circumference proportional to \(r\).
                         </p>
                       </div>
                       <div class="col-lg-4">
