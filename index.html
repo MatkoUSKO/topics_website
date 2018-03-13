@@ -310,7 +310,7 @@
               </div>
             </section>
             <!-- TEXTURE MAPPING END -->
-            
+
             <!-- CHALLENGES 1 START-->
             <section id="challenges1" class="fullsite container-fluid">
               <div class="row">
@@ -804,7 +804,7 @@
                             <p>
                               Before examining the actual algorithm that generates the wrinkles we need to introduce six new attributes of fine-scale wrinkles. These are the perturbation angle, the length of the furrow segment, the depth of the furrow, the width of the furrow, and the distance between adjacent furrows. The intuition behind these parameters is that they are controlled by the magnitude of the vector field in the given area. Should the magnitude be large, the wrinkles become more oriented, longer, deeper, wider, and the distance between them increases. The exact opposite happens for smaller magnitudes.
                             </p>
-                            
+
                           </div>
                           <div class="col-lg-6">
                             <p>
@@ -927,32 +927,38 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <p>
-                          The key observation made in [d’Eon’s paper] is, that sums of a small number of Gaussians work very well for approximation of dipoles and multipoles. In most cases very good approximations of single layer profiles can be done using four Gaussians.
+                          The key observation made in [d’Eon’s paper] is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\). In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians subsurface scattering can be computed very efficiently.
                         </p>
                         <p>
-                          Fitting Gaussian onto a diffusion profile \(R(r)\) is done by minimising:
+                          The aim of this method is to find for each diffusion profile \(R(r)\), \(k\) Gaussians with weights \(w_i\) and variances \(v_i\) such that:
+                          <div class="equation">
+                            $$ R(r) \approx \sum_{i=1}^k w_iG(v_i, r) $$
+                          </div>
+                          where the Gaussian of variance v is chosen the following way:
+                          <div class="equation">
+                            $$ G (v, r) := \frac{1}{2\pi v} e^{-r^2/(2v)} $$
+                          </div>
+                          It is important to note, that when \(G(v, r)\) is used for a radial 2D blur, it cannot darken or brighten the input image, that is why the constant for the Gaussian is set to \(1/(2v)\)
+                        </p>
+                      </div>
+                      <div class="col-lg-4">
+                        <p>
+                          Using this method once we know the diffusion profile \(R(r)\) which we want to use for our render, we find \(k\) Gaussians that minimize the following:
                           <div class="equation">
                             $$ \int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr $$
                           </div>
-                        </p>
-                        <p>
-                          Both the weights wi and variances for vi for k Gaussians are allowed to vary. Further information on calculating these constants in order to achieve an accurate approximation can be found in [d’Eon’s paper]. Using their method, d’Eon et al. managed to produce very accurate results with errors ranging from 1.52% to 0.0793% for the blue wavelength depending on the illuminated object itself.
-                        </p>
-                      </div>
-                      <div class="col-lg-4">
-                        <img class="card-img" src="imgs/reflectancediagram.png">
-                        <p>
-                          This graph shows a comparison between two and four Gaussians used to approximate the dipole profile for the green wavelength of marble. Using four Gaussians they only got an error of 1.25%, which is small enough to make renders using dipoles versus renders using the sum of four Gaussians indistinguishable. These errors could also be reduced to 0.093% using eight Gaussians.
+                          The result of this is an error function, where a squared error between \(R(r)\) and the sum of Gaussians at radial distance \(r\) is weighted by \(r\), because the profile at position \(r\) gathers light from a circle with circumference proportional to \(r\)
+
                         </p>
                       </div>
                       <div class="col-lg-4">
                         <p>
-                          There are 3 main advantages for using this technique instead of standard dipole method.
-                          <ol>
-                            <li>Gaussians are separable, so they can be applied as two 1D convolutions in \(x\) and \(y\) over a surface, allowing a very fast approximation of the surface irradiance convolution \((S)\). It is much faster to compute the convolution by sums of separable Gaussians, than to calculate convolution by a non-separable kernel \(R(r)\).</li>
-                            <li>Convolution by a wider Gaussian is much faster to compute from the result of a narrower Gaussian, than from the original irradiance values.</li>
-                            <li>Convolution of two layers becomes very efficient once the dipole or multipole profiles are described as sums of Gaussians. The radial convolution of any two Gaussians is another Gaussian.</li>
-                          </ol>
+                          To measure the errors of their approximations, d’Eon et al. used a metric, which gives a root-mean-square ratio between the error in fitting the sum of Gaussians to \(R(r)\) and the target diffusion profile itself:
+                          <div class="equation">
+                            $$ E = \frac{\sqrt{\int_0^\infty \left( R(r) - \sum_{i=1}^k w_iG(v_i,r) \right)^2 dr}}{\sqrt{\int_0^\infty \left( R(r)\right)^2 dr}} $$
+                          </div>
+                          The following graph shows a comparison between two and four Gaussians used to approximate the difussion profile for the green wavelength of marble:
+                          <img class="card-img" src="imgs/reflectancediagram.png">
                         </p>
                       </div>
                     </div>
