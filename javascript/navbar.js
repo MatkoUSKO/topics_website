@@ -78,7 +78,7 @@ $(document).ready(function(){
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        var scrollLocation = target.offset().top - 1.5*$('#topnavbar').outerHeight();
+        var scrollLocation = target.offset().top - 1.5*$('#topnavbarul').outerHeight();
         $('html, body').animate({
           scrollTop: scrollLocation
         }, 1000, function() {
