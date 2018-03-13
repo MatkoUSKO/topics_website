@@ -174,7 +174,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              Fresnel equations describe the behaviour of light when moving between media of differing refractive indices. The Fresnel’s coefficients can be computed by considering the angle of incidence and transmittance of the ray as well as the refractive indices of both media. Using these we can determine the fraction of reflected as well as transmitted light. When it comes to skin, we consider an unpolarized Fresnel reflectance function. You can find out more about Fresnel equations on <a href="https://en.wikipedia.org/wiki/Fresnel_equations">wikipedia.</a>
+                              Fresnel equations describe the behaviour of light when moving between substances of different refractive properties. The Fresnel’s coefficients can be computed by considering the angle of incidence and transmittance of the ray as well as the refractive indices of both media. Using these we can determine the fraction of reflected as well as transmitted light. When it comes to skin, we consider an unpolarized Fresnel reflectance function. You can find out more about Fresnel equations on <a href="https://en.wikipedia.org/wiki/Fresnel_equations">wikipedia.</a>
                             </p>
                           </div>
                         </div>
@@ -219,7 +219,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When a computer is rendering a frame it has to take into account every possible detail of a mesh of a currently rendered model. Therefore it is obvious that a high detailed (high-poly) mesh will take longer to render, but will appear more realistic.
+                          When a computer is rendering a frame it has to take into account every possible detail of the mesh of a currently rendered model. Therefore it is obvious that a high detailed (high-poly) mesh will take longer to render, but will appear more realistic.
                         </p>
                         <p>
                           This is enough for still renders or even animations where the observer does not have to see the final render in real-time, but for games, this would be unacceptable. Does this mean that games are doomed to run only in low frames-per-second or have poor visuals with low level of detail?
@@ -228,7 +228,7 @@
                           Texture mapping is the compromise between photorealism and performance.
                         </p>
                         <p>
-                          Maps are special textures applied to the model that do not influence the final colour of the model, but how the light is reflected from the surface. Texture maps create the illusion of high-poly models via simulating features that are not present on the low-poly mesh.
+                          Maps are special textures applied to the model that do not influence the final colour of the model, but how the light is reflected from the surface. Texture maps create the illusion of high-poly models via simulating features that are not present on low-poly meshes.
                         </p>
                       </div>
                     </div>
@@ -267,10 +267,10 @@
                           <div class="row">
                             <div class="section-text col-sm-6">
                               <p>
-                                Displacement maps are similar to bump maps. Both of them are height maps; however, while bump maps are creating fake ‘bumps’, displacement maps are actually changing the shape of the mesh through moving the vertices of the model upwards and downwards.
+                                Displacement maps are similar to bump maps. Both of them are height maps; however, while bump maps are creating fake ‘bumps’, displacement maps are actually changing the shape of the mesh by moving the vertices of the model upwards and downwards.
                               </p>
                               <p>
-                                One of the most typical uses of displacement maps is generating terrain from texture.
+                                One of the most typical uses of displacement maps is generating a terrain from a texture.
                               </p>
                             </div>
                             <div class="col-sm-6">
@@ -328,10 +328,10 @@
                           Even if it does not seem like it, the structure of human skin is very complex and every little detail affects the final render. If we want to create realistic computer-generated images of skin we have to take all the little complexities into consideration.
                         </p>
                         <p>
-                          Unlike many other materials, skin consists of different layers and each has its own function and behaviour. While skin can be very thin on eyelids or knuckles, it can be thick in the lips or belly area with the possibility of fat underneath the surface. Skin can also vary in colour due to different race, age, gender, physical wear, or daily exposure to the sun.
+                          Unlike many other materials, skin consists of different layers and each has its own function and behaviour. While skin can be very thin on eyelids and knuckles, it can be rather thick in the lips or belly area with the possibility of fat underneath the surface. Skin can also vary in colour due to different race, age, gender, physical wear, or daily exposure to the sun.
                         </p>
                         <p>
-                          The geometry of skin also plays a great role in realistic representation. Skin has many small natural pores, wrinkles and hairs. The little skin imperfections like freckles and moles are also part of the natural looking human skin. All these factors have to be taken into consideration when we intend to recreate realistic human skin.
+                          The geometry of skin also plays a great role in realistic representation. Skin has many small natural pores, wrinkles, and hairs. The little skin imperfections like freckles and moles are also a part of the natural looking human skin. All these factors have to be taken into consideration when we intend to recreate human skin.
                         </p>
                       </div>
                     </div>
@@ -345,18 +345,18 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Skin is never perfectly flat and realistic looking model relies heavily on underlying topology. From mesh model of body parts, through scars and wrinkles to smallest details like pores.
-                          Having an extremely detailed mesh capturing all the details of skin would be computationally too extensive and it would not work in reality.
+                          Skin is never perfectly flat and realistic looking models rely heavily on the underlying topology. From a mesh model of body parts, through scars and wrinkles to the smallest details like pores.
+                          Having an extremely detailed mesh which captures all the details of skin would be computationally very extensive and it would not work well in reality.
                         </p>
                         <p>
-                          The polygonal model includes realistically looking physical model of human body parts as well as bigger “details” such as wrinkles, scars or skin folds. When modeling wrinkles Langer's Lines should be considered to make them look natural. The model should contain information about permanent wrinkles as well as wrinkles that are visible only during some facial expressions, etc.
+                          The polygonal model includes a realistically looking physical model of human body parts as well as bigger “details” such as wrinkles, scars, and skin folds. When modeling wrinkles Langer's Lines should be considered to make them look natural. The model should contain information about permanent wrinkles as well as wrinkles that are visible only during some facial expressions.
                         </p>
                         <p>
-                          Higher detail of geometry of skin can be achieved using <a href="#normalmaps">normal maps</a>.
-                          Tiny pores, moles or freckles has to be “faked” using <a href="#bumpmaps">bump maps</a> which can capture even the smallest details of skin. Even though the use of <a href="#texturemapping">maps</a> is making the calculations harder, they are more effective than having highly detailed mesh.
+                          A higher detail of skin geometry can be achieved using <a href="#normalmaps">normal maps</a>.
+                          Tiny pores, moles, and freckles can be “faked” using <a href="#bumpmaps">bump maps</a> which are able to  capture even the smallest details of skin. Even though the use of <a href="#texturemapping">maps</a> makes the calculations harder, they are more effective than having a highly detailed mesh.
                         </p>
                         <p>
-                          The smallest details are crucial to the credible look of the skin and the more details are added the bigger is the chance that the observer gets distracted and does not notice the image is not real and is generated by the computer.
+                          The smallest details are often very crucial to achieve a credible look of the human skin.
                         </p>
                       </div>
                     </div>
@@ -370,7 +370,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          There are numerous types of human skin that make the realistic modeling even more difficult. Realistic models have to take into consideration the colour of skin, freckles, <a href="#wrinkles">wrinkles</a>, hairs (grown or ingrown under the skin). And even on one individual, we can find all types of skin. For example, the skin on lips is obviously different than skin that we can find on the face and this one is also different to the skin that is on hands, etc.
+                          There are numerous types of human skin that make the realistic modelling even more difficult. Realistic models have to take into consideration the colour of skin, freckles, <a href="#wrinkles">wrinkles</a>, hairs (grown or ingrown under the skin). Furthermore, even on one individual, we can find many different types of skin. For example, the skin on lips is obviously different from the skin that we can find on our faces, and these are both different from the skin on the palms of our hands.
                         </p>
                       </div>
                     </div>
