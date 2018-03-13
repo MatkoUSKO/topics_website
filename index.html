@@ -657,7 +657,7 @@
                 </section>
                 <section id="reflection" class="col-lg-7 d-flex align-items-strech">
                   <div class="card">
-                    <h2 class="card-header">Relfection</h2>
+                    <h2 class="card-header">Reflection</h2>
                     <div class="card-body">
                       <div class="section-text">
                         <p>
@@ -740,7 +740,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> was able to add texture by using <a href="#texturemapping">texture maps</a>, we would like to investigate how to generate these in a more dynamic manner. A paper called <i>A simple method for modelling wrinkles on human skin</i> by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a> introduces a way of achieving this and thus we shall investigate it in this section.
+                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> was able to add texture by using <a href="#texturemapping">texture maps</a>, we would like to investigate how to generate these in a more dynamic manner. A paper called <i>A simple method for modelling wrinkles on human skin</i> by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a> introduces a way of achieving this and thus we shall investigate it in this section.
                         </p>
                       </div>
                     </div>
@@ -890,17 +890,17 @@
                       <div class="row">
                         <div class="col-lg-4">
                           <p>
-                            Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost.Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
+                            Simulating the layers of skin (epidermis, dermis etc.) and approximating its behaviour plays a very important role in human skin rendering. By dividing it up to homogeneous thin slabs, researchers managed to achieve incredibly realistic results, however this realism comes at a great cost. Today’s state-of-the-art techniques for rendering multilayer translucent materials normally take seconds or even minutes to render. This makes them unusable in certain situations, such as in computer games or other applications where multiple images need to be rendered in a second.
                           </p>
                         </div>
                         <div class="col-lg-4">
                           <p>
-                            Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface.This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
+                            Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface. This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
                           </p>
                         </div>
                         <div class="col-lg-4">
                           <p>
-                            In their paper, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the multipole technique designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the diffusion of profiles of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
+                            In their  <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">paper</a>, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the <a href="http://delivery.acm.org/10.1145/1080000/1073308/p1032-donner.pdf?ip=146.169.187.149&id=1073308&acc=ACTIVE%20SERVICE&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1520958868_abf513d2a1048fbfc5cfc46eca0a86d2" target="_blank">diffusion profile approximation technique</a> designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the <a href="#scatteringandabsorbtion">diffusion profiles</a> of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
                           </p>
                         </div>
                       </div>
@@ -926,7 +926,7 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <p>
-                          The key observation made in [d’Eon’s paper] is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\). In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians subsurface scattering can be computed very efficiently.
+                          The key observation made by <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">d'Eon et al.</a> is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\). In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians <a href="#scatteringintro">subsurface scattering</a> can be computed very efficiently.
                         </p>
                         <p>
                           The aim of this method is to find for each diffusion profile \(R(r)\), \(k\) Gaussians with weights \(w_i\) and variances \(v_i\) such that:
