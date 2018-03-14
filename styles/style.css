@@ -108,6 +108,10 @@ a:hover {
   flex-direction: column;
 }
 
+.topic-header, .card-header {
+  text-transform: capitalize;
+}
+
 .equation {
   font-size: 11pt;
 }
