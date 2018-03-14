@@ -25,6 +25,10 @@ section.fullsite {
   margin-top:2pc;
 }
 
+/*.card img {
+  object-fit: contain;
+}*/
+
 a {
   color: #FF7558;
 }
