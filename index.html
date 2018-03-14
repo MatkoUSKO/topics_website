@@ -150,8 +150,15 @@
                 </ul>
               </li>
               <li>
-                <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse7">Authors</button>
+                <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse7">References</button>
                 <ul id="collapse7" class="collapse">
+                  <li><a href="#textref" target="_blank" class="btn btn-block sidebar-btn2">Text References</a></li>
+                  <li><a href="#imgref" target="_blank" class="btn btn-block sidebar-btn2">Image References</a></li>
+                </ul>
+              </li>
+              <li>
+                <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse">Authors</button>
+                <ul id="collapse" class="collapse">
                   <li><a href="https://www.doc.ic.ac.uk/~zh4917/" target="_blank" class="btn btn-block sidebar-btn2">Zoltán Hanesz</a></li>
                   <li><a href="https://www.doc.ic.ac.uk/~mp5217/personal/" target="_blank" class="btn btn-block sidebar-btn2">Michal Pándy</a></li>
                   <li><a href="https://www.doc.ic.ac.uk/~mp5317/" target="_blank" class="btn btn-block sidebar-btn2">Martin Piala</a></li>
@@ -183,12 +190,12 @@
                 <div class="col-lg-8 d-flex align-items-strech">
                   <div class="row">
                     <section id="fresnel" class="col-12 d-flex align-items-strech">
-                      <div class="card">
+                      <div class="card">g
                         <h2 class="card-header">Fresnel Equations</h2>
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              Fresnel equations describe the behaviour of light when moving between substances of different refractive properties. The Fresnel’s coefficients can be computed by considering the angle of incidence and transmittance of the ray as well as the refractive indices of both media. Using these we can determine the fraction of reflected as well as transmitted light. When it comes to skin, we consider an unpolarized Fresnel reflectance function. You can find out more about Fresnel equations on <a href="https://en.wikipedia.org/wiki/Fresnel_equations">wikipedia.</a>
+                              Fresnel equations describe the behaviour of light when moving between substances of different refractive properties. The Fresnel’s coefficients can be computed by considering the angle of incidence and transmittance of the ray as well as the refractive indices of both media. Using these we can determine the fraction of reflected as well as transmitted light. When it comes to skin, we consider an unpolarized Fresnel reflectance function. You can find out more about Fresnel equations on <a href="https://en.wikipedia.org/wiki/Fresnel_equations" target="_blank">wikipedia</a>[<a href="#textref01">Ref01</a>].
                             </p>
                           </div>
                         </div>
@@ -200,13 +207,13 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              As light travels in electromagnetic waves it interacts with particles in the medium it travels in. This interaction results in energy being transmitted and emitted in a direction that differs from the initial direction of the photon. This phenomenon is called <a href="https://en.wikipedia.org/wiki/Scattering" target="_blank">scattering</a>.
+                              As light travels in electromagnetic waves it interacts with particles in the medium it travels in. This interaction results in energy being transmitted and emitted in a direction that differs from the initial direction of the photon. This phenomenon is called <a href="https://en.wikipedia.org/wiki/Scattering">scattering</a>[<a href="#textref02">Ref02</a>].
                             </p>
                             <p>
-                              A perfect example of scattering is the <a href="https://mynasadata.larc.nasa.gov/what-color-is-your-sky/" target="_blank">coloration of the sky</a>. When light travels through air it gets scattered by the small particles present in the atmosphere. Since wavelength is inversely proportional to the amount of scattering, the most scattered wavelengths are the shortest ones. In terms of visible light, these are the blue and violet light. Since the sun emits <a href="http://bit.ly/2tPJdIh" target="_blank">more blue than violet light</a>, the sky appears blue in the result.
+                              A perfect example of scattering is the <a href="https://mynasadata.larc.nasa.gov/what-color-is-your-sky/" target="_blank">coloration of the sky</a>[<a href="#textref03">Ref03</a>]. When light travels through air it gets scattered by the small particles present in the atmosphere. Since wavelength is inversely proportional to the amount of scattering, the most scattered wavelengths are the shortest ones. In terms of visible light, these are the blue and violet light. Since the sun emits <a href="http://bit.ly/2tPJdIh" target="_blank">more blue than violet light</a>[<a href="#textref04">Ref04</a>], the sky appears blue in the result.
                             </p>
                             <p>
-                              Depending on the wavelength of light and the size of the particle it interacts with we distinguish between several types of scattering. For this work, the most important ones are <a href="https://en.wikipedia.org/wiki/Rayleigh_scattering" target="_blank">Rayleigh</a>, and <a href="https://en.wikipedia.org/wiki/Mie_scattering" target="_blank">Mie scattering</a>. The main difference between these is the direction of the scattered light which is illustrated in the picture below.
+                              Depending on the wavelength of light and the size of the particle it interacts with we distinguish between several types of scattering. For this work, the most important ones are <a href="https://en.wikipedia.org/wiki/Rayleigh_scattering" target="_blank">Rayleigh</a>[<a href="#textref05">Ref05</a>], and <a href="https://en.wikipedia.org/wiki/Mie_scattering" target="_blank">Mie scattering</a>[<a href="#textref06">Ref06</a>]. The main difference between these is the direction of the scattered light which is illustrated in the picture below.
                             </p>
                             <img src="imgs/scattering.png" alt="" class="card-img-bottom">
                           </div>
@@ -453,10 +460,10 @@
                         <div class="col-md-12">
                           <div class="section-text">
                             <p>
-                              Previously, we could see the wide scope of <a href="#challenges1">problems</a> associated with rendering realistic human skin. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
+                              Previously, we could see the wide scope of <a href="#challenges1">problems associated with rendering realistic human skin</a>. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
                             </p>
                             <p>
-                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a <a href="#biospecmodel">biophysically-based spectral model</a> proposed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a> which heavily relies on stochastic modelling. We will examine <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Craig Donner’s and Henrik Wann Jensen’s</a> <a href="#spectralbssrdf1">spectral BSSRDF</a> which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model <a href="#wrinkles">wrinkles</a> using a simple method for modelling wrinkles on human skin designed by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>.
+                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a <a href="#biospecmodel">biophysically-based spectral model</a> proposed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref07">Ref07</a>] which heavily relies on stochastic modelling. We will examine <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Craig Donner’s and Henrik Wann Jensen’s</a> <a href="#spectralbssrdf1">spectral BSSRDF</a>[<a href="#textref08">Ref08</a>] which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model <a href="#wrinkles">wrinkles</a> using a simple method for modelling wrinkles on human skin designed by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>[<a href="#textref09">Ref09</a>].
                             </p>
                           </div>
                         </div>
@@ -487,7 +494,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The BioSpec model was developed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a> as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
+                          The BioSpec model was developed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref07">Ref07</a>] as a part of their research paper called <i>A biophysically-based spectral model of light interaction with human skin</i>.
                         </p>
                         <p>
                           Perhaps the main feature of this model is that it is modelled by a <a href="#randomwalk">random walk</a> process of the light rays that travel through the layers of skin. This is achieved by using random variables to decide whether and how light is reflected, refracted, transmitted, or absorbed. The next key feature is that it uses a large range of biologically relevant coefficients to accurately model the behaviour of the light rays in different layers of skin. We will take a deeper look at these features in the <a href="#randomwalk">next section</a>.
@@ -544,7 +551,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the <a href="http://www.physicsclassroom.com/class/refln/Lesson-1/The-Law-of-Reflection" target="_blank">law of reflection</a>. Otherwise we generate a refracted ray using <a href="https://www.math.ubc.ca/~cass/courses/m309-01a/chu/Fundamentals/snell.htm" target="_blank">Snell’s law</a>.
+                          When it comes to reflectance and transmittance at the edges of the interfaces the model relies on <a href="#fresnel">Fresnel equations</a>. After computing the coefficient \(F\) we generate a random number \(\xi\) (from 0 to 1). If \(\xi \leq F\) then we generate a reflected ray using the <a href="http://www.physicsclassroom.com/class/refln/Lesson-1/The-Law-of-Reflection" target="_blank">law of reflection</a>[<a href="#textref10">Ref10</a>]. Otherwise we generate a refracted ray using <a href="https://www.math.ubc.ca/~cass/courses/m309-01a/chu/Fundamentals/snell.htm" target="_blank">Snell’s law</a>[<a href="#textref11">Ref11</a>].
                         </p>
                         <p>
                           When considering the reflected light we also have to account for the folds present in the stratum corneum. These can be conveniently represented as ellipsoids where the shape and size of the ellipsoid is governed by random variables. Therefore, we do not reflect from the stratum corneum as if it was perfectly flat but we reflect from a randomly curved ellipsoid instead.
@@ -566,10 +573,10 @@
                           The BioSpec model differentiates between scattering in the layers until and including epidermis and after epidermis.
                         </p>
                         <p>
-                          Scattering in the stratum corneum and epidermis involves perturbation of the ray in both the <a href="https://en.wikipedia.org/wiki/Spherical_coordinate_system" target="_blank">polar and the azimuthal</a> angles. When it comes to the azimuthal angle the scattering is symmetric; therefore it suffices to generate a random angle \(2\pi*\xi\). The polar angle is acquired by a randomized table lookup. Bruls and Leun have <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1751-1097.1984.tb04581.x/full" target="_blank">performed measurements</a> in these layers using which we can construct the table. For each wavelength, we store the measured fractions of scattered light as indices and their corresponding angle. Generating a random variable, scaling it to the size of the table, and using its integer part we can now acquire the necessary angle.
+                          Scattering in the stratum corneum and epidermis involves perturbation of the ray in both the <a href="https://en.wikipedia.org/wiki/Spherical_coordinate_system" target="_blank">polar and the azimuthal</a>[<a href="#textref12">Ref12</a>] angles. When it comes to the azimuthal angle the scattering is symmetric; therefore it suffices to generate a random angle \(2\pi*\xi\). The polar angle is acquired by a randomized table lookup. Bruls and Leun have <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1751-1097.1984.tb04581.x/full" target="_blank">performed measurements</a>[<a href="#textref13">Ref13</a>] in these layers using which we can construct the table. For each wavelength, we store the measured fractions of scattered light as indices and their corresponding angle. Generating a random variable, scaling it to the size of the table, and using its integer part we can now acquire the necessary angle.
                         </p>
                         <p>
-                          This method is promised to be more accurate than the use of data-fitting according to  <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>. Note that most of the <a href="#scatteringintro">scattering</a> happening in these layers is <a href="scattering">Mie scattering</a> due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
+                          This method is promised to be more accurate than the use of data-fitting according to  <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref13">Ref07</a>] . Note that most of the <a href="#scatteringintro">scattering</a> happening in these layers is <a href="scattering">Mie scattering</a> due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
                         </p>
                         <p>
                           In the remaining layers the model tests for <a href="scattering">Rayleigh scattering</a> as with the decreasing size of particles it becomes the dominant type of scattering. Firstly, we compute the amount of <a href="#scatteringintro">scattering</a> that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
@@ -659,7 +666,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          In order to understand what is a BSSRDF we first need to understand what a <a href="https://en.wikipedia.org/wiki/Bidirectional_scattering_distribution_function">BSDF</a> is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> can be conveniently described as a BSSRDF.
+                          In order to understand what is a BSSRDF we first need to understand what a <a href="https://en.wikipedia.org/wiki/Bidirectional_scattering_distribution_function">BSDF</a>[<a href="#textref14">Ref14</a>]  is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a>[<a href="#textref08">Ref08</a>] can be conveniently described as a BSSRDF.
                         </p>
                       </div>
                     </div>
@@ -672,7 +679,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
+                          The main distinction from the previous model is that the BSSRDF suggested by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a>[<a href="#textref08">Ref08</a>] tries to approximate physical interactions of light while maintaining a very high level of realism. Instead of considering a large number of tissues and interfaces it takes into account only two. The dermal and the epidermal layers.
                         </p>
                         <p>
                           The next distinction is that there are only four biologically relevant parameters which make this model easily adjustable to different skin types. The parameters are oiliness of the skin, hemoglobin concentration, melanin concentration, and a blend factor between different types of melanin. The model also addresses texturing which was not solved by the BioSpec model.
@@ -690,7 +697,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF. You can find out more about this BRDF <a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-57-9-1105" target="_blank">here</a>.
+                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF. You can find out more about this BRDF <a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-57-9-1105" target="_blank">here</a>[<a href="#textref15">Ref15</a>].
                         </p>
                         <p>
                           In order to estimate the average reflectance of a given point, we integrate the BRDF over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
@@ -717,7 +724,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers. The <a href="https://en.wikipedia.org/wiki/Epiermis" target="_blank">epidermis</a> and the <a href="https://en.wikipedia.org/wiki/Dermis" target="_blank">dermis</a>. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
+                          As light passes through the surface of the skin the model approximates the rest of the physical phenomenon using only two layers. The <a href="https://en.wikipedia.org/wiki/Epiermis" target="_blank">epidermis</a>[<a href="#textref16">Ref16</a>] and the <a href="https://en.wikipedia.org/wiki/Dermis" target="_blank">dermis</a>[<a href="#textref17">Ref17</a>]. The important distinction between these two layers is that the epidermis consists mainly of melanin and the dermis of hemoglobin. Both of these substances play a great role in the scattering and absorption of light.
                         </p>
                         <p>
                           In the <a href="#biospecmodel">previous model</a>, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
@@ -726,7 +733,7 @@
                           Diffusion profiles present an approximation of how light <a href="#scatteringintro">scatters</a> beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
                         </p>
                         <p>
-                          Diffusion profiles can be measured, however, they are also <a href="https://graphics.stanford.edu/papers/bssrdf/bssrdf.pdf" target="_blank">expressible analytically</a> based on the features of the medium the light gets scattered in. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
+                          Diffusion profiles can be measured, however, they are also <a href="https://graphics.stanford.edu/papers/bssrdf/bssrdf.pdf" target="_blank">expressible analytically</a>[<a href="#textref18">Ref18</a>] based on the features of the medium the light gets scattered in. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
                         </p>
                       </div>
                     </div>
@@ -763,7 +770,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a> was able to add texture by using <a href="#texturemapping">texture maps</a>, we would like to investigate how to generate these in a more dynamic manner. A paper called <i>A simple method for modelling wrinkles on human skin</i> by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a> introduces a way of achieving this and thus we shall investigate it in this section.
+                          An important feature of skin that enhances realism are wrinkles. Although we saw that the model developed by  <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a>[<a href="#textref08">Ref08</a>] was able to add texture by using <a href="#texturemapping">texture maps</a>, we would like to investigate how to generate these in a more dynamic manner. A paper called <i>A simple method for modelling wrinkles on human skin</i> by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>[<a href="#textref09">Ref09</a>] introduces a way of achieving this and thus we shall investigate it in this section.
                         </p>
                       </div>
                     </div>
@@ -792,7 +799,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          This model uses a <a href="https://en.wikipedia.org/wiki/Triangle_mesh" target="_blank">triangle mesh</a> to represent a particular body part. Wrinkles are then modeled on top of this mesh. In order to acquire the mesh, we scan the particular body part and then we project it into 2D.
+                          This model uses a <a href="https://en.wikipedia.org/wiki/Triangle_mesh" target="_blank">triangle mesh</a>[<a href="#textref19">Ref19</a>] to represent a particular body part. Wrinkles are then modeled on top of this mesh. In order to acquire the mesh, we scan the particular body part and then we project it into 2D.
                         </p>
                       </div>
                     </div>
@@ -870,7 +877,7 @@
                         <div class="row">
                           <div class="col-lg-6">
                             <p>
-                              Modelling large-scale wrinkles is much more challenging from the perspective that they can be quite distinct depending not only on the area of the skin but also on the given person. For this reason, the model cannot create them in bulks, but it has to assign and generate them one by one. The model achieves this by having users draw cubic <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank">Bezier curves</a> on the surface of the skin. Then, the model creates a cross-sectional wrinkle shape function \(S(l)\). Here \(l\) is the perpendicular distance from the Bezier curve.
+                              Modelling large-scale wrinkles is much more challenging from the perspective that they can be quite distinct depending not only on the area of the skin but also on the given person. For this reason, the model cannot create them in bulks, but it has to assign and generate them one by one. The model achieves this by having users draw cubic <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank">Bezier curves</a>[<a href="#textref20">Ref20</a>] on the surface of the skin. Then, the model creates a cross-sectional wrinkle shape function \(S(l)\). Here \(l\) is the perpendicular distance from the Bezier curve.
                             </p>
                             <p>
                               \(S(l)\) can be defined as:
@@ -916,12 +923,12 @@
                         </div>
                         <div class="col-lg-4">
                           <p>
-                            Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface. This approach however requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
+                            Most real-time methods for rendering translucent objects require precomputation of light transport on certain points of the surface. This approach; however, requires fixing the geometry of the model at precomputation time, not allowing deformation to the object itself, which makes it unusable for scenes with fully general animation or deformation (for example in computer games the shapes of objects often change based on user interaction with the environment).
                           </p>
                         </div>
                         <div class="col-lg-4">
                           <p>
-                            In their  <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">paper</a>, Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the <a href="https://dl.acm.org/citation.cfm?id=1073308" target="_blank">diffusion profile approximation technique</a> designed by Donner and Jensen achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the <a href="#scatteringandabsorbtion">diffusion profiles</a> of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
+                            In their  <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">paper</a>[<a href="#textref21">Ref21</a>], Dr. Eugene d’Eon and his colleagues present a new efficient formulation of the <a href="https://dl.acm.org/citation.cfm?id=1073308" target="_blank">diffusion profile approximation technique</a>[<a href="#textref22">Ref22</a>] designed by Donner and Jensen, achieving real-time rendering of skin in approximately 30 frames per second without the need of any precomputation. The key idea behind it is approximating the <a href="#scatteringandabsorbtion">diffusion profiles</a> of the layers of skin as a linear combination of Gaussian basic functions. In other words, they are using sums of Gaussian functions to accurately approximate the behaviour of illuminated skin. This method is in practice much faster than previously known techniques providing highly realistic results.
                           </p>
                         </div>
                       </div>
@@ -929,8 +936,8 @@
                   </div>
                   <a href="http://delivery.acm.org/10.1145/2390000/2383869/p147-deon.pdf?ip=146.169.189.17&id=2383869&acc=NO%20RULES&key=BF07A2EE685417C5%2EF5014A9D3D5CC2D9%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1521040844_cc05724c13d4808ed82fade2387075de" target="_blank"><img class="card-img-bottom" src="imgs/faces2.png"></a>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </section>
           <!-- INTERACTIVITY END -->
           <!-- INTERACTIVITY MODEL START -->
@@ -948,7 +955,7 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <p>
-                          The key observation made by <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">d'Eon et al.</a> is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\), where \(r\) is the radius of the circle from which light is gathered. In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians <a href="#scatteringintro">subsurface scattering</a> can be computed very efficiently.
+                          The key observation made by <a href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">d'Eon et al.</a>[<a href="#textref21">Ref21</a>] is, that sums of a small number of Gaussians work very well for approximation of diffusion profiles \(R(r)\), where \(r\) is the radius of the circle from which light is gathered. In most cases very good approximations can be done using four Gaussians. This observation is extremely useful in practice, because using some unique properties of Gaussians <a href="#scatteringintro">subsurface scattering</a> can be computed very efficiently.
                         </p>
                         <p>
                           The aim of this method is to find for each diffusion profile \(R(r)\), \(k\) Gaussians with weights \(w_i\) and variances \(v_i\) such that:
@@ -989,6 +996,106 @@
             </section>
           </section>
           <!-- INTERACTIVITY MODEL END -->
+          <!-- REFERENCES START -->
+          <section id="references" class="fullsite container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <h1 class="topic-header">Wrinkles</h1>
+              </div>
+            </div>
+            <div class="row">
+              <section id="textref" class="col-lg-12 container-fluid">
+                <div class="card">
+                  <h2 class="card-header">References</h2>
+                  <div class="card-body">
+                    <div class="section-text">
+                      <p>
+                        [Ref01] Fresnel Equations: <a id="textref01" href="https://en.wikipedia.org/wiki/Fresnel_equations" target="_blank">https://en.wikipedia.org/wiki/Fresnel_equations</a>
+                      </p>
+                      <p>
+                        [Ref02] Scattering: <a id="textref02" href="https://en.wikipedia.org/wiki/Scattering" target="_blank"">https://en.wikipedia.org/wiki/Scattering</a>
+                      </p>
+                      <p>
+                        [Ref03] Colour of the sky: <a id="textref03" href="https://mynasadata.larc.nasa.gov/what-color-is-your-sky/" target="_blank">https://mynasadata.larc.nasa.gov/what-color-is-your-sky/</a>
+                      </p>
+                      <p>
+                        [Ref04] Spectral distrubution of Sun emmitance: <a id="textref04" href="http://bit.ly/2tPJdIh" target="_blank">http://bit.ly/2tPJdIh</a>
+                      </p>
+                      <p>
+                        [Ref05] Rayleigh scattering: <a id="textref05" href="https://en.wikipedia.org/wiki/Rayleigh_scattering" target="_blank">https://en.wikipedia.org/wiki/Rayleigh_scattering</a>
+                      </p>
+                      <p>
+                        [Ref06] Mie scattering: <a id="textref06" href="https://en.wikipedia.org/wiki/Mie_scattering" target="_blank">https://en.wikipedia.org/wiki/Mie_scattering</a>
+                      </p>
+                      <p>
+                        [Ref07] <a id="textref07" href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank"> Krishnaswamy, A. and Baranoski, G.V., 2004. A study on skin optics. Natural Phenomena Simulation Group, School of Computer Science, University of Waterloo, Canada, Technical Report, 1, pp.1-17. </a>
+                      </p>
+                      <p>
+                        [Ref08] <a id="textref08" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner, C. and Jensen, H.W., 2006. A Spectral BSSRDF for Shading Human Skin. Rendering techniques, 2006, pp.409-418.</a>
+                      </p>
+                      <p>
+                        [Ref09] <a id="textref09" href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Bando, Y., Kuratate, T. and Nishita, T., 2002. A simple method for modeling wrinkles on human skin. In Computer Graphics and Applications, 2002. Proceedings. 10th Pacific Conference on (pp. 166-175). IEEE.</a>
+                      </p>
+                       <p>
+                        [Ref10] Law of reflction: <a id="textref10" href="http://www.physicsclassroom.com/class/refln/Lesson-1/The-Law-of-Reflection" target="_blank">http://www.physicsclassroom.com/class/refln/Lesson-1/The-Law-of-Reflection</a>
+                      </p>
+                       <p>
+                        [Ref11] Snell's law: <a id="textref11" href="https://www.math.ubc.ca/~cass/courses/m309-01a/chu/Fundamentals/snell.htm" target="_blank">https://www.math.ubc.ca/~cass/courses/m309-01a/chu/Fundamentals/snell.htm</a>
+                      </p>
+                       <p>
+                        [Ref12] Polar and azimuthal angles: <a id="textref12" href="https://en.wikipedia.org/wiki/Spherical_coordinate_system" target="_blank">https://en.wikipedia.org/wiki/Spherical_coordinate_system</a>
+                      </p>
+                       <p>
+                        [Ref13] <a id="textref13" href="http://onlinelibrary.wiley.com/doi/10.1111/j.1751-1097.1984.tb04581.x/full" target="_blank">Bruls, W.A. and Van Der Leun, J.C., 1984. Forward scattering properties of human epidermal layers. Photochemistry and photobiology, 40(2), pp.231-242.</a>
+                      </p>
+                      <p>
+                        [Ref14] BSDF: <a id="textref14" href="https://en.wikipedia.org/wiki/Bidirectional_scattering_distribution_function" target="_blank">https://en.wikipedia.org/wiki/Bidirectional_scattering_distribution_function</a>
+                      </p>
+                      <p>
+                        [Ref15] <a id="textref15" href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-57-9-1105" target="_blank">Torrance, K.E. and Sparrow, E.M., 1967. Theory for off-specular reflection from roughened surfaces. Josa, 57(9), pp.1105-1114.</a>
+                      </p>
+                      <p>
+                        [Ref16] Epidermis: <a id="textref16" href="https://en.wikipedia.org/wiki/Epiermis" target="_blank">https://en.wikipedia.org/wiki/Epiermis</a>
+                      </p>
+                      <p>
+                        [Ref17] Dermis: <a id="textref17" href="https://en.wikipedia.org/wiki/Dermis" target="_blank">https://en.wikipedia.org/wiki/Dermis</a>
+                      </p>
+                      <p>
+                        [Ref18] <a id="textref18" href="https://graphics.stanford.edu/papers/bssrdf/bssrdf.pdf" target="_blank">Jensen, H.W., Marschner, S.R., Levoy, M. and Hanrahan, P., 2001, August. A practical model for subsurface light transport. In Proceedings of the 28th annual conference on Computer graphics and interactive techniques (pp. 511-518). ACM.</a>
+                      </p>
+                      <p>
+                        [Ref19] Triangle mesh: <a id="textref19" href="https://en.wikipedia.org/wiki/Triangle_mesh" target="_blank">https://en.wikipedia.org/wiki/Triangle_mesh</a>
+                      </p>
+                      <p>
+                        [Ref20] Bezier curves: <a id="textref20" href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank">https://en.wikipedia.org/wiki/B%C3%A9zier_curve</a>
+                      </p>
+                      <p>
+                        [Ref21] <a id="textref21" href="http://www.eugenedeon.com/wp-content/uploads/2014/04/efficientskin.pdf" target="_blank">d'Eon, E., Luebke, D. and Enderton, E., 2007, June. Efficient rendering of human skin. In Proceedings of the 18th Eurographics conference on Rendering Techniques (pp. 147-157). Eurographics Association.</a>
+                      </p>
+                      <p>
+                        [Ref22] <a id="textref22" href="https://dl.acm.org/citation.cfm?id=1073308" target="_blank">Donner, C. and Jensen, H.W., 2005, July. Light diffusion in multi-layered translucent materials. In ACM Transactions on Graphics (ToG) (Vol. 24, No. 3, pp. 1032-1039). ACM.</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="row">
+              <section id="imgref" class="col-lg-12 container-fluid">
+                <div class="card">
+                  <h2 class="card-header">References</h2>
+                  <div class="card-body">
+                    <div class="section-text">
+                      <p class="links">
+                        IMG REF PLACEHOLDER
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <!-- REFERENCES END -->
         </div>
       </div>
     </div>
