@@ -207,7 +207,7 @@
                         <div class="card-body">
                           <div class="section-text">
                             <p>
-                              As light travels in electromagnetic waves it interacts with particles in the medium it travels in. This interaction results in energy being transmitted and emitted in a direction that differs from the initial direction of the photon. This phenomenon is called <a href="https://en.wikipedia.org/wiki/Scattering">scattering</a>[<a href="#textref02">Ref02</a>].
+                              As light travels in electromagnetic waves it interacts with particles in the medium it travels in. This interaction results in energy being transmitted and emitted in a direction that differs from the initial direction of the photon. This phenomenon is called <a href="https://en.wikipedia.org/wiki/Scattering" target="_blank">scattering</a>[<a href="#textref02">Ref02</a>].
                             </p>
                             <p>
                               A perfect example of scattering is the <a href="https://mynasadata.larc.nasa.gov/what-color-is-your-sky/" target="_blank">coloration of the sky</a>[<a href="#textref03">Ref03</a>]. When light travels through air it gets scattered by the small particles present in the atmosphere. Since wavelength is inversely proportional to the amount of scattering, the most scattered wavelengths are the shortest ones. In terms of visible light, these are the blue and violet light. Since the sun emits <a href="http://bit.ly/2tPJdIh" target="_blank">more blue than violet light</a>[<a href="#textref04">Ref04</a>], the sky appears blue in the result.
@@ -234,7 +234,6 @@
               </div>
               <div class="row">
                 <section id="whatistexturemapping" class="col-lg-4 d-flex align-items-strech">
-                  <!-- Miso povie aby som to robil rucne, because reasons -->
                   <div class="card">
                     <h2 class="card-header">What is Texture Mapping</h2>
                     <div class="card-body">
@@ -408,7 +407,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          There are numerous types of human skin that make the realistic modelling even more difficult. Realistic models have to take into consideration the colour of skin, freckles, <a href="#wrinkles">wrinkles</a>, hairs (grown or ingrown under the skin). Furthermore, even on one individual, we can find many different types of skin. For example, the skin on lips is obviously different from the skin that we can find on our faces, and these are both different from the skin on the palms of our hands.
+                          There are numerous types of human skin that make the realistic modelling even more difficult. Realistic models have to take into consideration the colour of skin, freckles, <a href="#wrinkles1">wrinkles</a>, hairs (grown or ingrown under the skin). Furthermore, even on one individual, we can find many different types of skin. For example, the skin on lips is obviously different from the skin that we can find on our faces, and these are both different from the skin on the palms of our hands.
                         </p>
                       </div>
                     </div>
@@ -487,7 +486,7 @@
                               Previously, we could see the wide scope of <a href="#challenges1">problems associated with rendering realistic human skin</a>. Its layers, chemical composition, and high level of microstructures make it very complex to model and approximate.
                             </p>
                             <p>
-                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a <a href="#biospecmodel">biophysically-based spectral model</a> proposed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref07">Ref07</a>] which heavily relies on stochastic modelling. We will examine <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Craig Donner’s and Henrik Wann Jensen’s</a> <a href="#spectralbssrdf1">spectral BSSRDF</a>[<a href="#textref08">Ref08</a>] which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model <a href="#wrinkles">wrinkles</a> using a simple method for modelling wrinkles on human skin designed by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>[<a href="#textref09">Ref09</a>].
+                              In this section, we will discover some of the novel approaches to rendering realistic human skin. Namely, we will take a closer look at a <a href="#biospecmodel">biophysically-based spectral model</a> proposed by <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref07">Ref07</a>] which heavily relies on stochastic modelling. We will examine <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Craig Donner’s and Henrik Wann Jensen’s</a> <a href="#spectralbssrdf1">spectral BSSRDF</a>[<a href="#textref08">Ref08</a>] which introduces various improvements by highly effective approximations. Following these two models, we will also take a peek at how to model <a href="#wrinkles1">wrinkles</a> using a simple method for modelling wrinkles on human skin designed by <a href="http://web.media.mit.edu/~bandy/wrinkle/PG02wrinkle.pdf" target="_blank">Y. Bando, T. Kuratate, and T. Nishita</a>[<a href="#textref09">Ref09</a>].
                             </p>
                           </div>
                         </div>
@@ -616,10 +615,10 @@
                           Scattering in the stratum corneum and epidermis involves perturbation of the ray in both the <a href="https://en.wikipedia.org/wiki/Spherical_coordinate_system" target="_blank">polar and the azimuthal</a>[<a href="#textref12">Ref12</a>] angles. When it comes to the azimuthal angle the scattering is symmetric; therefore it suffices to generate a random angle \(2\pi*\xi\). The polar angle is acquired by a randomized table lookup. Bruls and Leun have <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1751-1097.1984.tb04581.x/full" target="_blank">performed measurements</a>[<a href="#textref13">Ref13</a>] in these layers using which we can construct the table. For each wavelength, we store the measured fractions of scattered light as indices and their corresponding angle. Generating a random variable, scaling it to the size of the table, and using its integer part we can now acquire the necessary angle.
                         </p>
                         <p>
-                          This method is promised to be more accurate than the use of data-fitting according to  <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref13">Ref07</a>] . Note that most of the <a href="#scatteringintro">scattering</a> happening in these layers is <a href="scattering">Mie scattering</a> due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
+                          This method is promised to be more accurate than the use of data-fitting according to  <a href="https://cs.uwaterloo.ca/research/tr/2004/01/tech-rep-CS-2004-01.pdf" target="_blank">Aravind Krishnaswamy and Gladimir V. G. Baranoski</a>[<a href="#textref13">Ref07</a>] . Note that most of the <a href="#scatteringintro">scattering</a> happening in these layers is <a href="#scattering">Mie scattering</a> due to the size of the particles the light interacts with. Therefore the light is mainly scattered in the forward direction.
                         </p>
                         <p>
-                          In the remaining layers the model tests for <a href="scattering">Rayleigh scattering</a> as with the decreasing size of particles it becomes the dominant type of scattering. Firstly, we compute the amount of <a href="#scatteringintro">scattering</a> that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
+                          In the remaining layers the model tests for <a href="#scattering">Rayleigh scattering</a> as with the decreasing size of particles it becomes the dominant type of scattering. Firstly, we compute the amount of <a href="#scatteringintro">scattering</a> that occurs given the wavelength of the ray and the indices describing the biological properties of the layer. Namely the index of refraction of the medium, the index of refraction of the fibers, the density of the fibers, and the thickness of the medium.
                         </p>
                         <p>
                           <div class="equation">$$ R(\lambda) = \frac{8\pi^3\left(\left(\frac{\eta_f}{\eta_m}\right)^2-1\right)^2}{3N\lambda^4}\left(\frac{t}{\cos\theta}\right) $$</div>
@@ -715,7 +714,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          In order to understand what is a BSSRDF we first need to understand what a <a href="https://en.wikipedia.org/wiki/Bidirectional_scattering_distribution_function">BSDF</a>[<a href="#textref14">Ref14</a>]  is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a>[<a href="#textref08">Ref08</a>] can be conveniently described as a BSSRDF.
+                          In order to understand what is a BSSRDF we first need to understand what a <a href="https://en.wikipedia.org/wiki/Bidirectional_scattering_distribution_function" target="_blank">BSDF</a>[<a href="#textref14">Ref14</a>]  is. A BSDF is a combination of a bidirectional reflectance distribution function (BRDF) and bidirectional transmittance distribution function (BTDF). These are both described as a ratio of the radiance of the reflected light and the irradiance of the incoming light. Combining these functions we create a BSDF. To get a BSSRDF we also need to account for phenomenon such as <a href="#scatteringintro">scattering</a>, hence the name bidirectional scattering-surface reflectance distribution function. The model created by <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.226.4533&rep=rep1&type=pdf" target="_blank">Donner and Jensen</a>[<a href="#textref08">Ref08</a>] can be conveniently described as a BSSRDF.
                         </p>
                       </div>
                     </div>
@@ -734,7 +733,6 @@
                         </p>
                       </div>
                     </div>
-                    <!-- <img class="card-img-bottom" src="http://via.placeholder.com/600x400"> -->
                   </div>
                 </section>
               </div>
