@@ -143,7 +143,7 @@
                 <button type="button" class="btn btn-block sidebar-btn" data-toggle="collapse" data-target="#collapse6">Interactive Rendering</button>
                 <ul id="collapse6" class="collapse">
                   <li><a href="#maximisingrealism" class="btn btn-block sidebar-btn2">Interactive Rendering</a></li>
-                  <li><a href="#background" class="btn btn-block sidebar-btn2">Background</a></li>
+                  <li><a href="#background" class="btn btn-block sidebar-btn2">Fast Approximations</a></li>
                 </ul>
               </li>
             </ul>
@@ -399,7 +399,7 @@
                         <div class="col-lg-6">
                           <h3 id="epidermis"> Epidermis </h3>
                           <p class="section-text">
-                            The epidermis is the outermost layer and therefore is subject to the external environment. Epidermis (or “epi”) is the layer of skin that varies the most in thickness. The thinner this layer is, the more influential are the lower layers. Since the epi has a small oily layer on top, a small amount of uncoloured light is reflected from the surface of skin. However, the reflection is not perfectly mirror-like because the epidermis is rough, containing pores and little bumps. Only about 6-9% of light is reflected directly from the skin. The rest of the light enters the skin, <a href="scatteringintro">scatters</a> and is either absorbed or exits the skin at a different point (see later).
+                            The epidermis is the outermost layer and therefore is subject to the external environment. Epidermis (or “epi”) is the layer of skin that varies the most in thickness. The thinner this layer is, the more influential are the lower layers. Since the epi has a small oily layer on top, a small amount of uncoloured light is reflected from the surface of skin. However, the reflection is not perfectly mirror-like because the epidermis is rough, containing pores and little bumps. Only about 6-9% of light is reflected directly from the skin. The rest of the light enters the skin, <a href="#scatteringintro">scatters</a> and is either absorbed or exits the skin at a different point (see later).
                             The pigments responsible for the absorption of light are phaeomelanin (red/yellow) and eumelanin (brown/black). The ratio of their concentration in human skin varies from individual to individual.
                           </p>
                           <h3 id="dermis">Dermis</h3>
@@ -661,7 +661,7 @@
                     <div class="card-body">
                       <div class="section-text">
                         <p>
-                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF. You can find out more about this BRDF <a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-57-9-1105">here</a>.
+                          Recall that in the previous section we had to model the reflection from the surface of skin using ellipsoids. In this model, however, we make use of a BRDF which was shown to give good results when considering the reflection from the human skin. The BRDF is called the Torrance-Sparrow microfacet BRDF. You can find out more about this BRDF <a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-57-9-1105" target="_blank">here</a>.
                         </p>
                         <p>
                           In order to estimate the average reflectance of a given point, we integrate the BRDF over all the outgoing light directions. Specifically, we integrate over the outgoing hemisphere. This gives us an idea of the amount of light that was reflected. We assume the remaining light to be transmitted into the deeper level.
@@ -694,7 +694,7 @@
                           In the <a href="#biospecmodel">previous model</a>, we tried to exactly follow each beam of light as it travels through the layers of skin. This model approaches subsurface scattering by introducing the concept of diffusion profiles.
                         </p>
                         <p>
-                          Diffusion profiles present an approximation of how light <a href="scatteringintro">scatters</a> beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
+                          Diffusion profiles present an approximation of how light <a href="#scatteringintro">scatters</a> beneath the surface of highly scattering translucent materials such as skin. A simple way of thinking about this new idea is by considering an experiment where we point a beam of a very thin white laser to a flat surface. Since some light goes beneath the surface and scatters back, we see a glow around the point where the laser hits the surface. Diffusion profiles tell us how much light returns from the surface as a function of angle and distance from the centre. These profiles are colour dependent.
                         </p>
                         <p>
                           Diffusion profiles can be measured, however, they are also expressible analytically based on the features of the medium the light gets scattered in[Jensen et al. 2001]. Using this new way of expressing subsurface scattering it now suffices to sum across all the points where light enters skin considering the reflectance and also the diffusion profile of the given area.
@@ -750,7 +750,7 @@
                           The model distinguishes between two types of wrinkles. <a href="#finescalewrinkles">Fine-scale wrinkles</a>, and <a href="#largescalewrinkles">large-scale wrinkles</a>. <a href="#finescalewrinkles">Fine-scale wrinkles</a> cover the whole body and are much harder to spot by eye than <a href="#largescalewrinkles">large-scale wrinkles</a>, which are usually associated with a certain body part such as the forehead.
                         </p>
                         <p>
-                          When it comes to <a href="#finescalewrinkles">fine-scale wrinkles</a> the interesting properties they share are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning <a href="largescalewrinkles">large-scale wrinkles</a> perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrunk around <a href="largescalewrinkles">large-scale wrinkles</a>. We will take this into consideration when modelling the shape of <a href="largescalewrinkles">large-scale wrinkles</a>.
+                          When it comes to <a href="#finescalewrinkles">fine-scale wrinkles</a> the interesting properties they share are that the furrow lines usually run in both directions and the intersection of two furrow lines becomes an endpoint of either. Concerning <a href="largescalewrinkles">large-scale wrinkles</a> perhaps the most important property is the preservation of skin volume. Notice that skin is incompressible and so it is shrunk around <a href="#largescalewrinkles">large-scale wrinkles</a>. We will take this into consideration when modelling the shape of <a href="#largescalewrinkles">large-scale wrinkles</a>.
                         </p>
                       </div>
                     </div>
