@@ -61,8 +61,8 @@ $(document).ready(function(){
   }
 
   $('a[href*="#"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
+  .not('a[href="#"]')
+  .not('a[href="#0"]')
   .click(function(event) {
     // On-page links
     if (
