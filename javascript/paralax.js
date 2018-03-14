@@ -27,7 +27,31 @@ function parallax() {
       position: 'absolute',
       top: $('nav').outerHeight() + $(window).height()
     });
-    }
+  }
+
+  // VIDEO OPACITY
+  if (scrollPos < $(window).height()) {
+    var op = 1 - scrollPos / $(window).height();
+    $("#myVideo").css({
+      opacity: op
+    });
+  } else { 
+    $("#myVideo").css({
+      opacity: 0
+    });
+  }
+
+  //VIDEO NOT VISIBLE
+  if (scrollPos < 2*$(window).height()) {
+    var op = 1 - scrollPos / $(window).height();
+    $("#myVideo").css({
+      display: block
+    });
+  } else { 
+    $("#myVideo").css({
+      display: none
+    });
+  }
 
 
   // var headingbot = $('#paralax-heading').offset().top + 1.5*$('#paralax-heading').outerHeight();
