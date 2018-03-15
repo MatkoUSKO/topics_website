@@ -29,16 +29,13 @@ function mynavbarcollapse() {
 $(document).on('click', '#toggleSidebar', function(){
   mynavbarcollapse();
   return false;
-})
-
-
+});
 
 $(document).ready(function(){
-  if($(window).width() < 650) {
+  if($(window).width() > 650) {
      $("#sidebar").addClass("sidebar-collapsed");
   }
-  mynavbar();
-  }
+  mynavbarcollapse();
 
   $('a[href*="#"]')
   .not('[href="#"]')

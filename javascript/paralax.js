@@ -52,6 +52,7 @@ function parallax() {
       display: none
     });
   }
+}
 
 $(document).scroll(parallax);
 $(window).resize(parallax);
