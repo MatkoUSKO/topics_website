@@ -1,0 +1,67 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/** {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
+
+.parallax {
+    margin: 0px;
+    padding: 0px;
+    /* The image used */
+    background-image: url("res/title.jpg");
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: left-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Text in parallax */
+    color:white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+}
+
+.parallax h1 {
+    font-size:6vw;
+    font-family: "Courier Header";
+}
+
+.parallax h2 {
+    font-size:3vw;
+    color:white;
+    font-family: "Courier Body copy";
+    font-weight: 100;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-width: 992px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+
+    .parallax h1 {
+        font-size:9vw;
+        font-family: "Courier Header";
+    }
+
+    .parallax h2 {
+        font-size:6vw;
+        color:white;
+    }
+}
+
+.disappear-on-scroll{
+    top:0;
+    opacity:100;
+}

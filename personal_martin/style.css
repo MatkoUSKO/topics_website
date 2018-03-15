@@ -1,0 +1,103 @@
+section.fullsite {
+	border-bottom: 1px solid #000;
+ 	padding-top: 4rem !important;
+	padding-bottom: 4rem !important;
+	min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  section.fullstie {
+    min-height: 100vh;
+    min-width: 18rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section.fullstie {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+html, body {
+	background-color: #9AE3C3;
+}
+
+.section-title {
+	font-family: 'Francois One';
+	margin-bottom:5vh;
+	color: #444455;
+}
+
+.bg-grey {
+	background-color: #444455;
+}
+
+.text-special {
+	color: #9AE3C3;
+	text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.text-grey {
+	color: #444455;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.text-dark {
+	color: #111;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.bg-redblue {
+	background-color: #4499DD;
+}
+
+.bg-purpshade {
+	background-color: #D85CE0;
+}
+
+.card-title {
+	box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.minh-m{
+	min-height: 50vh;
+}
+
+.minh-s {
+	min-height: 35vh;
+}
+
+.card{
+	transition: all .2s ease-in-out;
+
+}
+
+.card:hover {
+	box-shadow: 5px 3px 4px rgba(0, 0, 0, 0.5);
+	transform: scale(1.05);
+	border-color: #4499DD;
+	border-width: 3px;
+}
+
+body {
+    overflow: auto;
+}
+
+.card ul {
+    list-style-type: none; /*to remove bullets*/
+    text-align: justify;
+    margin: 2px;
+    padding-top: 3px;
+    padding-left: 0 auto;
+    padding-right: 0 auto;
+    width: 90%;
+    flex-flow: column;
+    display: flex;
+}
+
+.card li{
+    padding: 2px;
+    width: 100%;
+    flex-grow: 1;
+}

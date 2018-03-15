@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Martin Piala - Software Developer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="parallax.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="parallax.js" ></script>
+    <script type="text/javascript" src="typewriter.js" ></script>
+    <script type="text/javascript" src="navbar.js" ></script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="parallax">
+      <div class="fixed-top disappear-on-scroll container-fluid">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
+            <h1> Martin Piala. </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-6">
+            <h2 class="typewrite" data-period="2000" data-type='[ "Hi!", "I am Software Developer...", "...in Training.", "I Love to Develop.", "I am Creative.", "I Love Problem Solving.", "I Love Programming.", "I am Clever.", "I Love to Learn.", "I am Future Engineer.", "I Love to Create.", "I am not a Robot.", "I am Martin Piala." ]'>
+            <span class="wrap"></span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-grey navbar-dark">
+      <a id="to-top" class="navbar-brand" href="#"> Martin Piala</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a id="to-education" class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a id="to-projects" class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="res/martinpiala.pdf">CV in pdf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="education" class="container-fluid movedown fullsite p-lg-5">
+      <div class="row">
+        <h1 class="section-title">Education</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card m-lg-0 mb-3 bg-dark minh-m">
+            <div class="card-title bg-redblue rounded p-sm-2 text-dark">
+              <h3 class="text-left"> Imperial College London </h3>
+              <h4 class="text-right font-italic"> 2017-2021 </h4>
+            </div>
+            <ul class="card-body text-special">
+              <li> <b>MEng.</b> in <b>Computing</b> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card m-lg-0 mb-3 bg-dark minh-m">
+            <div class="card-title bg-redblue rounded p-sm-2 text-dark">
+              <h3 class="text-left"> Gymnazium Velka Okruzna, Zilina </h3>
+              <h4 class="text-right font-italic"> 2013-2017 </h4>
+            </div>
+            <ul class="card-body text-special">
+              <li> Grammar School </li>
+              <li> <b>Maths Class</b>, Graduated with the best academic results possible in <b>Maths</b>, <b>Computing</b> and <b>Physics</b> </li>
+              <li> Finalist in national round of Olympiad in Mathematics </li>
+              <li> <b>Logarithmic relationship</b> between loudness and power of sound was taken in the count </li>
+              <li> <b>1st place</b> in national robotics competition </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="container-fluid movedown fullsite p-lg-5">
+      <div class="row">
+        <h1 class="section-title">Projects</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card m-lg-0 mb-3 bg-dark minh-s">
+            <h3 class="card-title bg-purpshade rounded p-sm-2 text-dark"> Handwritten digits recognition </h3>
+            <ul class="card-body text-special">
+              <li> Program could <b>read handwritten digits</b> written on paper and shown to the computers web-camera. </li>
+              <li> Utlilising neural network in <b>digit recognition</b> process, net trained using MNIST dataset of handwritten digits. </li>
+              <li> Project completely written in <b>Python</b> using <b>Numpy</b> library </li>
+            </ul>
+          </div>
+          <div class="card m-lg-0 mb-3 bg-dark minh-s">
+            <h3 class="card-title bg-purpshade rounded p-sm-2 text-dark"> Music Visualiser </h3>
+            <ul class="card-body text-special">
+              <li> <b>Custom hardware</b> lights reacting to music with software written in <b>C</b> </li>
+              <li> Source of the sound connected to the main unit via 3.5mm jack </li>
+              <li> Group of led lights visualised different ranges of frequencies played through the main unit, which analysed the sound waves </li>
+              <li> <b>Logarithmic relationship</b> between loudness and power of sound was taken in the count </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card m-lg-0 mb-3 bg-dark minh-s">
+            <h3 class="card-title bg-purpshade rounded p-sm-2 text-dark"> Pawn Race with AI </h3>
+            <ul class="card-body text-special">
+              <li> Pawn race game playable <b>both</b> by <b>human</b> and <b>computer</b> player </li>
+              <li> For <b>Artificial Intelligence</b> which plays the game the <b>iterative deepening</b> depth first search of <b>minimax</b> decision tree was implemented </li>
+              <li> Various <b>optimisations</b> were made, such as <b>alpha-beta pruning</b> and utilizing a <b>hash-map</b> of already searched boards, so each state of the game would be searched only once </li>
+              <li> Board was internally represented as 64-bit number, so every move can be calculated using only <b>bit operations</b> </li>
+              <li> Whole project was written in <b>Java</b> </li>
+            </ul>
+          </div>
+          <div class="card m-lg-0 mb-3 bg-dark minh-s">
+            <h3 class="card-title bg-purpshade rounded p-sm-2 text-dark"> Robotic car controlled over the Internet </h3>
+            <ul class="card-body text-special">
+              <li> Real-time <b>video stream</b> from a camera mounted on the robotic car </li>
+              <li> <b>Real-time remote control</b> of the robotic car using web interface built using <b>Bootstrap</b> and <b>Javascript </b> </li>
+              <li> Robot controls are written in pure <b>C</b> </li>
+              <li> Server handling communication is written in <b>Python</b> on Raspberry Pi </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card m-lg-0 mb-3 bg-dark minh-s">
+            <h3 class="card-title bg-purpshade rounded p-sm-2 text-dark"> Home intrusion detection system </h3>
+            <ul class="card-body text-special">
+              <li> <b>Custom hardware</b> intrusion detection system </li>
+              <li> <b>Sms notifications</b> via GPRS module </li>
+              <li> Real-time <b>data collection</b> from various sensors (temperature, motion detection, etc...) </li>
+              <li> Built using 8-bit micro-controllers </li>
+              <li> Software written in <b>C</b> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
