@@ -1,4 +1,4 @@
-function mynavbar() {
+function mynavbarcollapse() {
   if ($("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
       'margin-left': $('#sidebar').width()
@@ -27,14 +27,11 @@ function mynavbar() {
 }
 
 $(document).on('click', '#toggleSidebar', function(){
-  mynavbar();
-  
+  mynavbarcollapse();
   return false;
 })
 
-$(window).resize(function() {
 
-});
 
 $(document).ready(function(){
   if($(window).width() < 650) {
