@@ -1,4 +1,4 @@
-$(document).on('click', '#toggleSidebar', function(){
+function mynavbar() {
   if ($("#sidebar").hasClass("sidebar-collapsed")) {
     $("#content").css({
       'margin-left': $('#sidebar').width()
@@ -24,6 +24,10 @@ $(document).on('click', '#toggleSidebar', function(){
     });
     $("#toggleSidebar img").removeClass("rotated");
   }
+}
+
+$(document).on('click', '#toggleSidebar', function(){
+  mynavbar();
   
   return false;
 })
@@ -36,28 +40,7 @@ $(document).ready(function(){
   if($(window).width() < 650) {
      $("#sidebar").addClass("sidebar-collapsed");
   }
-  if ($("#sidebar").hasClass("sidebar-collapsed")) {
-    $("#content").css({
-      'margin-left': 0
-    });
-    $(".navbar").css({
-      'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0.5)'
-    });
-    $(".sidebar").css({
-      'margin-left': - $(".sidebar").width()
-    });
-    $("#toggleSidebar img").removeClass("rotated");
-  } else {
-    $("#content").css({
-      'margin-left': $('#sidebar').width()
-    });
-    $(".navbar").css({
-      'box-shadow': '0px 10px 10px rgba(0, 0, 0, 0)'
-    });
-    $(".sidebar").css({
-      'margin-left': 0
-    });
-    $("#toggleSidebar img").addClass("rotated");
+  mynavbar();
   }
 
   $('a[href*="#"]')
